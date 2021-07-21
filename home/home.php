@@ -10,7 +10,12 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
     public $type = 'home';
 
     public $allowed_scripts = [ 'foundations-js' ];
-    public $allowed_styles = ['foundations-css', 'porch-style-css', 'genesis-blocks-style-css' ];
+    public $allowed_styles = [
+        'foundations-css',
+        'porch-style-css',
+        'genesis-blocks-style-css',
+        'animate-css',
+        'themeisle-gutenberg-animation-style' ];
 
     private static $_instance = null;
     public static function instance() {
@@ -32,6 +37,9 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
              * the url fail, but are re-added here.
              */
 
+            add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css'], 10, 1 );
+            add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js'], 10, 1 );
+
             // register url and access
             add_action( "template_redirect", [ $this, 'theme_redirect' ] );
             add_filter( 'dt_blank_access', function (){ return true;}, 100, 1 ); // allows non-logged in visit
@@ -49,6 +57,27 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
             add_action( 'dt_blank_body', [ $this, 'body' ] ); // body for no post key
 
         }
+    }
+
+    public function dt_magic_url_base_allowed_js( $allowed_js ) {
+        $allowed_js = [
+            'jquery',
+            'jquery-ui',
+            'foundations-js'
+        ];
+        return $allowed_js;
+    }
+
+    public function dt_magic_url_base_allowed_css( $allowed_css ) {
+        $allowed_css = [
+            'jquery-ui-site-css',
+            'foundations-css',
+            'porch-style-css',
+            'genesis-blocks-style-css',
+            'animate-css',
+            'themeisle-gutenberg-animation-style'
+        ];
+        return $allowed_css;
     }
 
     public function theme_redirect() {
