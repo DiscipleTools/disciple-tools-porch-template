@@ -76,8 +76,6 @@ class Disciple_Tools_Porch_Template_Landing extends DT_Magic_Url_Base
             jQuery(document).ready(function(){
                 jQuery(document).foundation();
 
-                clearInterval(window.fiveMinuteTimer)
-
                 window.get_user_app()
             })
 

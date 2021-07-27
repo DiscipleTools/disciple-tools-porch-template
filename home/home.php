@@ -29,8 +29,6 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
              * the url fail, but are re-added here.
              */
 
-
-
             // register url and access
             add_action( "template_redirect", [ $this, 'theme_redirect' ] );
             add_filter( 'dt_blank_access', function (){ return true;}, 100, 1 ); // allows non-logged in visit
