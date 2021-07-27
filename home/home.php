@@ -9,14 +9,6 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
     public $root = "porch_app";
     public $type = 'home';
 
-    public $allowed_scripts = [ 'foundations-js' ];
-    public $allowed_styles = [
-        'foundations-css',
-        'porch-style-css',
-        'genesis-blocks-style-css',
-        'animate-css',
-        'themeisle-gutenberg-animation-style' ];
-
     private static $_instance = null;
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -37,8 +29,7 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
              * the url fail, but are re-added here.
              */
 
-            add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css'], 10, 1 );
-            add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js'], 10, 1 );
+
 
             // register url and access
             add_action( "template_redirect", [ $this, 'theme_redirect' ] );
@@ -49,47 +40,36 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
             add_filter( "dt_blank_title", [ $this, "page_tab_title" ] ); // adds basic title to browser tab
             add_action( 'wp_print_scripts', [ $this, 'print_scripts' ], 1500 ); // authorizes scripts
             add_action( 'wp_print_styles', [ $this, 'print_styles' ], 1500 ); // authorizes styles
-            add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ], 99 );
+
 
             // page content
             add_action( 'dt_blank_head', [ $this, '_header' ] );
             add_action( 'dt_blank_footer', [ $this, '_footer' ] );
             add_action( 'dt_blank_body', [ $this, 'body' ] ); // body for no post key
 
+            require_once( trailingslashit( plugin_dir_path( __DIR__ ) ) . 'framework/enqueue.php');
+            add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css'], 10, 1 );
+            add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js'], 10, 1 );
+            add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ], 99 );
         }
     }
 
     public function dt_magic_url_base_allowed_js( $allowed_js ) {
-        $allowed_js = [
-            'jquery',
-            'jquery-ui',
-            'foundations-js'
-        ];
-        return $allowed_js;
+        return Disciple_Tools_Porch_Template_Enqueue::load_allowed_scripts();
     }
 
     public function dt_magic_url_base_allowed_css( $allowed_css ) {
-        $allowed_css = [
-            'jquery-ui-site-css',
-            'foundations-css',
-            'porch-style-css',
-            'genesis-blocks-style-css',
-            'animate-css',
-            'themeisle-gutenberg-animation-style'
-        ];
-        return $allowed_css;
+        return Disciple_Tools_Porch_Template_Enqueue::load_allowed_styles();
+    }
+
+    public function wp_enqueue_scripts() {
+        Disciple_Tools_Porch_Template_Enqueue::load_scripts();
     }
 
     public function theme_redirect() {
         $path = get_theme_file_path( 'template-blank.php' );
         include( $path );
         die();
-    }
-
-    public function wp_enqueue_scripts() {
-        // load scripts
-        require_once( trailingslashit( plugin_dir_path( __DIR__ ) ) . 'framework/enqueue.php');
-        Disciple_Tools_Porch_Template_Enqueue::load_scripts();
     }
 
     public function body(){

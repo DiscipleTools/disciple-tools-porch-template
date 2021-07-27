@@ -11,9 +11,6 @@ class Disciple_Tools_Porch_Template_Landing extends DT_Magic_Url_Base
     public $post_type = 'landing';
     public $meta_key = 'l_p_magic_key';
 
-    public $allowed_scripts = [ 'foundations-js' ];
-    public $allowed_styles = ['foundations-css', 'porch-style-css', 'genesis-blocks-style-css' ];
-
     private static $_instance = null;
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -38,17 +35,28 @@ class Disciple_Tools_Porch_Template_Landing extends DT_Magic_Url_Base
         /**
          * tests magic link parts are registered and have valid elements
          */
-//        if ( !$this->check_parts_match( false ) ){
-//            return;
-//        }
+        if ( !$this->check_parts_match( false ) ){
+            return;
+        }
 
         // load if valid url
         add_action( 'dt_blank_body', [ $this, 'body' ] ); // body for no post key
-        add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
+
+        require_once( trailingslashit( plugin_dir_path( __DIR__ ) ) . 'framework/enqueue.php');
+        add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css'], 10, 1 );
+        add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js'], 10, 1 );
+        add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ], 99 );
     }
 
-    public function scripts(){
-        require_once( trailingslashit( plugin_dir_path( __DIR__ ) ) . 'framework/enqueue.php');
+    public function dt_magic_url_base_allowed_js( $allowed_js ) {
+        return Disciple_Tools_Porch_Template_Enqueue::load_allowed_scripts();
+    }
+
+    public function dt_magic_url_base_allowed_css( $allowed_css ) {
+        return Disciple_Tools_Porch_Template_Enqueue::load_allowed_styles();
+    }
+
+    public function wp_enqueue_scripts() {
         Disciple_Tools_Porch_Template_Enqueue::load_scripts();
     }
 
@@ -92,8 +100,6 @@ class Disciple_Tools_Porch_Template_Landing extends DT_Magic_Url_Base
                         jQuery('#error').html(e)
                     })
             }
-
-
         </script>
         <?php
         return true;

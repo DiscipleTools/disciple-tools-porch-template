@@ -73,6 +73,7 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
                 "description" => "Administrates porch public pages",
                 "permissions" => [
                     'wp_api_allowed_user' => true,
+                    'read' => true,
                 ]
             ];
         }
@@ -110,13 +111,25 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
                 'exclude_from_search' => true,
                 'show_ui' => true,
                 'query_var' => false,
+                'show_in_nav_menus' => true,
                 'menu_position' => 60, /* this is what order you want it to appear in on the left hand side menu */
                 'menu_icon' => 'dashicons-book', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
                 'rewrite' => false, /* you can specify its url slug */
                 'has_archive' => false, /* you can rename the slug here */
-                'capability_type' => 'post',
+                'capabilities' => [
+                    'create_posts'        => 'create_'.$this->post_type,
+                    'edit_post'           => 'edit_'.$this->post_type, // needed for bulk edit
+                    'read_post'           => 'read_'.$this->post_type,
+                    'delete_post'         => 'delete_'.$this->post_type, // delete individual post
+                    'delete_others_posts' => 'delete_others_'.$this->post_type.'s',
+                    'delete_posts'        => 'delete_'.$this->post_type.'s', // bulk delete posts
+                    'edit_posts'          => 'edit'.$this->post_type.'s', //menu link in WP Admin
+                    'edit_others_posts'   => 'edit_others_'.$this->post_type.'s',
+                    'publish_posts'       => 'publish_'.$this->post_type.'s',
+                    'read_private_posts'  => 'read_private_'.$this->post_type.'s',
+                ],
+                'capability_type' => $this->post_type,
                 'hierarchical' => true,
-                /* the next one is important, it tells what's enabled in the post editor */
                 'show_in_rest' => true,
                 'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions'  )
             ) /* end of options */

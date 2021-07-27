@@ -26,4 +26,23 @@ class Disciple_Tools_Porch_Template_Enqueue
             return $html;
         }, 10, 2 );
     }
+
+    public static function load_allowed_scripts() {
+        return [
+            'jquery',
+            'jquery-ui',
+            'foundations-js'
+        ];
+    }
+
+    public static function load_allowed_styles() {
+        return [
+            'jquery-ui-site-css',
+            'foundations-css',
+            'porch-style-css',
+            'genesis-blocks-style-css',
+            'animate-css',
+            'themeisle-gutenberg-animation-style'
+        ];
+    }
 }

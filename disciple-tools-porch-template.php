@@ -95,6 +95,7 @@ class Disciple_Tools_Porch_Template {
 
     private function __construct() {
 
+
         // home page
         require_once( 'home/home.php' );
 
@@ -104,6 +105,9 @@ class Disciple_Tools_Porch_Template {
 
         // private pages
         require_once('pages-private/profile.php');
+
+
+        add_action( 'init', [ $this, 'register_site_menu' ] );
 
         $this->i18n();
 
@@ -115,6 +119,10 @@ class Disciple_Tools_Porch_Template {
 
             add_filter( 'plugin_row_meta', [ $this, 'plugin_description_links' ], 10, 4 );
         }
+    }
+
+    public function register_site_menu() {
+        register_nav_menu('header-menu',__( 'Porch Template Header Menu' ));
     }
 
     /**
