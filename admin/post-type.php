@@ -48,37 +48,14 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
         $this->taxonomies = $taxonomies;
 
         add_action( 'init', [ $this, 'register_post_type' ] );
-        add_filter( 'dt_allow_rest_access', [ $this, 'dt_allow_rest_access'] ); // allows access
-        add_filter( 'dt_set_roles_and_permissions', [ $this, 'dt_set_roles_and_permissions' ], 50, 1 );
-
         add_action( 'transition_post_status', [ $this, 'transition_post'], 10, 3 );
+
         if ( is_admin() ){
             add_filter( 'manage_'.$this->post_type.'_posts_columns', [ $this, 'set_custom_edit_columns' ] );
             add_action( 'manage_'.$this->post_type.'_posts_custom_column' , [ $this, 'custom_column' ], 10, 2 );
         }
 
     } // End __construct()
-
-    public function dt_allow_rest_access( $authorized ) {
-        if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'wp/v2' ) !== false && user_can( get_current_user_id(), 'wp_api_allowed_user' ) ) {
-            $authorized = true;
-        }
-        return $authorized;
-    }
-
-    public function dt_set_roles_and_permissions( $expected_roles ){
-        if ( !isset( $expected_roles["porch_admin"] ) ){
-            $expected_roles["porch_admin"] = [
-                "label" => __( 'Porch Admin', 'disciple_tools' ),
-                "description" => "Administrates porch public pages",
-                "permissions" => [
-                    'wp_api_allowed_user' => true,
-                    'read' => true,
-                ]
-            ];
-        }
-        return $expected_roles;
-    }
 
     /**
      * Register the post type.
@@ -138,7 +115,7 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
 
 
     public function transition_post( $new_status, $old_status, $post ) {
-        if( 'publish' == $new_status && 'publish' == $old_status && $post->post_type == 'landing' ) {
+        if( 'publish' == $new_status && $post->post_type == 'landing' ) {
 
             $post_id = $post->ID;
             $slug = trim( strtolower( $post->post_title ) );

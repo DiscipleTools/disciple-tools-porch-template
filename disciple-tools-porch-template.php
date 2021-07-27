@@ -94,24 +94,23 @@ class Disciple_Tools_Porch_Template {
     }
 
     private function __construct() {
-
+        require_once('admin/post-type.php');
+        require_once('admin/roles-and-permissions.php');
+        add_action( 'init', [ $this, 'register_site_menu' ] );
 
         // home page
         require_once( 'home/home.php' );
 
         // public pages
-        require_once('pages-public/post-type.php');
         require_once('pages-public/landing.php');
 
         // private pages
         require_once('pages-private/profile.php');
 
 
-        add_action( 'init', [ $this, 'register_site_menu' ] );
-
         $this->i18n();
 
-        if ( is_admin() ) { // adds links to the plugin description area in the plugin admin list.
+        if ( is_admin() ) {
             require_once( 'admin/require-plugins/class-tgm-plugin-activation.php' );
             require_once( 'admin/require-plugins/config-required-plugins.php' );
 
