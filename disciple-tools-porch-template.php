@@ -64,19 +64,6 @@ function disciple_tools_porch_template() {
 }
 add_action( 'after_setup_theme', 'disciple_tools_porch_template', 20 );
 
-add_action( 'init', function (){
-    /**
-     * We want to make sure migrations are run on updates.
-     * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
-     */
-    try {
-        require_once( plugin_dir_path( __FILE__ ) . '/admin/class-migration-engine.php' );
-        Disciple_Tools_Porch_Template_Migration_Engine::migrate( Disciple_Tools_Porch_Template_Migration_Engine::$migration_number );
-    } catch ( Throwable $e ) {
-        new WP_Error( 'migration_error', 'Migration engine failed to migrate.', [ "message" => $e->getMessage() ] );
-    }
-} );
-
 /**
  * Singleton class for setting up the plugin.
  *
@@ -94,34 +81,31 @@ class Disciple_Tools_Porch_Template {
     }
 
     private function __construct() {
-        require_once('admin/post-type.php');
-        require_once('admin/roles-and-permissions.php');
-        add_action( 'init', [ $this, 'register_site_menu' ] );
 
-        // home page
-        require_once( 'home/home.php' );
 
-        // public pages
-        require_once('pages-public/landing.php');
+        $template_landing_pages = true;
+        $template_one_page_dark = true;
+
+
+
+        if ( $template_landing_pages ) {
+            require_once('template-landing-pages/loader.php');
+        }
+        else if ( $template_one_page_dark ) {
+            require_once('template-one-page-dark/loader.php');
+        }
+
+
 
         // private pages
         require_once('pages-private/profile.php');
 
-
-        $this->i18n();
-
         if ( is_admin() ) {
             require_once( 'admin/require-plugins/class-tgm-plugin-activation.php' );
             require_once( 'admin/require-plugins/config-required-plugins.php' );
-
-            require_once( 'admin/admin-menu-and-tabs.php');
-
             add_filter( 'plugin_row_meta', [ $this, 'plugin_description_links' ], 10, 4 );
         }
-    }
-
-    public function register_site_menu() {
-        register_nav_menu('header-menu',__( 'Porch Template Header Menu' ));
+        $this->i18n();
     }
 
     /**
@@ -130,6 +114,7 @@ class Disciple_Tools_Porch_Template {
      */
     public function plugin_description_links( $links_array, $plugin_file_name, $plugin_data, $status ) {
         if ( strpos( $plugin_file_name, basename( __FILE__ ) ) ) {
+
             // You can still use `array_unshift()` to add links at the beginning.
             $links_array[] = '<a href="https://disciple.tools">Disciple.Tools Community</a>'; // @todo replace with your links.
         }
