@@ -55,7 +55,7 @@ class Disciple_Tools_Porch_Template_Landing_Roles
                     'read_private_'.$this->post_type.'s' => true,
 
                     // edit theme menu
-//                    'edit_theme_options' => true,
+                    'edit_theme_options' => true,
 
                     'edit_files' => true,
                     'upload_files' => true,
@@ -69,8 +69,8 @@ class Disciple_Tools_Porch_Template_Landing_Roles
 
     public function hide_menu() {
         if ( current_user_can('porch_admin' ) && ! current_user_can('manage_dt' ) ) {
-//            remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
-//            remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
+            remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
+            remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
         }
     }
     public function hide_customizer() {
