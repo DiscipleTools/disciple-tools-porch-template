@@ -103,8 +103,6 @@ class Disciple_Tools_Porch_Template_Landing extends DT_Magic_Url_Base
     }
 
     public function body(){
-        // nav
-        require_once( 'nav.php' );
         // body
 
         if ( isset( $this->parts['post_id'] ) && ! empty( $this->parts['post_id'] ) ) {

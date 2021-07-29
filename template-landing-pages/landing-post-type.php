@@ -89,7 +89,7 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
                 'show_ui' => true,
                 'query_var' => false,
                 'show_in_nav_menus' => true,
-                'menu_position' => 60, /* this is what order you want it to appear in on the left hand side menu */
+                'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */
                 'menu_icon' => 'dashicons-book', /* the icon for the custom post type menu. uses built-in dashicons (CSS class name) */
                 'rewrite' => false, /* you can specify its url slug */
                 'has_archive' => false, /* you can rename the slug here */

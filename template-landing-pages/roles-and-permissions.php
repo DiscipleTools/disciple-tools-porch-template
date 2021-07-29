@@ -26,8 +26,6 @@ class Disciple_Tools_Porch_Template_Landing_Roles
     public function __construct() {
         add_filter( 'dt_set_roles_and_permissions', [ $this, 'dt_set_roles_and_permissions' ], 50, 1 );
         add_filter( 'dt_allow_rest_access', [ $this, 'dt_allow_rest_access'] ); // allows access
-        add_action( 'admin_head', [ $this, 'hide_menu' ] );
-        add_action( 'admin_menu', [ $this, 'hide_customizer' ], 99 );
     }
 
     public function dt_set_roles_and_permissions( $expected_roles ){
@@ -54,36 +52,12 @@ class Disciple_Tools_Porch_Template_Landing_Roles
                     'publish_'.$this->post_type.'s' => true,
                     'read_private_'.$this->post_type.'s' => true,
 
-                    // edit theme menu
-                    'edit_theme_options' => true,
-
                     'edit_files' => true,
                     'upload_files' => true,
                 ]
             ];
-
-
         }
         return $expected_roles;
-    }
-
-    public function hide_menu() {
-        if ( current_user_can('porch_admin' ) && ! current_user_can('manage_dt' ) ) {
-            remove_submenu_page( 'themes.php', 'themes.php' ); // hide the theme selection submenu
-            remove_submenu_page( 'themes.php', 'widgets.php' ); // hide the widgets submenu
-        }
-    }
-    public function hide_customizer() {
-        if ( current_user_can('porch_admin' ) && ! current_user_can('manage_dt' ) ) {
-            global $submenu;
-            if ( isset( $submenu[ 'themes.php' ] ) ) {
-                foreach ( $submenu[ 'themes.php' ] as $index => $menu_item ) {
-                    if ( in_array( 'customize', $menu_item ) ) {
-                        unset( $submenu[ 'themes.php' ][ $index ] );
-                    }
-                }
-            }
-        }
     }
 
     public function dt_allow_rest_access( $authorized ) {

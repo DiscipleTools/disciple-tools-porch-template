@@ -83,8 +83,9 @@ class Disciple_Tools_Porch_Template {
     private function __construct() {
 
 
-        $template_landing_pages = true;
+        $template_landing_pages = false;
         $template_one_page_dark = true;
+        $template_user_page = true;
 
 
 
@@ -95,14 +96,13 @@ class Disciple_Tools_Porch_Template {
             require_once('template-one-page-dark/loader.php');
         }
 
-
-
-        // private pages
-        require_once('pages-private/profile.php');
+        if ( $template_user_page ) {
+            require_once('template-user-page/loader.php');
+        }
 
         if ( is_admin() ) {
             require_once( 'admin/require-plugins/class-tgm-plugin-activation.php' );
-            require_once( 'admin/require-plugins/config-required-plugins.php' );
+            require_once( 'admin/config-required-plugins.php' );
             add_filter( 'plugin_row_meta', [ $this, 'plugin_description_links' ], 10, 4 );
         }
         $this->i18n();
