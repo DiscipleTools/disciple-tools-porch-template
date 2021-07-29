@@ -31,8 +31,10 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
 
             // register url and access
             add_action( "template_redirect", [ $this, 'theme_redirect' ] );
-            add_filter( 'dt_blank_access', function (){ return true;}, 100, 1 ); // allows non-logged in visit
-            add_filter( 'dt_allow_non_login_access', function (){ return true; }, 100, 1 );
+            add_filter( 'dt_blank_access', function (){ return true;
+            }, 100, 1 ); // allows non-logged in visit
+            add_filter( 'dt_allow_non_login_access', function (){ return true;
+            }, 100, 1 );
 
             // header content
             add_filter( "dt_blank_title", [ $this, "page_tab_title" ] ); // adds basic title to browser tab
@@ -46,8 +48,8 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
             add_action( 'dt_blank_body', [ $this, 'body' ] ); // body for no post key
 
             require_once( 'enqueue.php' );
-            add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css'], 10, 1 );
-            add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js'], 10, 1 );
+            add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css' ], 10, 1 );
+            add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js' ], 10, 1 );
             add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ], 99 );
         }
     }
@@ -72,13 +74,13 @@ class Disciple_Tools_Porch_Template_Home extends DT_Magic_Url_Base
 
     public function body(){
         // body
-        $my_postid = get_option('dt_porch_landing_page');
+        $my_postid = get_option( 'dt_porch_landing_page' );
         $post_status = get_post_status( $my_postid );
         if ( 'publish' === $post_status ) {
-            $content_post = get_post($my_postid);
+            $content_post = get_post( $my_postid );
             $content = $content_post->post_content;
-            $content = apply_filters('the_content', $content);
-            $content = str_replace(']]>', ']]&gt;', $content);
+            $content = apply_filters( 'the_content', $content );
+            $content = str_replace( ']]>', ']]&gt;', $content );
             echo $content;
         }
     }

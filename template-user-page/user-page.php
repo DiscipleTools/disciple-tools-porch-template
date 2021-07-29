@@ -47,8 +47,8 @@ class Disciple_Tools_Porch_Template_User_Page extends DT_Magic_Url_Base {
         // load if valid url
         add_action( 'dt_blank_body', [ $this, 'body' ] ); // body for no post key
 
-        add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css'], 10, 1 );
-        add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js'], 10, 1 );
+        add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css' ], 10, 1 );
+        add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js' ], 10, 1 );
         add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ], 99 );
     }
 
@@ -79,10 +79,10 @@ class Disciple_Tools_Porch_Template_User_Page extends DT_Magic_Url_Base {
             }
             return $html;
         }, 10, 2 );
-        wp_enqueue_style( 'porch-user-style-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/style.css', array('foundations-css'), filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'css/style.css' ), 'all' );
+        wp_enqueue_style( 'porch-user-style-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/style.css', array( 'foundations-css' ), filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'css/style.css' ), 'all' );
 
         // javascript
-        wp_register_script( 'foundations-js', 'https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js', ['jquery'], '6.6.3' );
+        wp_register_script( 'foundations-js', 'https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js', [ 'jquery' ], '6.6.3' );
         wp_enqueue_script( 'foundations-js' );
         add_filter( 'style_loader_tag', function( $html, $handle ) {
             if ( 'foundations-js' === $handle ) {
@@ -91,7 +91,7 @@ class Disciple_Tools_Porch_Template_User_Page extends DT_Magic_Url_Base {
             return $html;
         }, 10, 2 );
 
-        wp_enqueue_script( 'porch-user-site-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/site.js', ['jquery'], filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'js/site.js' ) );
+        wp_enqueue_script( 'porch-user-site-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/site.js', [ 'jquery' ], filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'js/site.js' ) );
     }
 
     public function footer_javascript(){
@@ -112,7 +112,7 @@ class Disciple_Tools_Porch_Template_User_Page extends DT_Magic_Url_Base {
     }
 
     public function body(){
-        require_once('user-page-template.php');
+        require_once( 'user-page-template.php' );
     }
 
     /**

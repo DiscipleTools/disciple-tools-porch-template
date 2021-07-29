@@ -25,7 +25,7 @@ class Disciple_Tools_Porch_Template_Landing_Roles
 
     public function __construct() {
         add_filter( 'dt_set_roles_and_permissions', [ $this, 'dt_set_roles_and_permissions' ], 50, 1 );
-        add_filter( 'dt_allow_rest_access', [ $this, 'dt_allow_rest_access'] ); // allows access
+        add_filter( 'dt_allow_rest_access', [ $this, 'dt_allow_rest_access' ] ); // allows access
     }
 
     public function dt_set_roles_and_permissions( $expected_roles ){

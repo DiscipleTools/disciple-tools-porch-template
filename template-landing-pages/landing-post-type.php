@@ -48,11 +48,11 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
         $this->taxonomies = $taxonomies;
 
         add_action( 'init', [ $this, 'register_post_type' ] );
-        add_action( 'transition_post_status', [ $this, 'transition_post'], 10, 3 );
+        add_action( 'transition_post_status', [ $this, 'transition_post' ], 10, 3 );
 
         if ( is_admin() ){
             add_filter( 'manage_'.$this->post_type.'_posts_columns', [ $this, 'set_custom_edit_columns' ] );
-            add_action( 'manage_'.$this->post_type.'_posts_custom_column' , [ $this, 'custom_column' ], 10, 2 );
+            add_action( 'manage_'.$this->post_type.'_posts_custom_column', [ $this, 'custom_column' ], 10, 2 );
         }
 
     } // End __construct()
@@ -108,14 +108,14 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
                 'capability_type' => $this->post_type,
                 'hierarchical' => true,
                 'show_in_rest' => true,
-                'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions'  )
+                'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'revisions' )
             ) /* end of options */
         ); /* end of register post type */
     } // End register_post_type()
 
 
     public function transition_post( $new_status, $old_status, $post ) {
-        if( 'publish' == $new_status && $post->post_type == 'landing' ) {
+        if ( 'publish' == $new_status && $post->post_type == 'landing' ) {
 
             $post_id = $post->ID;
             $slug = trim( strtolower( $post->post_title ) );
@@ -130,18 +130,18 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
             $slug = str_replace( "/", '', $slug );
             $slug = urlencode( $slug );
 
-            $current_public_key = get_post_meta($post_id, 'l_p_magic_key', true );
+            $current_public_key = get_post_meta( $post_id, 'l_p_magic_key', true );
             if ( $slug !== $current_public_key ) {
                 update_post_meta( $post_id, 'l_p_magic_key', $slug );
                 global $wpdb;
-                $wpdb->query($wpdb->prepare( "UPDATE $wpdb->posts SET guid = %s WHERE ID = %s;", trailingslashit( site_url() ) . 'l/p/' . $slug , $post_id) );
+                $wpdb->query( $wpdb->prepare( "UPDATE $wpdb->posts SET guid = %s WHERE ID = %s;", trailingslashit( site_url() ) . 'l/p/' . $slug, $post_id ) );
             }
         }
     }
 
     // Add the custom columns to the book post type:
 
-    function set_custom_edit_columns($columns) {
+    function set_custom_edit_columns( $columns) {
         unset( $columns['author'] );
         $columns['url'] = 'URL';
 
@@ -153,7 +153,7 @@ class Disciple_Tools_Porch_Template_Landing_Post_Type
     function custom_column( $column, $post_id ) {
         switch ( $column ) {
             case 'url' :
-                $public_key = get_post_meta( $post_id , 'l_p_magic_key' , true );
+                $public_key = get_post_meta( $post_id, 'l_p_magic_key', true );
                 echo '<a href="' . trailingslashit( site_url() ) . 'l/p/' . $public_key . '">'. trailingslashit( site_url() ) . 'l/p/' . $public_key .'</a>';
                 break;
 

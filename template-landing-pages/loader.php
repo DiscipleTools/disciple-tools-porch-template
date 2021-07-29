@@ -13,7 +13,7 @@ if ( is_admin() ) {
     $required_admin_files = scandir( plugin_dir_path( __FILE__ ) . '/admin' );
     foreach ( $required_admin_files as $file ) {
         if ( substr( $file, -4, '4' ) === '.php' ) {
-            require_once(trailingslashit(plugin_dir_path(__FILE__)) . '/admin/' . $file);
+            require_once( trailingslashit( plugin_dir_path( __FILE__ ) ) . '/admin/' . $file );
         }
     }
 }

@@ -14,7 +14,7 @@ class Pray4Movement_Site_Porch_Admin {
         }
 
         add_filter( 'dt_remove_menu_pages', [ $this, 'add_media_tab' ], 10, 1 );
-        add_filter('upload_mimes', [ $this, 'add_additional_mime_types' ], 1, 1);
+        add_filter( 'upload_mimes', [ $this, 'add_additional_mime_types' ], 1, 1 );
 
         if ( '/wp-admin/upload.php' === $_SERVER['REQUEST_URI'] ) {
             $this->p4m_add_media_page_warning();
@@ -29,7 +29,7 @@ class Pray4Movement_Site_Porch_Admin {
         }
         return $list;
     }
-    public function add_additional_mime_types($mime_types){
+    public function add_additional_mime_types( $mime_types){
         $mime_types['svg'] = 'image/svg+xml'; //Adding svg extension
         $mime_types['psd'] = 'image/vnd.adobe.photoshop'; //Adding photoshop files
         $mime_types['pdf'] = 'application/pdf'; //Adding photoshop files
@@ -95,85 +95,85 @@ class Pray4Movement_Site_Porch_Admin {
 
         $defaults = DT_Posts::get_post_field_settings( 'contacts' );
 
-        $content = get_option('landing_content', [] );
+        $content = get_option( 'landing_content', [] );
         if ( isset( $_POST['landing_page'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['landing_page'] ) ), 'landing_page'.get_current_user_id() ) ) {
 
-            dt_write_log($_POST);
+            dt_write_log( $_POST );
 
-            if ( isset( $_POST['title'] ) )  {
+            if ( isset( $_POST['title'] ) ) {
                 $content['title'] = sanitize_text_field( wp_unslash( $_POST['title'] ) );
             }
-            if ( isset( $_POST['description'] ) )  {
+            if ( isset( $_POST['description'] ) ) {
                 $content['description'] = sanitize_text_field( wp_unslash( $_POST['description'] ) );
             }
-            if ( isset( $_POST['location'] ) )  {
+            if ( isset( $_POST['location'] ) ) {
                 $content['location'] = sanitize_text_field( wp_unslash( $_POST['location'] ) );
             }
-            if ( isset( $_POST['logo_url'] ) )  {
+            if ( isset( $_POST['logo_url'] ) ) {
                 $content['logo_url'] = sanitize_text_field( wp_unslash( $_POST['logo_url'] ) );
             }
-            if ( isset( $_POST['background_image_url'] ) )  {
+            if ( isset( $_POST['background_image_url'] ) ) {
                 $content['background_image_url'] = sanitize_text_field( wp_unslash( $_POST['background_image_url'] ) );
             }
-            if ( isset( $_POST['facebook_url'] ) )  {
+            if ( isset( $_POST['facebook_url'] ) ) {
                 $content['facebook_url'] = sanitize_text_field( wp_unslash( $_POST['facebook_url'] ) );
             }
-            if ( isset( $_POST['facebook_events_url'] ) )  {
+            if ( isset( $_POST['facebook_events_url'] ) ) {
                 $content['facebook_events_url'] = sanitize_text_field( wp_unslash( $_POST['facebook_events_url'] ) );
             }
-            if ( isset( $_POST['instagram_url'] ) )  {
+            if ( isset( $_POST['instagram_url'] ) ) {
                 $content['instagram_url'] = sanitize_text_field( wp_unslash( $_POST['instagram_url'] ) );
             }
-            if ( isset( $_POST['twitter_url'] ) )  {
+            if ( isset( $_POST['twitter_url'] ) ) {
                 $content['twitter_url'] = sanitize_text_field( wp_unslash( $_POST['twitter_url'] ) );
             }
-            if ( isset( $_POST['mailchimp_form_url'] ) )  {
+            if ( isset( $_POST['mailchimp_form_url'] ) ) {
                 $content['mailchimp_form_url'] = sanitize_text_field( wp_unslash( $_POST['mailchimp_form_url'] ) );
             }
-            if ( isset( $_POST['mailchimp_form_hidden_id'] ) )  {
+            if ( isset( $_POST['mailchimp_form_hidden_id'] ) ) {
                 $content['mailchimp_form_hidden_id'] = sanitize_text_field( wp_unslash( $_POST['mailchimp_form_hidden_id'] ) );
             }
-            if ( isset( $_POST['contact_form'] ) )  {
+            if ( isset( $_POST['contact_form'] ) ) {
                 $content['contact_form'] = wp_unslash( $_POST['contact_form'] );
             }
 
-            if ( isset( $_POST['samples_section'] ) )  {
+            if ( isset( $_POST['samples_section'] ) ) {
                 $content['samples_section'] = sanitize_text_field( wp_unslash( $_POST['samples_section'] ) );
             }
-            if ( isset( $_POST['stats_population'] ) )  {
+            if ( isset( $_POST['stats_population'] ) ) {
                 $content['stats_population'] = sanitize_text_field( wp_unslash( $_POST['stats_population'] ) );
             }
-            if ( isset( $_POST['stats_cities'] ) )  {
+            if ( isset( $_POST['stats_cities'] ) ) {
                 $content['stats_cities'] = sanitize_text_field( wp_unslash( $_POST['stats_cities'] ) );
             }
-            if ( isset( $_POST['stats_trainings'] ) )  {
+            if ( isset( $_POST['stats_trainings'] ) ) {
                 $content['stats_trainings'] = sanitize_text_field( wp_unslash( $_POST['stats_trainings'] ) );
             }
-            if ( isset( $_POST['stats_churches'] ) )  {
+            if ( isset( $_POST['stats_churches'] ) ) {
                 $content['stats_churches'] = sanitize_text_field( wp_unslash( $_POST['stats_churches'] ) );
             }
-            if ( isset( $_POST['google_analytics'] ) )  {
+            if ( isset( $_POST['google_analytics'] ) ) {
                 $content['google_analytics'] = wp_unslash( $_POST['google_analytics'] );
             }
 
-            if ( isset( $_POST['mailchimp_api_key'] ) )  {
+            if ( isset( $_POST['mailchimp_api_key'] ) ) {
                 $content['mailchimp_api_key'] = sanitize_text_field( wp_unslash( $_POST['mailchimp_api_key'] ) );
             }
-            if ( isset( $_POST['mailchimp_list_id'] ) )  {
+            if ( isset( $_POST['mailchimp_list_id'] ) ) {
                 $content['mailchimp_list_id'] = sanitize_text_field( wp_unslash( $_POST['mailchimp_list_id'] ) );
             }
-            if ( isset( $_POST['status_for_subscriptions'] ) )  {
+            if ( isset( $_POST['status_for_subscriptions'] ) ) {
                 $content['status_for_subscriptions'] = sanitize_text_field( wp_unslash( $_POST['status_for_subscriptions'] ) );
             }
-            if ( isset( $_POST['source_for_subscriptions'] ) )  {
+            if ( isset( $_POST['source_for_subscriptions'] ) ) {
                 $content['source_for_subscriptions'] = sanitize_text_field( wp_unslash( $_POST['source_for_subscriptions'] ) );
             }
-            if ( isset( $_POST['assigned_user_for_followup'] ) )  {
+            if ( isset( $_POST['assigned_user_for_followup'] ) ) {
                 $content['assigned_user_for_followup'] = sanitize_text_field( wp_unslash( $_POST['assigned_user_for_followup'] ) );
             }
 
             update_option( 'landing_content', $content, true );
-            $content = get_option('landing_content');
+            $content = get_option( 'landing_content' );
         }
         ?>
         <div class="wrap">
@@ -184,7 +184,7 @@ class Pray4Movement_Site_Porch_Admin {
 
                         <!-- Box -->
                         <form method="post">
-                            <?php wp_nonce_field('landing_page'.get_current_user_id(), 'landing_page' ) ?>
+                            <?php wp_nonce_field( 'landing_page'.get_current_user_id(), 'landing_page' ) ?>
                             <table class="widefat striped">
                                 <thead>
                                 <tr>

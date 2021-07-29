@@ -27,7 +27,7 @@ class Disciple_Tools_Porch_Template_Media_Tab {
         if ( '/wp-admin/upload.php' === $_SERVER['REQUEST_URI'] ) {
             $this->media_page_warning();
         }
-        add_filter('upload_mimes', [ $this, 'add_additional_mime_types' ], 1, 1);
+        add_filter( 'upload_mimes', [ $this, 'add_additional_mime_types' ], 1, 1 );
 
     } // End __construct()
 
@@ -37,7 +37,7 @@ class Disciple_Tools_Porch_Template_Media_Tab {
         }
         return $list;
     }
-    public function add_additional_mime_types($mime_types){
+    public function add_additional_mime_types( $mime_types){
         $mime_types['svg'] = 'image/svg+xml'; //Adding svg extension
         $mime_types['psd'] = 'image/vnd.adobe.photoshop'; //Adding photoshop files
         $mime_types['pdf'] = 'application/pdf'; //Adding photoshop files

@@ -43,8 +43,8 @@ class Disciple_Tools_Porch_Template_Landing extends DT_Magic_Url_Base
         add_action( 'dt_blank_body', [ $this, 'body' ] ); // body for no post key
 
         require_once( 'enqueue.php' );
-        add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css'], 10, 1 );
-        add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js'], 10, 1 );
+        add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css' ], 10, 1 );
+        add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js' ], 10, 1 );
         add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ], 99 );
     }
 
@@ -109,10 +109,10 @@ class Disciple_Tools_Porch_Template_Landing extends DT_Magic_Url_Base
             $my_postid = $this->parts['post_id'];//This is page id or post id
             $post_status = get_post_status( $my_postid );
             if ( 'publish' === $post_status ) {
-                $content_post = get_post($my_postid);
+                $content_post = get_post( $my_postid );
                 $content = $content_post->post_content;
-                $content = apply_filters('the_content', $content);
-                $content = str_replace(']]>', ']]&gt;', $content);
+                $content = apply_filters( 'the_content', $content );
+                $content = str_replace( ']]>', ']]&gt;', $content );
                 echo $content;
             }
             else {

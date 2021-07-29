@@ -90,14 +90,14 @@ class Disciple_Tools_Porch_Template {
 
 
         if ( $template_landing_pages ) {
-            require_once('template-landing-pages/loader.php');
+            require_once( 'template-landing-pages/loader.php' );
         }
         else if ( $template_one_page_dark ) {
-            require_once('template-one-page-dark/loader.php');
+            require_once( 'template-one-page-dark/loader.php' );
         }
 
         if ( $template_user_page ) {
-            require_once('template-user-page/loader.php');
+            require_once( 'template-user-page/loader.php' );
         }
 
         if ( is_admin() ) {

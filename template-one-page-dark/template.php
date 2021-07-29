@@ -1,6 +1,6 @@
 <?php
 
-$content = get_option('landing_content');
+$content = get_option( 'landing_content' );
 
 ?>
 <script>
@@ -28,7 +28,7 @@ $content = get_option('landing_content');
                 <li><a class="smoothscroll" href="#about" title="about">About</a></li>
                 <li><a class="smoothscroll" href="#values" title="our-plan">Values</a></li>
                 <li><a class="smoothscroll" href="#contact" title="contact">Join Us</a></li>
-                <?php if( $content['sample_section'] ?? 'yes' === 'yes' ) : ?>
+                <?php if ( $content['sample_section'] ?? 'yes' === 'yes' ) : ?>
                     <li><a class="smoothscroll" href="#works" title="works">Samples</a></li>
                 <?php endif; ?>
 
@@ -41,17 +41,17 @@ $content = get_option('landing_content');
                 prayer-walk. Above all pray with us to see spiritual life poured out on our state.</p>
 
             <ul class="header-nav__social">
-                <?php if( ! empty( $content['facebook_url'] ?? '') ) : ?>
+                <?php if ( ! empty( $content['facebook_url'] ?? '' ) ) : ?>
                     <li>
                         <a href="<?php echo esc_html( $content['facebook_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener"><i class="fab fa-facebook"></i></a>
                     </li>
                 <?php endif; ?>
-                <?php if( ! empty( $content['twitter_url'] ?? '') ) : ?>
+                <?php if ( ! empty( $content['twitter_url'] ?? '' ) ) : ?>
                     <li>
                         <a href="<?php echo esc_html( $content['twitter_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener"><i class="fab fa-twitter"></i></a>
                     </li>
                 <?php endif; ?>
-                <?php if( ! empty( $content['instagram_url'] ?? '') ) : ?>
+                <?php if ( ! empty( $content['instagram_url'] ?? '' ) ) : ?>
                     <li>
                         <a href="<?php echo esc_html( $content['instagram_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener"><i class="fab fa-instagram"></i></a>
                     </li>
@@ -114,21 +114,21 @@ $content = get_option('landing_content');
                 <span class="home-social-text">Email Guide</span>
             </a>
         </li>
-        <?php if( ! empty( $content['facebook_url'] ?? '') ) : ?>
+        <?php if ( ! empty( $content['facebook_url'] ?? '' ) ) : ?>
         <li><a href="<?php echo esc_html( $content['facebook_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener">
                 <i class="fab fa-facebook"></i>
                 <span class="home-social-text">Facebook</span>
             </a>
         </li>
         <?php endif; ?>
-        <?php if( ! empty( $content['twitter_url'] ?? '') ) : ?>
+        <?php if ( ! empty( $content['twitter_url'] ?? '' ) ) : ?>
         <li><a href="<?php echo esc_html( $content['twitter_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener">
                 <i class="fab fa-twitter"></i>
                 <span class="home-social-text">Twitter</span>
             </a>
         </li>
         <?php endif; ?>
-        <?php if( ! empty( $content['instagram_url'] ?? '') ) : ?>
+        <?php if ( ! empty( $content['instagram_url'] ?? '' ) ) : ?>
         <li><a href="<?php echo esc_html( $content['instagram_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener">
                 <i class="fab fa-instagram"></i>
                 <span class="home-social-text">Instagram</span>
@@ -196,13 +196,13 @@ $content = get_option('landing_content');
                     <p>
                         Our same email challenges can also be followed on social media. Join our online prayer
                         warriors.
-                        <?php if( ! empty( $content['facebook_url'] ?? '') ) : ?>
+                        <?php if ( ! empty( $content['facebook_url'] ?? '' ) ) : ?>
                         <a href="<?php echo esc_html( $content['facebook_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener">Facebook</a>
                         <?php endif; ?>
-                        <?php if( ! empty( $content['twitter_url'] ?? '') ) : ?>
+                        <?php if ( ! empty( $content['twitter_url'] ?? '' ) ) : ?>
                         , <a href="<?php echo esc_html( $content['twitter_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener">Twitter</a>
                         <?php endif; ?>
-                        <?php if( ! empty( $content['instagram_url'] ?? '') ) : ?>
+                        <?php if ( ! empty( $content['instagram_url'] ?? '' ) ) : ?>
                           , and <a href="<?php echo esc_html( $content['instagram_url'] ?? '' ) ?>" target="_blank" rel="noreferrer noopener">Instagram</a>
                         <?php endif; ?>
 
@@ -408,7 +408,7 @@ $content = get_option('landing_content');
             <h3 class="subhead subhead--light">Join Us</h3>
             <h1 class="display-1 display-1--light">(1) Get our email prayer guide</h1>
 
-            <?php if( isset( $content['contact_form'] ) && ! empty( $content['contact_form'] ) ) : ?>
+            <?php if ( isset( $content['contact_form'] ) && ! empty( $content['contact_form'] ) ) : ?>
                 <?php echo $content['contact_form']; ?>
             <?php else : ?>
                 <form id="newsletter-form" action="">
@@ -447,13 +447,13 @@ $content = get_option('landing_content');
         <div class="col-full">
             <h1 class="display-1 display-1--light">(2) Follow on social media</h1>
             <p>
-                <?php if( ! empty( $content['facebook_url'] ?? '') ) : ?>
+                <?php if ( ! empty( $content['facebook_url'] ?? '' ) ) : ?>
                 <button type="button" onclick="location.href = '<?php echo esc_html( $content['facebook_url'] ?? '' ) ?>'"><i class="fab fa-facebook"></i> Facebook</button>
                 <?php endif; ?>
-                <?php if( ! empty( $content['twitter_url'] ?? '') ) : ?>
+                <?php if ( ! empty( $content['twitter_url'] ?? '' ) ) : ?>
                 <button type="button" onclick="location.href = '<?php echo esc_html( $content['twitter_url'] ?? '' ) ?>'"><i class="fab fa-twitter"></i> Twitter</button>
                 <?php endif; ?>
-                <?php if( ! empty( $content['instagram_url'] ?? '') ) : ?>
+                <?php if ( ! empty( $content['instagram_url'] ?? '' ) ) : ?>
                 <button type="button" onclick="location.href = '<?php echo esc_html( $content['instagram_url'] ?? '' ) ?>'"><i class="fab fa-instagram"></i> Instagram</button>
                 <?php endif; ?>
 
@@ -778,7 +778,7 @@ $content = get_option('landing_content');
     }
 </style>
 
-<?php if( $content['sample_section'] ?? 'yes' === 'yes' ) : ?>
+<?php if ( $content['sample_section'] ?? 'yes' === 'yes' ) : ?>
 <!-- works
 ================================================== -->
 <section id="works" class="s-works">
@@ -797,8 +797,8 @@ $content = get_option('landing_content');
                 <div class="item-folio">
 
                     <div class="item-folio__thumb">
-                        <a href="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-dmm1.jpg" class="thumb-link" title="Movement" data-size="800x800">
-                            <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/dmm1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/dmm1.jpg 1x, <?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-dmm1.jpg 2x" alt="">
+                        <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-dmm1.jpg" class="thumb-link" title="Movement" data-size="800x800">
+                            <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/dmm1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/dmm1.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-dmm1.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -826,8 +826,8 @@ $content = get_option('landing_content');
                 <div class="item-folio">
 
                     <div class="item-folio__thumb">
-                        <a href="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-pray.jpg" class="thumb-link" title="Pray" data-size="800x800">
-                            <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/pray.jpg" srcset="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/pray.jpg 1x, <?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-pray.jpg 2x" alt="">
+                        <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-pray.jpg" class="thumb-link" title="Pray" data-size="800x800">
+                            <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/pray.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/pray.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-pray.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -855,8 +855,8 @@ $content = get_option('landing_content');
                 <div class="item-folio">
 
                     <div class="item-folio__thumb">
-                        <a href="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-quote1.jpg" class="thumb-link" title="Woodcraft" data-size="800x800">
-                            <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/quote1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/quote1.jpg 1x, <?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-quote1.jpg 2x" alt="">
+                        <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote1.jpg" class="thumb-link" title="Woodcraft" data-size="800x800">
+                            <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote1.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote1.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -884,8 +884,8 @@ $content = get_option('landing_content');
                 <div class="item-folio">
 
                     <div class="item-folio__thumb">
-                        <a href="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-scripture.jpg" class="thumb-link" title="Liberty" data-size="800x800">
-                            <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/scripture1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/scripture1.jpg 1x, <?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-scripture.jpg 2x" alt="">
+                        <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-scripture.jpg" class="thumb-link" title="Liberty" data-size="800x800">
+                            <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/scripture1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/scripture1.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-scripture.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -914,8 +914,8 @@ $content = get_option('landing_content');
                 <div class="item-folio">
 
                     <div class="item-folio__thumb">
-                        <a href="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-quote4.jpg" class="thumb-link" title="Fuji" data-size="800x800">
-                            <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/quote4.jpg" srcset="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/quote4.jpg 1x, <?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-quote4.jpg 2x" alt="">
+                        <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote4.jpg" class="thumb-link" title="Fuji" data-size="800x800">
+                            <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote4.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote4.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote4.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -943,8 +943,8 @@ $content = get_option('landing_content');
                 <div class="item-folio">
 
                     <div class="item-folio__thumb">
-                        <a href="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-quote3.jpg" class="thumb-link" title="Shutterbug" data-size="800x800">
-                            <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/quote3.jpg" srcset="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/quote3.jpg 1x, <?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/g-quote3.jpg 2x" alt="">
+                        <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote3.jpg" class="thumb-link" title="Shutterbug" data-size="800x800">
+                            <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote3.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote3.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote3.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -984,7 +984,7 @@ $content = get_option('landing_content');
             <div class="col-full testimonials__slider">
 
                 <div class="testimonials__slide">
-                    <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                    <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/user-02.jpg" alt="Author image" class="testimonials__avatar">
                     <p>If we never pray for movement in <?php echo esc_html( $content['location'] ?? '' ) ?>, do we have the right to complain when it isn't happening?</p>
                     <div class="testimonials__author">
                         Dave ~
@@ -993,7 +993,7 @@ $content = get_option('landing_content');
                 </div> <!-- end testimonials__slide -->
 
                 <div class="testimonials__slide">
-                    <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                    <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/user-01.jpg" alt="Author image" class="testimonials__avatar">
                     <p>The American church needs to catch up with the prayer commitment, passion, and priority of the church in Asia and Africa.</p>
                     <div class="testimonials__author">
                         Chris ~
@@ -1002,7 +1002,7 @@ $content = get_option('landing_content');
                 </div> <!-- end testimonials__slide -->
 
                 <div class="testimonials__slide">
-                    <img src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>images/keller.jpg" alt="Author image" class="testimonials__avatar">
+                    <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/keller.jpg" alt="Author image" class="testimonials__avatar">
                     <p>The primary means of revival, that everyone agrees on, is extra-ordinary prayer.</p>
                     <div class="testimonials__author">
                         Tim Keller
@@ -1093,6 +1093,6 @@ Copyright ©<script>document.write(new Date().getFullYear());</script> All right
 
 <!-- Java Script
 ================================================== -->
-<script src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>js/jquery-3.2.1.min.js"></script>
-<script src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>js/plugins.js"></script>
-<script src="<?php echo trailingslashit( plugin_dir_url(__FILE__) ) ?>js/main.js"></script>
+<script src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>js/jquery-3.2.1.min.js"></script>
+<script src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>js/plugins.js"></script>
+<script src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>js/main.js"></script>

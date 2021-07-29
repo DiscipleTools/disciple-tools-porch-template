@@ -124,16 +124,16 @@ class Disciple_Tools_Porch_Template_Tab_General {
 
         if ( isset( $_POST['landing_home'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['landing_home'] ) ), 'landing_home'. get_current_user_id() ) && isset( $_POST['selected_home_page'] ) ) {
             dt_write_log( $_POST );
-            $id = sanitize_text_field( wp_unslash( $_POST['selected_home_page'] ) ) ;
+            $id = sanitize_text_field( wp_unslash( $_POST['selected_home_page'] ) );
             update_option( 'dt_porch_landing_page', $id, true );
         }
 
-        $selected = get_option('dt_porch_landing_page');
-        $list = get_posts([ 'post_type' => 'landing', 'post_status' => 'published', 'numberposts' => -1, 'orderby' => 'post_title', 'order' => 'ASC' ] );
+        $selected = get_option( 'dt_porch_landing_page' );
+        $list = get_posts( [ 'post_type' => 'landing', 'post_status' => 'published', 'numberposts' => -1, 'orderby' => 'post_title', 'order' => 'ASC' ] );
         ?>
         <!-- Box -->
         <form method="post">
-            <?php wp_nonce_field('landing_home'. get_current_user_id(), 'landing_home' ) ?>
+            <?php wp_nonce_field( 'landing_home'. get_current_user_id(), 'landing_home' ) ?>
         <table class="widefat striped">
             <thead>
                 <tr>
@@ -148,7 +148,7 @@ class Disciple_Tools_Porch_Template_Tab_General {
                         <option></option>
                         <?php
                         if ( ! empty( $list ) ) {
-                            foreach( $list as $post_object ) {
+                            foreach ( $list as $post_object ) {
 
                                 if ( $selected == $post_object->ID ) {
                                     ?>
@@ -159,7 +159,6 @@ class Disciple_Tools_Porch_Template_Tab_General {
                                     <option value="<?php echo esc_attr( $post_object->ID ) ?>"><?php echo esc_html( $post_object->post_title ) ?></option>
                                     <?php
                                 }
-
                             }
                         }
                         ?>
