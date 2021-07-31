@@ -93,7 +93,7 @@ class Disciple_Tools_Porch_Template {
             require_once( 'template-landing-pages/loader.php' );
         }
         else if ( $template_one_page_dark ) {
-            require_once( 'template-one-page-dark/loader.php' );
+            require_once('template-one-page-p4m/loader.php');
         }
 
         if ( $template_user_page ) {

@@ -1,6 +1,6 @@
 <?php
 
-$content = get_option( 'landing_content' );
+$content = Disciple_Tools_Porch_Template_One_Page_P4M::get_content_array();
 
 ?>
 <script>
@@ -33,8 +33,6 @@ $content = get_option( 'landing_content' );
                 <?php endif; ?>
 
             </ul>
-
-
 
             <p><?php echo esc_html( $content['title'] ?? '' ) ?> serves as a connection point for anyone with a passion to see a disciple-making movement in
                 <?php echo esc_html( $content['location'] ?? '' ) ?>. Join our email prayer guide, follow us on social media, or join us for a

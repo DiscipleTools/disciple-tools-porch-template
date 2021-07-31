@@ -1,10 +1,19 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
-class Disciple_Tools_Porch_Template_Home
+define( 'ONE_PAGE_P4M_ROOT', 'porch_app' );
+define( 'ONE_PAGE_P4M_TYPE', 'one_page_p4m' );
+define( 'ONE_PAGE_P4M_TOKEN', 'one_page_p4m' ); // must be less than 20 characters
+define( 'ONE_PAGE_P4M_TITLE', 'One Page P4M' );
+
+class Disciple_Tools_Porch_Template_One_Page_P4M extends DT_Magic_Url_Base
 {
-    public $root = "p4m_app";
-    public $type = 'home';
+    public $magic = false;
+    public $parts = false;
+    public $page_title = ONE_PAGE_P4M_TITLE;
+    public $token = ONE_PAGE_P4M_TOKEN;
+    public $root = ONE_PAGE_P4M_ROOT;
+    public $type = ONE_PAGE_P4M_TYPE;
 
     private static $_instance = null;
     public static function instance() {
@@ -15,37 +24,97 @@ class Disciple_Tools_Porch_Template_Home
     } // End instance()
 
     public function __construct() {
+        parent::__construct();
+
+        add_action( 'init', [ $this, 'register_post_type' ] );
+
         /**
          * Loads the REST url and gives authorization for non-logged in visitors.
          */
         add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
         add_filter( 'dt_allow_rest_access', [ $this, 'authorize_url' ], 10, 1 );
 
-        /**
-         * Grabs an empty url at the root of the site and loads the black template.
-         */
         $url = dt_get_url_path();
         if ( empty( $url ) && ! dt_is_rest() ) {
+
+            // register url and access
             add_action( "template_redirect", [ $this, 'theme_redirect' ] );
-            add_filter( 'dt_blank_access', function(){ return true;
-            } );
-            add_filter( 'dt_allow_non_login_access', function(){ return true;
+            add_filter( 'dt_blank_access', function (){ return true;
+            }, 100, 1 ); // allows non-logged in visit
+            add_filter( 'dt_allow_non_login_access', function (){ return true;
             }, 100, 1 );
 
-            add_filter( "dt_blank_title", [ $this, "_browser_tab_title" ] );
+            // header content
+            add_filter( "dt_blank_title", [ $this, "page_tab_title" ] ); // adds basic title to browser tab
+            add_action( 'wp_print_scripts', [ $this, 'print_scripts' ], 1500 ); // authorizes scripts
+            add_action( 'wp_print_styles', [ $this, 'print_styles' ], 1500 ); // authorizes styles
+
+
+            // page content
             add_action( 'dt_blank_head', [ $this, '_header' ] );
             add_action( 'dt_blank_footer', [ $this, '_footer' ] );
             add_action( 'dt_blank_body', [ $this, 'body' ] ); // body for no post key
 
-            // load page elements
-            add_action( 'wp_print_scripts', [ $this, '_print_scripts' ], 1500 );
-            add_action( 'wp_print_styles', [ $this, '_print_styles' ], 1500 );
-
-            add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
+            add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css' ], 10, 1 );
+            add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js' ], 10, 1 );
         }
     }
 
+    public function dt_magic_url_base_allowed_js( $allowed_js ) {
+        return [ 'jquery', 'jquery-ui' ];
+    }
+
+    public function dt_magic_url_base_allowed_css( $allowed_css ) {
+        return [ 'jquery-ui-site-css' ];
+    }
+
+    public function register_post_type() {
+        $args = array(
+            'public'    => false
+        );
+        register_post_type( $this->token, $args );
+    }
+
+    public static function get_content_post_id() {
+        $page = get_page_by_title( ONE_PAGE_P4M_TOKEN, ARRAY_A, ONE_PAGE_P4M_TOKEN );
+        if ( empty( $page ) ) {
+            $args = [
+                'post_title' => ONE_PAGE_P4M_TOKEN,
+                'post_type' => ONE_PAGE_P4M_TOKEN
+            ];
+            $page_id = wp_insert_post($args);
+                } else {
+            $page_id = $page['ID'];
+        }
+        return $page_id;
+    }
+
+    public static function get_content_array() : array {
+        $page_id = self::get_content_post_id();
+        $post_meta = get_post_meta( $page_id, 'landing_content', true );
+
+        if ( false === $post_meta ) {
+            self::update_content_array( [] );
+            return [];
+        }
+
+        if ( ! is_array( $post_meta ) ) {
+            return [];
+        }
+
+        return $post_meta;
+    }
+
+    public static function update_content_array( array $content ) {
+        $page_id = self::get_content_post_id();
+
+        update_post_meta( $page_id, 'landing_content', $content );
+
+        return get_post_meta( $page_id, 'landing_content', true );
+    }
+
     public function _browser_tab_title( $title ){
+        // @todo add via post_type
         $content = get_option( 'landing_content' );
         return $content['title'] ?? '';
     }
@@ -56,7 +125,8 @@ class Disciple_Tools_Porch_Template_Home
         die();
     }
 
-    public function _header(){
+
+    public function header_javascript(){
         ?>
         <?php echo esc_html( $content['google_analytics'] ?? '' ) ?>
 
@@ -65,7 +135,6 @@ class Disciple_Tools_Porch_Template_Home
         <meta charset="utf-8">
         <title><?php echo esc_html( $content['title'] ?? '' ) ?></title>
         <meta name="description" content="<?php echo esc_html( $content['description'] ?? '' ) ?>">
-        <meta name="author" content="<?php echo esc_html( $content['title'] ?? '' ) ?>">
         <meta name="author" content="<?php echo esc_html( $content['title'] ?? '' ) ?>">
 
         <!-- mobile specific metas
@@ -87,6 +156,27 @@ class Disciple_Tools_Porch_Template_Home
         ================================================== -->
         <link rel="shortcut icon" href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>favicon.png" type="image/x-icon">
         <link rel="icon" href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>favicon.png" type="image/x-icon">
+
+        <script>
+            let jsObject = [<?php echo json_encode([
+                'map_key' => DT_Mapbox_API::get_key(),
+                'mirror_url' => dt_get_location_grid_mirror( true ),
+                'theme_uri' => trailingslashit( get_stylesheet_directory_uri() ),
+                'root' => esc_url_raw( rest_url() ),
+                'nonce' => wp_create_nonce( 'wp_rest' ),
+                'parts' => [
+                    'root' => $this->root,
+                    'type' => $this->type,
+                ],
+                'trans' => [
+                    'add' => __( 'Add Magic', 'disciple_tools' ),
+                ],
+            ]) ?>][0]
+
+            jQuery(document).ready(function(){
+                clearInterval(window.fiveMinuteTimer)
+            })
+        </script>
 
         <style>
             .header-logo {
@@ -125,95 +215,15 @@ class Disciple_Tools_Porch_Template_Home
             }
         </style>
         <?php
-        wp_head();
-        $this->header_style();
-        $this->header_javascript();
-    }
-
-    public function header_javascript(){
-        ?>
-        <script>
-            let jsObject = [<?php echo json_encode([
-                'map_key' => DT_Mapbox_API::get_key(),
-                'mirror_url' => dt_get_location_grid_mirror( true ),
-                'theme_uri' => trailingslashit( get_stylesheet_directory_uri() ),
-                'root' => esc_url_raw( rest_url() ),
-                'nonce' => wp_create_nonce( 'wp_rest' ),
-                'parts' => [
-                    'root' => $this->root,
-                    'type' => $this->type,
-                ],
-                'trans' => [
-                    'add' => __( 'Add Magic', 'disciple_tools' ),
-                ],
-            ]) ?>][0]
-
-            jQuery(document).ready(function(){
-                clearInterval(window.fiveMinuteTimer)
-            })
-        </script>
-        <?php
         return true;
     }
 
-    public function scripts() {}
 
-    public function _print_scripts(){
-        // @link /disciple-tools-theme/dt-assets/functions/enqueue-scripts.php
-
-        $allowed_js = apply_filters( 'public_porch_allowed_js', [
-            'jquery',
-            //            'lodash',
-            //            'site-js',
-            //            'shared-functions',
-            //            'mapbox-gl',
-            //            'mapbox-cookie',
-            //            'mapbox-search-widget',
-            //            'google-search-widget',
-            //            'jquery-cookie',
-            //            'jquery-touch-punch',
-        ] );
-
-        global $wp_scripts;
-
-        if ( isset( $wp_scripts ) ){
-            foreach ( $wp_scripts->queue as $key => $item ){
-                if ( ! in_array( $item, $allowed_js ) ){
-                    unset( $wp_scripts->queue[$key] );
-                }
-            }
-        }
-        unset( $wp_scripts->registered['mapbox-search-widget']->extra['group'] );
-    }
-
-    public function _print_styles(){
-        // @link /disciple-tools-theme/dt-assets/functions/enqueue-scripts.php
-        $allowed_css = apply_filters( 'public_porch_allowed_css', [
-            'foundation-css',
-            'jquery-ui-site-css',
-            //            'site-css',
-            //            'mapbox-gl-css',
-        ] );
-
-        global $wp_styles;
-        if ( isset( $wp_styles ) ) {
-            foreach ($wp_styles->queue as $key => $item) {
-                if ( !in_array( $item, $allowed_css )) {
-                    unset( $wp_styles->queue[$key] );
-                }
-            }
-        }
-    }
-
-    public function header_style(){}
 
     public function body(){
         require_once( 'template.php' );
     }
 
-    public function _footer(){
-        wp_footer();
-    }
 
     public function add_api_routes() {
         $namespace = $this->root . '/v1';
@@ -296,7 +306,6 @@ class Disciple_Tools_Porch_Template_Home
         curl_setopt( $ch, CURLOPT_POSTFIELDS, $json );
         $result = curl_exec( $ch );
 
-        dt_write_log( $result );
 
         $httpCode = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
         curl_close( $ch );
@@ -378,4 +387,4 @@ class Disciple_Tools_Porch_Template_Home
         return $data;
     }
 }
-Disciple_Tools_Porch_Template_Home::instance();
+Disciple_Tools_Porch_Template_One_Page_P4M::instance();

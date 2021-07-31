@@ -1,6 +1,10 @@
 <?php
 
 class Pray4Movement_Site_Porch_Admin {
+
+    public $root = ONE_PAGE_P4M_ROOT;
+    public $type = ONE_PAGE_P4M_TYPE;
+
     private static $_instance = null;
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -17,7 +21,7 @@ class Pray4Movement_Site_Porch_Admin {
         add_filter( 'upload_mimes', [ $this, 'add_additional_mime_types' ], 1, 1 );
 
         if ( '/wp-admin/upload.php' === $_SERVER['REQUEST_URI'] ) {
-            $this->p4m_add_media_page_warning();
+            $this->add_media_page_warning();
         }
 
         add_action( 'admin_menu', [ $this, 'admin_menu' ] );
@@ -40,7 +44,7 @@ class Pray4Movement_Site_Porch_Admin {
         return $mime_types;
     }
 
-    public function p4m_add_media_page_warning() {
+    public function add_media_page_warning() {
         ?>
         <div class="notice notice-warning is-dismissible">
             <p>SECURITY WARNING: <BR>ALL IMAGES AND MEDIA FILES ADDED HERE ARE PUBLICLY ACCESSIBLE TO THE INTERNET. <BR>DO NOT STORE SENSITIVE FILES!</p>
@@ -49,11 +53,11 @@ class Pray4Movement_Site_Porch_Admin {
     }
 
     public function admin_menu() {
-        add_menu_page( 'Front Porch', 'Front Porch', 'manage_dt', 'landing_page', [ $this, 'landing_admin_page' ], 'dashicons-admin-generic', 70 );
+        add_menu_page( 'Porch', 'Porch', 'manage_dt', $this->root . '_' . $this->type, [ $this, 'landing_admin_page' ], 'dashicons-admin-generic', 5);
     }
 
     public function landing_admin_page(){
-        $slug = 'landing_page';
+        $slug = $this->root . '_' . $this->type;
 
         if ( !current_user_can( 'manage_options' ) ) { // manage dt is a permission that is specific to Disciple Tools and allows admins, strategists and dispatchers into the wp-admin
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
@@ -69,7 +73,7 @@ class Pray4Movement_Site_Porch_Admin {
 
         ?>
         <div class="wrap">
-            <h2>Pray4Movement Landing Page</h2>
+            <h2>Landing Page</h2>
             <h2 class="nav-tab-wrapper">
                 <a href="<?php echo esc_attr( $link ) . 'settings' ?>"
                    class="nav-tab <?php echo esc_html( ( $tab == 'settings' || !isset( $tab ) ) ? 'nav-tab-active' : '' ); ?>">Settings
@@ -95,7 +99,8 @@ class Pray4Movement_Site_Porch_Admin {
 
         $defaults = DT_Posts::get_post_field_settings( 'contacts' );
 
-        $content = get_option( 'landing_content', [] );
+        $content = Disciple_Tools_Porch_Template_One_Page_P4M::get_content_array();
+
         if ( isset( $_POST['landing_page'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['landing_page'] ) ), 'landing_page'.get_current_user_id() ) ) {
 
             dt_write_log( $_POST );
@@ -172,8 +177,7 @@ class Pray4Movement_Site_Porch_Admin {
                 $content['assigned_user_for_followup'] = sanitize_text_field( wp_unslash( $_POST['assigned_user_for_followup'] ) );
             }
 
-            update_option( 'landing_content', $content, true );
-            $content = get_option( 'landing_content' );
+            $content = Disciple_Tools_Porch_Template_One_Page_P4M::update_content_array( $content );
         }
         ?>
         <div class="wrap">
