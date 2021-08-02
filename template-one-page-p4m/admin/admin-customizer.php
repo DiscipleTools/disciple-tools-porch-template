@@ -99,7 +99,7 @@ class Pray4Movement_Site_Porch_Admin {
 
         $defaults = DT_Posts::get_post_field_settings( 'contacts' );
 
-        $content = Disciple_Tools_Porch_Template_One_Page_P4M::get_content_array();
+        $content = DT_Porch_Template_One_Page_P4M::get_content_array();
 
         if ( isset( $_POST['landing_page'] ) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['landing_page'] ) ), 'landing_page'.get_current_user_id() ) ) {
 
@@ -177,7 +177,7 @@ class Pray4Movement_Site_Porch_Admin {
                 $content['assigned_user_for_followup'] = sanitize_text_field( wp_unslash( $_POST['assigned_user_for_followup'] ) );
             }
 
-            $content = Disciple_Tools_Porch_Template_One_Page_P4M::update_content_array( $content );
+            $content = DT_Porch_Template_One_Page_P4M::update_content_array( $content );
         }
         ?>
         <div class="wrap">

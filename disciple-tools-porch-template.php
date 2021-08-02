@@ -20,8 +20,9 @@
 
 /**
  * @todo replace Porch Template
+ * @todo replace Disciple_Tools_Porch_Template
  * @todo replace disciple-tools-porch-template
- * @todo replace disciple_tools_porch_template
+ * @todo replace dt_porch_template
  */
 
 
@@ -30,14 +31,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Gets the instance of the `Disciple_Tools_Porch_Template` class.
+ * Gets the instance of the `DT_Porch_Template` class.
  *
  * @since  0.1
  * @access public
  * @return object|bool
  */
-function disciple_tools_porch_template() {
-    $disciple_tools_porch_template_required_dt_theme_version = '1.0';
+function dt_porch_template() {
+    $dt_porch_template_required_dt_theme_version = '1.0';
     $wp_theme = wp_get_theme();
     $version = $wp_theme->version;
 
@@ -45,8 +46,8 @@ function disciple_tools_porch_template() {
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
     $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
-    if ( $is_theme_dt && version_compare( $version, $disciple_tools_porch_template_required_dt_theme_version, "<" ) ) {
-        add_action( 'admin_notices', 'disciple_tools_porch_template_hook_admin_notice' );
+    if ( $is_theme_dt && version_compare( $version, $dt_porch_template_required_dt_theme_version, "<" ) ) {
+        add_action( 'admin_notices', 'dt_porch_template_hook_admin_notice' );
         add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
         return false;
     }
@@ -60,9 +61,9 @@ function disciple_tools_porch_template() {
         require_once get_template_directory() . '/dt-core/global-functions.php';
     }
 
-    return Disciple_Tools_Porch_Template::instance();
+    return DT_Porch_Template::instance();
 }
-add_action( 'after_setup_theme', 'disciple_tools_porch_template', 20 );
+add_action( 'after_setup_theme', 'dt_porch_template', 20 );
 
 /**
  * Singleton class for setting up the plugin.
@@ -70,7 +71,7 @@ add_action( 'after_setup_theme', 'disciple_tools_porch_template', 20 );
  * @since  0.1
  * @access public
  */
-class Disciple_Tools_Porch_Template {
+class DT_Porch_Template {
 
     private static $_instance = null;
     public static function instance() {
@@ -82,20 +83,12 @@ class Disciple_Tools_Porch_Template {
 
     private function __construct() {
 
+        // home examples
+        require_once( 'home-templates/loader.php');
+        load_home_template( 8 ); // load templates 1 - 7
 
-        $template_landing_pages = false;
-        $template_one_page_dark = true;
+        // private user page example
         $template_user_page = true;
-
-
-
-        if ( $template_landing_pages ) {
-            require_once( 'template-landing-pages/loader.php' );
-        }
-        else if ( $template_one_page_dark ) {
-            require_once('template-one-page-p4m/loader.php');
-        }
-
         if ( $template_user_page ) {
             require_once( 'template-user-page/loader.php' );
         }
@@ -199,7 +192,7 @@ class Disciple_Tools_Porch_Template {
      * @access public
      */
     public function __call( $method = '', $args = array() ) {
-        _doing_it_wrong( "disciple_tools_porch_template::" . esc_html( $method ), 'Method does not exist.', '0.1' );
+        _doing_it_wrong( "dt_porch_template::" . esc_html( $method ), 'Method does not exist.', '0.1' );
         unset( $method, $args );
         return null;
     }
@@ -207,18 +200,18 @@ class Disciple_Tools_Porch_Template {
 
 
 // Register activation hook.
-register_activation_hook( __FILE__, [ 'Disciple_Tools_Porch_Template', 'activation' ] );
-register_deactivation_hook( __FILE__, [ 'Disciple_Tools_Porch_Template', 'deactivation' ] );
+register_activation_hook( __FILE__, [ 'DT_Porch_Template', 'activation' ] );
+register_deactivation_hook( __FILE__, [ 'DT_Porch_Template', 'deactivation' ] );
 
 
-if ( ! function_exists( 'disciple_tools_porch_template_hook_admin_notice' ) ) {
-    function disciple_tools_porch_template_hook_admin_notice() {
-        global $disciple_tools_porch_template_required_dt_theme_version;
+if ( ! function_exists( 'dt_porch_template_hook_admin_notice' ) ) {
+    function dt_porch_template_hook_admin_notice() {
+        global $dt_porch_template_required_dt_theme_version;
         $wp_theme = wp_get_theme();
         $current_version = $wp_theme->version;
-        $message = "'Disciple Tools - Public Porch Template' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.";
+        $message = "'Disciple Tools - Porch Template' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.";
         if ( $wp_theme->get_template() === "disciple-tools-theme" ){
-            $message .= ' ' . sprintf( esc_html( 'Current Disciple Tools version: %1$s, required version: %2$s' ), esc_html( $current_version ), esc_html( $disciple_tools_porch_template_required_dt_theme_version ) );
+            $message .= ' ' . sprintf( esc_html( 'Current Disciple Tools version: %1$s, required version: %2$s' ), esc_html( $current_version ), esc_html( $dt_porch_template_required_dt_theme_version ) );
         }
         // Check if it's been dismissed...
         if ( ! get_option( 'dismissed-disciple-tools-porch-template', false ) ) { ?>
