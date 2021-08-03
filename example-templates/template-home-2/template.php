@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
     <div class="container">
-        <a class="navbar-brand" href="/">Law</a>
+        <a class="navbar-brand" href="/">Site Name</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="ion-navicon"></i></span>
         </button>
@@ -10,8 +10,8 @@
                 <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#section-why-us">Why</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-practicing-areas">Practicing Areas</a></li>
-                <li class="nav-item"><a class="nav-link" href="#section-attorneys">Attorneys</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-areas">Areas</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-team">Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="#section-testimonials">Testimonials</a></li>
                 <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
             </ul>
@@ -25,9 +25,9 @@
         <div class="row align-items-center justify-content-end">
             <div class="col-md-6  order-md-1">
 
-                <h2 class="heading mb-3">The Law Firm</h2>
-                <div class="sub-heading"><p class="mb-5">A free template by <a href="https://uicookies.com/">uicookies.com</a> for Law Firm</p>
-                    <p><a href="#section-contact" role="button" class="btn smoothscroll pb_outline-light btn-xl pb_font-13 p-4 rounded-0 pb_letter-spacing-2">Free Consultation</a></p>
+                <h2 class="heading mb-3">Site</h2>
+                <div class="sub-heading"><p class="mb-5">Praying for a disciple making movement</p>
+                    <p><a href="#section-contact" role="button" class="btn smoothscroll pb_outline-light btn-xl pb_font-13 p-4 rounded-0 pb_letter-spacing-2">Join Us</a></p>
                 </div>
 
             </div>
@@ -42,13 +42,13 @@
         <div class="row">
             <div class="col-lg-5 pr-md-5 pr-sm-0">
                 <h2 class="mt-0 heading-border-top mb-3 font-weight-normal">Who We Are</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>No one has ever gone into heaven except the one who came from heaven—the Son of Man. Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up, that everyone who believes may have eternal life in him.</p>
                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
             </div>
             <div class="col-lg-7">
                 <div class="images">
-                    <img class="img1 img-fluid" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/600x450_img_2.jpg" alt="free Template by uicookies.com">
-                    <img class="img2" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/800x500_img_1.jpg" alt="free Template by uicookies.com">
+                    <img class="img1 img-fluid" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/600x450_img_2.jpg" alt="image">
+                    <img class="img2" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/800x500_img_1.jpg" alt="image">
                 </div>
             </div>
 
@@ -65,8 +65,8 @@
                 <div class="media pb_media_v2 d-block text-center mb-3">
                     <div class="icon border border-gray rounded-circle d-block mr-3 display-4 mx-auto mb-4"><i class="flaticon text-secondary flaticon-jury"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-20">Group of Lawyers</h3>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <h3 class="mt-0 pb_font-20">Thought 1</h3>
+                        <p>I have spoken to you of earthly things and you do not believe</p>
                     </div>
                 </div>
             </div>
@@ -74,8 +74,8 @@
                 <div class="media pb_media_v2 d-block text-center  mb-3">
                     <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 mx-auto mb-4"><i class="flaticon text-secondary flaticon-law"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-20">No One is Above The Law</h3>
-                        <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                        <h3 class="mt-0 pb_font-20">Thought 2</h3>
+                        <p>The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 <div class="media pb_media_v2 d-block text-center  mb-3">
                     <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 mx-auto mb-4"><i class="flaticon text-secondary flaticon-courthouse"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-20">Hall of Justice</h3>
+                        <h3 class="mt-0 pb_font-20">Thought 3</h3>
                         <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
                     </div>
                 </div>
@@ -98,8 +98,8 @@
 
         <div class="row align-items-center">
             <div class="col-md-12">
-                <h2 class="heading mb-3">Free Consultation</h2>
-                <p class="sub-heading mb-5 pb_color-light-opacity-8">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h2 class="heading mb-3">Join Us</h2>
+                <p class="sub-heading mb-5 pb_color-light-opacity-8">I have spoken to you of earthly things and you do not believe</p>
                 <p><a href="#section-contact" role="button" class="btn smoothscroll pb_outline-light p-3 rounded-0 pb_font-13 pb_letter-spacing-2">Get Started</a></p>
             </div>
         </div>
@@ -113,41 +113,41 @@
         <div class="row justify-content-md-center text-center mb-5">
             <div class="col-lg-7">
                 <h2 class="mt-0 heading-border-top font-weight-normal">Why Us</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>No one has ever gone into heaven except the one who came from heaven—the Son of Man. Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up, that everyone who believes may have eternal life in him.</p>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-7">
                 <div class="images right">
-                    <img class="img1 img-fluid" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/600x450_img_2.jpg" alt="free Template by uicookies.com">
-                    <img class="img2" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/800x500_img_1.jpg" alt="free Template by uicookies.com">
+                    <img class="img1 img-fluid" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/600x450_img_2.jpg" alt="image">
+                    <img class="img2" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/800x500_img_1.jpg" alt="image">
                 </div>
             </div>
             <div class="col-lg-5 pl-md-5 pl-sm-0">
                 <div id="exampleAccordion" class="pb_accordion" data-children=".item">
                     <div class="item">
-                        <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1" class="pb_font-18">Property &amp; Business Law</a>
+                        <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1" class="pb_font-18">Expandable Thought 1</a>
                         <div id="exampleAccordion1" class="collapse show" role="tabpanel">
-                            <p>Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                            <p>The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going.</p>
+                            <p>Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council. He came to Jesus at night and said, "Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him."</p>
                         </div>
                     </div>
                     <div class="item">
-                        <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2" class="pb_font-18">Famimly Law</a>
+                        <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2" class="pb_font-18">Expandable Thought 2</a>
                         <div id="exampleAccordion2" class="collapse" role="tabpanel">
                             <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion3" aria-expanded="false" aria-controls="exampleAccordion3" class="pb_font-18">Commercial Litigation</a>
+                        <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion3" aria-expanded="false" aria-controls="exampleAccordion3" class="pb_font-18">Expandable Thought 3</a>
                         <div id="exampleAccordion3" class="collapse" role="tabpanel">
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                            <p>Very truly I tell you, we speak of what we know, and we testify to what we have seen, but still you people do not accept our testimony. I have spoken to you of earthly things and you do not believe; how then will you believe if I speak of heavenly things?</p>
                         </div>
                     </div>
                     <div class="item">
-                        <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion4" aria-expanded="false" aria-controls="exampleAccordion4" class="pb_font-18">Injury Compensation</a>
+                        <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion4" aria-expanded="false" aria-controls="exampleAccordion4" class="pb_font-18">Expandable Thought 4</a>
                         <div id="exampleAccordion4" class="collapse" role="tabpanel">
-                            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+                            <p>Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council. He came to Jesus at night and said, "Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him."</p>
                         </div>
                     </div>
                 </div>
@@ -164,7 +164,7 @@
             <a href="#" class="link-block">
                 <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
-                    <h2>Criminal Law</h2>
+                    <h2>Reason 1</h2>
                     <p>Read More</p>
                 </div>
             </a>
@@ -173,7 +173,7 @@
             <a href="#" class="link-block">
                 <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
-                    <h2>Migration Law</h2>
+                    <h2>Reason 2</h2>
                     <span>Read More</span>
                 </div>
             </a>
@@ -182,7 +182,7 @@
             <a href="#" class="link-block">
                 <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
-                    <h2>Civil Rights</h2>
+                    <h2>Reason 3</h2>
                     <span>Read More</span>
                 </div>
             </a>
@@ -191,7 +191,7 @@
             <a href="#" class="link-block">
                 <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
-                    <h2>Property Law</h2>
+                    <h2>Reason 4</h2>
                     <span>Read More</span>
                 </div>
             </a>
@@ -200,7 +200,7 @@
             <a href="#" class="link-block">
                 <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_1.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
-                    <h2>Civil Rights</h2>
+                    <h2>Reason 5</h2>
                     <span>Read More</span>
                 </div>
             </a>
@@ -209,7 +209,7 @@
             <a href="#" class="link-block">
                 <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
-                    <h2>State Laws</h2>
+                    <h2>Reason 6</h2>
                     <span>Read More</span>
                 </div>
             </a>
@@ -218,7 +218,7 @@
             <a href="#" class="link-block">
                 <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
-                    <h2>Immigration Laws</h2>
+                    <h2>Reason 7</h2>
                     <span>Read More</span>
                 </div>
             </a>
@@ -229,12 +229,12 @@
 <!-- END section -->
 
 
-<section class="pb_section pb_bg-half" data-section="practicing-areas" id="section-practicing-areas">
+<section class="pb_section pb_bg-half" data-section="areas" id="section-areas">
     <div class="container">
         <div class="row justify-content-md-center text-center mb-5">
             <div class="col-lg-7">
-                <h2 class="mt-0 heading-border-top font-weight-normal">Practicing Areas</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <h2 class="mt-0 heading-border-top font-weight-normal">Areas</h2>
+                <p>Very truly I tell you, we speak of what we know, and we testify to what we have seen, but still you people do not accept our testimony. I have spoken to you of earthly things and you do not believe; how then will you believe if I speak of heavenly things?</p>
             </div>
         </div>
 
@@ -247,10 +247,10 @@
                             <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-handcuffs"></i></div>
-                                <h3 class="font-weight-normal mt-0 mb-4">Criminal Law</h3>
-                                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                                <h3 class="font-weight-normal mt-0 mb-4">Fact 1</h3>
+                                <p>Very truly I tell you, we speak of what we know, and we testify to what we have seen, but still you people do not accept our testimony. I have spoken to you of earthly things and you do not believe; how then will you believe if I speak of heavenly things?</p>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                                <p>Very truly I tell you, we speak of what we know, and we testify to what we have seen, but still you people do not accept our testimony. I have spoken to you of earthly things and you do not believe; how then will you believe if I speak of heavenly things?</p>
                             </div>
                         </div>
                     </div>
@@ -260,10 +260,9 @@
                             <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-wallet"></i></div>
-                                <h3 class="font-weight-normal mt-0 mb-4">Financial Law</h3>
-                                <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-
-                                <p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+                                <h3 class="font-weight-normal mt-0 mb-4">Fact 2</h3>
+                                <p>Very truly I tell you, no one can enter the kingdom of God unless they are born of water and the Spirit. Flesh gives birth to flesh, but the Spirit3:6 Or but spirit gives birth to spirit.</p>
+                                <p>Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council. He came to Jesus at night and said, "Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him."</p>
                             </div>
                         </div>
                     </div>
@@ -273,10 +272,10 @@
                             <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-computer-security"></i></div>
-                                <h3 class="font-weight-normal mt-0 mb-4">Cyber Crime Law</h3>
-                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. And if she hasn’t been rewritten, then they are still using her.</p>
-                                <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+                                <h3 class="font-weight-normal mt-0 mb-4">Fact 3</h3>
+                                <p>The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
+                                <p>Very truly I tell you, no one can enter the kingdom of God unless they are born of water and the Spirit. Flesh gives birth to flesh, but the Spirit3:6 Or but spirit gives birth to spirit.</p>
+                                <p>Very truly I tell you, we speak of what we know, and we testify to what we have seen, but still you people do not accept our testimony. I have spoken to you of earthly things and you do not believe; how then will you believe if I speak of heavenly things? Very truly I tell you, we speak of what we know, and we testify to what we have seen, but still you people do not accept our testimony. I have spoken to you of earthly things and you do not believe; how then will you believe if I speak of heavenly things?</p>
                             </div>
                         </div>
                     </div>
@@ -286,10 +285,10 @@
                             <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-courthouse"></i></div>
-                                <h3 class="font-weight-normal mt-0 mb-4">Real Estate Law</h3>
-                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. And if she hasn’t been rewritten, then they are still using her. Original article: Web Designer Notebook | Text from Dummy Text Generator</p>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. And if she hasn’t been rewritten, then they are still using her.</p>
+                                <h3 class="font-weight-normal mt-0 mb-4">Fact 4</h3>
+                                <p>The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
+                                <p>Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council. He came to Jesus at night and said, "Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him."</p>
+                                <p>Very truly I tell you, no one can enter the kingdom of God unless they are born of water and the Spirit. Flesh gives birth to flesh, but the Spirit3:6 Or but spirit gives birth to spirit.</p>
                             </div>
                         </div>
                     </div>
@@ -299,10 +298,10 @@
                             <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-jury"></i></div>
-                                <h3 class="font-weight-normal mt-0 mb-4">Family Law</h3>
+                                <h3 class="font-weight-normal mt-0 mb-4">Fact 5</h3>
                                 <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. And if she hasn’t been rewritten, then they are still using her.</p>
+                                <p>Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council. He came to Jesus at night and said, "Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him."</p>
+                                <p>Very truly I tell you, no one can enter the kingdom of God unless they are born of water and the Spirit. Flesh gives birth to flesh, but the Spirit3:6 Or but spirit gives birth to spirit.</p>
                             </div>
                         </div>
                     </div>
@@ -315,12 +314,12 @@
 </section>
 <!-- END section -->
 
-<section class="pb_section bg-light bg-image with-overlay" data-section="attorneys" id="section-attorneys" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg)">
+<section class="pb_section bg-light bg-image with-overlay" data-section="attorneys" id="section-team" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg)">
     <div class="container">
         <div class="row justify-content-md-center text-center mb-5">
             <div class="col-lg-7">
                 <h2 class="mt-0 heading-border-top light font-weight-normal text-white">Attorneys</h2>
-                <p class="text-white">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p class="text-white">No one has ever gone into heaven except the one who came from heaven—the Son of Man. Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up, that everyone who believes may have eternal life in him.</p>
             </div>
         </div>
         <div class="row">
@@ -329,7 +328,7 @@
                     <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title mt-0 mb-2">Richard Wilson</h4>
-                        <h6 class="card-subtitle mb-2">Family Lawyer</h6>
+                        <h6 class="card-subtitle mb-2">Disciple-Maker</h6>
                         <p><a href="#">Read Full Bio</a></p>
                     </div>
                 </div>
@@ -339,7 +338,7 @@
                     <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title mt-0 mb-2">Steve White</h4>
-                        <h6 class="card-subtitle mb-2">Financial Lawyer</h6>
+                        <h6 class="card-subtitle mb-2">Disciple-Maker</h6>
                         <p><a href="#">Read Full Bio</a></p>
                     </div>
                 </div>
@@ -349,7 +348,7 @@
                     <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title mt-0 mb-2">Ryan David</h4>
-                        <h6 class="card-subtitle mb-2">Business Lawyer</h6>
+                        <h6 class="card-subtitle mb-2">Disciple-Maker</h6>
                         <p><a href="#">Read Full Bio</a></p>
                     </div>
                 </div>
@@ -363,8 +362,8 @@
     <div class="container">
         <div class="row justify-content-md-center text-center mb-5">
             <div class="col-lg-7">
-                <h2 class="mt-0 heading-border-top font-weight-normal">Happy Customers</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <h2 class="mt-0 heading-border-top font-weight-normal">Testimonies</h2>
+                <p>Very truly I tell you, no one can enter the kingdom of God unless they are born of water and the Spirit. Flesh gives birth to flesh, but the Spirit gives birth to spirit.</p>
             </div>
         </div>
         <div class="row justify-content-md-center">
@@ -375,8 +374,8 @@
                             <img class="d-flex img-fluid rounded-circle mb-sm-5" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Generic placeholder image">
                             <div class="media-body pl-md-5 pl-sm-0">
                                 <blockquote>
-                                    <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-                                    <p class="pb_author"><citeclass="text-uppercase">John Smith</cite> Designer at uicookies.com</p>
+                                    <p>Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council. He came to Jesus at night and said, "Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him."</p>
+                                    <p class="pb_author"><citeclass="text-uppercase">John Smith</cite></p>
                                 </blockquote>
                             </div>
                         </div>
@@ -387,7 +386,7 @@
                             <div class="media-body pl-md-5 pl-sm-0">
                                 <blockquote>
                                     <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>
-                                    <p class="pb_author"><cite class="text-uppercase">John Smith</cite> Designer at uicookies.com</p>
+                                    <p class="pb_author"><cite class="text-uppercase">John Smith</cite></p>
                                 </blockquote>
                             </div>
                         </div>
@@ -409,8 +408,8 @@
                 <div class="media pb_media_v1 mb-5">
                     <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary"><i class="flaticon flaticon-jury"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-17">Group of Lawyers</h3>
-                        <p class="pb_font-14">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <h3 class="mt-0 pb_font-17">Fact 1</h3>
+                        <p class="pb_font-14">I have spoken to you of earthly things and you do not believe</p>
                     </div>
                 </div>
 
@@ -419,8 +418,8 @@
                 <div class="media pb_media_v1 mb-5">
                     <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary"><i class="flaticon flaticon-law"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-17">No One is Above The Law</h3>
-                        <p class="pb_font-14">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                        <h3 class="mt-0 pb_font-17">Fact 2</h3>
+                        <p class="pb_font-14">The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     </div>
                 </div>
             </div>
@@ -428,8 +427,8 @@
                 <div class="media pb_media_v1 mb-5">
                     <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary"><i class="flaticon flaticon-courthouse"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-17">Hall of Justice</h3>
-                        <p class="pb_font-14">It is a paradisematic country, in which roasted parts of sentences fly into your mouth decided to leave for the far World of Grammar.</p>
+                        <h3 class="mt-0 pb_font-17">Fact 3</h3>
+                        <p class="pb_font-14">The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going.</p>
                     </div>
                 </div>
             </div>
@@ -439,8 +438,8 @@
                 <div class="media pb_media_v1 mb-5">
                     <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary"><i class="flaticon flaticon-jury"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-17">Family Law</h3>
-                        <p class="pb_font-14">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <h3 class="mt-0 pb_font-17">Fact 4</h3>
+                        <p class="pb_font-14">I have spoken to you of earthly things and you do not believe</p>
                     </div>
                 </div>
 
@@ -449,8 +448,8 @@
                 <div class="media pb_media_v1 mb-5">
                     <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary"><i class="flaticon flaticon-courthouse"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-17">No One is Above The Law</h3>
-                        <p class="pb_font-14">Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                        <h3 class="mt-0 pb_font-17">Fact 5</h3>
+                        <p class="pb_font-14">The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     </div>
                 </div>
             </div>
@@ -459,8 +458,8 @@
 
                     <div class="icon border border-gray rounded-circle d-flex mr-3 display-4 text-primary"><i class="flaticon flaticon-law"></i></div>
                     <div class="media-body">
-                        <h3 class="mt-0 pb_font-17">Hall of Justice</h3>
-                        <p class="pb_font-14">It is a paradisematic country, in which roasted parts of sentences fly into your mouth decided to leave for the far World of Grammar.</p>
+                        <h3 class="mt-0 pb_font-17">Fact 6</h3>
+                        <p class="pb_font-14">The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going.</p>
                     </div>
                 </div>
             </div>
@@ -477,7 +476,7 @@
         <div class="row justify-content-md-center text-center mb-5">
             <div class="col-lg-7">
                 <h2 class="mt-0 heading-border-top font-weight-normal">Get In Touch</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <p>No one has ever gone into heaven except the one who came from heaven—the Son of Man. Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up, that everyone who believes may have eternal life in him.</p>
             </div>
         </div>
 
@@ -512,22 +511,16 @@
             <div class="col-md-4">
                 <ul class="pb_contact_details_v1">
                     <li>
-                        <span class="text-uppercase">Email</span>
-                        probootstrap@gmail.com
-                    </li>
-                    <li>
                         <span class="text-uppercase">Phone</span>
                         +30 976 1382 9921
                     </li>
                     <li>
-                        <span class="text-uppercase">Fax</span>
+                        <span class="text-uppercase">WhatsApp</span>
                         +30 976 1382 9922
                     </li>
                     <li>
-                        <span class="text-uppercase">Address</span>
-                        San Francisco, CA <br>
-                        4th Floor8 Lower  <br>
-                        San Francisco street, M1 50F
+                        <span class="text-uppercase">Facebook Username</span>
+                        pray4movement
                     </li>
                 </ul>
             </div>
@@ -550,7 +543,7 @@
         </div>
         <div class="row">
             <div class="col text-center">
-                <p class="pb_font-14">&copy; 2017 <a href="https://uicookies.com/">Law</a>. All Rights Reserved. Designed by <a href="https://uicookies.com/">uiCookies</a> Demo Images: Unsplash</p>
+                <p class="pb_font-14">&copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.</p>
             </div>
         </div>
     </div>

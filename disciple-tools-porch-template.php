@@ -83,9 +83,14 @@ class DT_Porch_Template {
 
     private function __construct() {
 
-        // home examples
-        require_once( 'home-templates/loader.php');
-        load_home_template( 8 ); // load templates 1 - 7
+        require_once( 'example-templates/loader.php');
+        /**
+         * Example home templates are preconfigured single page designs
+         *
+         * @see
+         *
+         */
+        load_home_template( 2 ); // load templates 1 - 8
 
         // private user page example
         $template_user_page = true;
@@ -94,8 +99,8 @@ class DT_Porch_Template {
         }
 
         if ( is_admin() ) {
-            require_once( 'admin/require-plugins/class-tgm-plugin-activation.php' );
-            require_once( 'admin/config-required-plugins.php' );
+            require_once('required-plugins/class-tgm-plugin-activation.php');
+            require_once('required-plugins/config-required-plugins.php');
             add_filter( 'plugin_row_meta', [ $this, 'plugin_description_links' ], 10, 4 );
         }
         $this->i18n();
