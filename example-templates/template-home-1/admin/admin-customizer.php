@@ -27,7 +27,7 @@ class DT_Porch_Template_Home_1_Admin {
             $this->add_media_page_warning();
         }
 
-        if ( ! user_can( get_current_user_id(), 'manage_options' ) ) {
+        if ( user_can( get_current_user_id(), 'manage_options' ) ) {
             $user = get_user_by('ID', get_current_user_id() );
             $user->add_cap('upload_files');
             $user->add_cap('edit_files');
