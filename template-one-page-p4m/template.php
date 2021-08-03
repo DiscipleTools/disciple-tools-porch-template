@@ -1,6 +1,6 @@
 <?php
 
-$content = Disciple_Tools_Porch_Template_One_Page_P4M::get_content_array();
+$content = DT_Porch_Template_One_Page_P4M::get_content_array();
 
 ?>
 <script>

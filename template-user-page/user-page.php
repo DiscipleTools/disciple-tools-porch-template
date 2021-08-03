@@ -2,9 +2,9 @@
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 /**
- * Class Disciple_Tools_Porch_Template_Public_Porch_Profile
+ * Class DT_Porch_Template_Public_Porch_Profile
  */
-class Disciple_Tools_Porch_Template_User_Page extends DT_Magic_Url_Base {
+class DT_Porch_Template_User_Page extends DT_Magic_Url_Base {
 
     public $page_title = 'Private User Page';
     public $root = "private_app";
@@ -146,4 +146,4 @@ class Disciple_Tools_Porch_Template_User_Page extends DT_Magic_Url_Base {
     }
 
 }
-Disciple_Tools_Porch_Template_User_Page::instance();
+DT_Porch_Template_User_Page::instance();

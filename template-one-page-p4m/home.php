@@ -6,7 +6,7 @@ define( 'ONE_PAGE_P4M_TYPE', 'one_page_p4m' );
 define( 'ONE_PAGE_P4M_TOKEN', 'one_page_p4m' ); // must be less than 20 characters
 define( 'ONE_PAGE_P4M_TITLE', 'One Page P4M' );
 
-class Disciple_Tools_Porch_Template_One_Page_P4M extends DT_Magic_Url_Base
+class DT_Porch_Template_One_Page_P4M extends DT_Magic_Url_Base
 {
     public $magic = false;
     public $parts = false;
@@ -387,4 +387,4 @@ class Disciple_Tools_Porch_Template_One_Page_P4M extends DT_Magic_Url_Base
         return $data;
     }
 }
-Disciple_Tools_Porch_Template_One_Page_P4M::instance();
+DT_Porch_Template_One_Page_P4M::instance();
