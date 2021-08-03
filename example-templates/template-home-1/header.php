@@ -1,5 +1,5 @@
 <?php
-$content = DT_Porch_Template_Home_1_Storage::get_settings();
+//$content = DT_Porch_Template_Home_1_Storage::get_settings();
 ?>
 <?php echo esc_html( $content['google_analytics'] ?? '' ) ?>
 

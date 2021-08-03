@@ -111,6 +111,8 @@ class DT_Porch_Template_Home_1_Storage {
     public static $settings_token = PORCH_TOKEN . '_settings';
     public static $body_token = PORCH_TOKEN . '_body';
 
+    public static $settings_version = 1;
+
     public static function register_post_type() {
         $args = array(
             'public'    => false
@@ -118,17 +120,70 @@ class DT_Porch_Template_Home_1_Storage {
         register_post_type( PORCH_TOKEN, $args );
     }
 
+    public static function get_settings_defaults() {
+        return [
+            'version' => self::$settings_version,
+            'title' => [
+                'key' => 'title',
+                'label' => 'Title',
+                'type' => 'text',
+                'default' => '',
+                'value' => '',
+            ],
+            'description' => [
+                'key' => 'description',
+                'label' => 'Description',
+                'type' => 'text',
+                'default' => '',
+                'value' => '',
+            ],
+            'google_analytics' => [
+                'key' => 'google_analytics',
+                'label' => 'Google Analytics',
+                'type' => 'text',
+                'default' => '',
+                'value' => '',
+            ],
+            'contact_form' => [
+                'key' => 'contact_form',
+                'label' => 'Website Lead Form',
+                'type' => 'text',
+                'default' => '',
+                'value' => '',
+            ],
+            'assigned_to' => [
+                'key' => 'assigned_to',
+                'label' => 'Assign to',
+                'type' => 'user_list',
+                'default' => '',
+                'value' => '',
+            ],
+        ];
+    }
+
+    public static function match_settings() {
+        $settings = [];
+        $old_settings = DT_Porch_Template_Home_1_Storage::get_settings();
+        $default_settings = self::get_settings_defaults();
+        foreach( $default_settings as $value ) {
+            $settings[$value['key']] = $value;
+        }
+        foreach( $old_settings as $value ) {
+            if ( isset( $settings[$value['key']] ) ) {
+                $settings[$value['key']] = $value;
+            }
+        }
+        return $settings;
+    }
+
     public static function get_settings() : array {
         $post_id = self::get_settings_post_id();
         $post_meta = get_post_meta( $post_id, 'content', true );
-        if ( false === $post_meta ) {
-            self::update_settings( [] );
-            return [];
+        if ( false === $post_meta || ! is_array( $post_meta ) ) {
+            $post_meta =  self::update_settings( self::get_settings_defaults() );
         }
-        if ( ! is_array( $post_meta ) ) {
-            return [];
-        }
-        return $post_meta;
+
+        return is_array( $post_meta ) ? $post_meta : self::get_settings_defaults();
     }
 
     public static function get_settings_post_id() {
@@ -186,6 +241,4 @@ class DT_Porch_Template_Home_1_Storage {
         update_post_meta( $post_id, 'content', $content );
         return get_post_meta( $post_id, 'content', true );
     }
-
-
 }
