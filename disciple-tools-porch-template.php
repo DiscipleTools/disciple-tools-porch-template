@@ -90,7 +90,7 @@ class DT_Porch_Template {
          * @see
          *
          */
-        load_home_template( 2 ); // load templates 1 - 8
+        load_home_template( 1 ); // load templates 1 - 8
 
         // private user page example
         $template_user_page = true;
