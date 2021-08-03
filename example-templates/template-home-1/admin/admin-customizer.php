@@ -18,6 +18,10 @@ class DT_Porch_Template_Home_1_Admin {
             return;
         }
 
+        if ( ! current_user_can( 'porch_admin' ) ) {
+            return;
+        }
+
         $this->token = DT_Porch_Template_Home_1::$token;
 
         add_filter('dt_remove_menu_pages', [$this, 'add_media_tab'], 10, 1);
@@ -27,11 +31,6 @@ class DT_Porch_Template_Home_1_Admin {
             $this->add_media_page_warning();
         }
 
-        if ( user_can( get_current_user_id(), 'manage_options' ) ) {
-            $user = get_user_by('ID', get_current_user_id() );
-            $user->add_cap('upload_files');
-            $user->add_cap('edit_files');
-        }
         add_action('admin_menu', [$this, 'admin_menu']);
     }
 
@@ -42,7 +41,7 @@ class DT_Porch_Template_Home_1_Admin {
     public function landing_admin_page(){
         $slug = $this->token;
 
-        if ( !current_user_can( 'manage_options' ) ) { // manage dt is a permission that is specific to Disciple Tools and allows admins, strategists and dispatchers into the wp-admin
+        if ( !current_user_can( 'porch_admin' ) ) { // manage dt is a permission that is specific to Disciple Tools and allows admins, strategists and dispatchers into the wp-admin
             wp_die( esc_attr__( 'You do not have sufficient permissions to access this page.' ) );
         }
 

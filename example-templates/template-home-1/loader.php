@@ -61,6 +61,7 @@ class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
         if ( is_admin() ) {
             require_once( 'admin/admin-customizer.php' );
             add_action( 'init', [ 'DT_Porch_Template_Home_1_Storage', 'register_post_type' ] );
+            add_filter('dt_set_roles_and_permissions', [ $this, 'dt_set_roles_and_permissions'], 50, 1);
         }
     }
 
@@ -82,6 +83,23 @@ class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
 
     public function footer_javascript(){
         require_once( 'footer.php' );
+    }
+
+    public function dt_set_roles_and_permissions($expected_roles)
+    {
+        if (!isset($expected_roles["porch_admin"])) {
+            $expected_roles["porch_admin"] = [
+                "label" => __('Porch Admin', 'disciple_tools'),
+                "description" => "Administrates public porch",
+                "permissions" => [
+                    'read' => true,
+                    'porch_admin' => true,
+                    'edit_files' => true,
+                    'upload_files' => true,
+                ]
+            ];
+        }
+        return $expected_roles;
     }
 }
 DT_Porch_Template_Home_1::instance();
@@ -168,4 +186,6 @@ class DT_Porch_Template_Home_1_Storage {
         update_post_meta( $post_id, 'content', $content );
         return get_post_meta( $post_id, 'content', true );
     }
+
+
 }
