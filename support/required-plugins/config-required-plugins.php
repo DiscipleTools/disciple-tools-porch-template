@@ -70,76 +70,76 @@ add_action( 'tgmpa_register', function () {
 
         /*
         'strings'      => array(
-            'page_title'                      => __( 'Install Required Plugins', 'disciple_tools' ),
-            'menu_title'                      => __( 'Install Plugins', 'disciple_tools' ),
+            'page_title'                      => __( 'Install Required Plugins', 'disciple-tools-porch-template' ),
+            'menu_title'                      => __( 'Install Plugins', 'disciple-tools-porch-template' ),
             /* translators: %s: plugin name. * /
-            'installing'                      => __( 'Installing Plugin: %s', 'disciple_tools' ),
+            'installing'                      => __( 'Installing Plugin: %s', 'disciple-tools-porch-template' ),
             /* translators: %s: plugin name. * /
-            'updating'                        => __( 'Updating Plugin: %s', 'disciple_tools' ),
-            'oops'                            => __( 'Something went wrong with the plugin API.', 'disciple_tools' ),
+            'updating'                        => __( 'Updating Plugin: %s', 'disciple-tools-porch-template' ),
+            'oops'                            => __( 'Something went wrong with the plugin API.', 'disciple-tools-porch-template' ),
             'notice_can_install_required'     => _n_noop(
                 /* translators: 1: plugin name(s). * /
                 'This theme requires the following plugin: %1$s.',
                 'This theme requires the following plugins: %1$s.',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
             'notice_can_install_recommended'  => _n_noop(
                 /* translators: 1: plugin name(s). * /
                 'This theme recommends the following plugin: %1$s.',
                 'This theme recommends the following plugins: %1$s.',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
             'notice_ask_to_update'            => _n_noop(
                 /* translators: 1: plugin name(s). * /
                 'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
                 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
             'notice_ask_to_update_maybe'      => _n_noop(
                 /* translators: 1: plugin name(s). * /
                 'There is an update available for: %1$s.',
                 'There are updates available for the following plugins: %1$s.',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
             'notice_can_activate_required'    => _n_noop(
                 /* translators: 1: plugin name(s). * /
                 'The following required plugin is currently inactive: %1$s.',
                 'The following required plugins are currently inactive: %1$s.',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
             'notice_can_activate_recommended' => _n_noop(
                 /* translators: 1: plugin name(s). * /
                 'The following recommended plugin is currently inactive: %1$s.',
                 'The following recommended plugins are currently inactive: %1$s.',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
             'install_link'                    => _n_noop(
                 'Begin installing plugin',
                 'Begin installing plugins',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
             'update_link'                     => _n_noop(
                 'Begin updating plugin',
                 'Begin updating plugins',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
             'activate_link'                   => _n_noop(
                 'Begin activating plugin',
                 'Begin activating plugins',
-                'disciple_tools'
+                'disciple-tools-porch-template'
             ),
-            'return'                          => __( 'Return to Required Plugins Installer', 'disciple_tools' ),
-            'plugin_activated'                => __( 'Plugin activated successfully.', 'disciple_tools' ),
-            'activated_successfully'          => __( 'The following plugin was activated successfully:', 'disciple_tools' ),
+            'return'                          => __( 'Return to Required Plugins Installer', 'disciple-tools-porch-template' ),
+            'plugin_activated'                => __( 'Plugin activated successfully.', 'disciple-tools-porch-template' ),
+            'activated_successfully'          => __( 'The following plugin was activated successfully:', 'disciple-tools-porch-template' ),
             /* translators: 1: plugin name. * /
-            'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'disciple_tools' ),
+            'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'disciple-tools-porch-template' ),
             /* translators: 1: plugin name. * /
-            'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'disciple_tools' ),
+            'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'disciple-tools-porch-template' ),
             /* translators: 1: dashboard link. * /
-            'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'disciple_tools' ),
-            'dismiss'                         => __( 'Dismiss this notice', 'disciple_tools' ),
-            'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'disciple_tools' ),
-            'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'disciple_tools' ),
+            'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'disciple-tools-porch-template' ),
+            'dismiss'                         => __( 'Dismiss this notice', 'disciple-tools-porch-template' ),
+            'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'disciple-tools-porch-template' ),
+            'contact_admin'                   => __( 'Please contact the administrator of this site for help.', 'disciple-tools-porch-template' ),
 
             'nag_type'                        => '', // Determines admin notice type - can only be one of the typical WP notice classes, such as 'updated', 'update-nag', 'notice-warning', 'notice-info' or 'error'. Some of which may not work as expected in older WP versions.
         ),

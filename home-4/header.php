@@ -19,7 +19,7 @@
             'type' => $this->type,
         ],
         'trans' => [
-            'add' => __( 'Add Magic', 'disciple_tools' ),
+            'add' => __( 'Add Magic', 'disciple-tools-porch-template' ),
         ],
     ]) ?>][0]
 </script>

@@ -103,7 +103,7 @@ class DT_Porch_Template_User_Page extends DT_Magic_Url_Base {
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'parts' => $this->parts,
                 'translations' => [
-                    'add' => __( 'Add Magic', 'disciple_tools' ),
+                    'add' => __( 'Add Magic', 'disciple-tools-porch-template' ),
                 ],
             ]) ?>][0]
         </script>

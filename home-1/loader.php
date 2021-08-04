@@ -89,7 +89,7 @@ class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
     {
         if (!isset($expected_roles["porch_admin"])) {
             $expected_roles["porch_admin"] = [
-                "label" => __('Porch Admin', 'disciple_tools'),
+                "label" => __('Porch Admin', 'disciple-tools-porch-template'),
                 "description" => "Administrates public porch",
                 "permissions" => [
                     'read' => true,

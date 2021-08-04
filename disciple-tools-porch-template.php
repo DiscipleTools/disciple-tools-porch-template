@@ -18,12 +18,29 @@
  *          https://www.gnu.org/licenses/gpl-2.0.html
  */
 
-/**
- * @todo replace Porch Template
- * @todo replace Disciple_Tools_Porch_Template
- * @todo replace disciple-tools-porch-template
- * @todo replace dt_porch_template
- */
+/***********************************************************************************************************************
+/***********************************************************************************************************************
+ * REFACTOR THIS PLUGIN!
+ * This entire template plugin can be converted to your project by finding and replacing the follow strings throughout
+ * the plugin folder. Accomplish the @todo tasks below.
+ *
+ * (full url of your github repo location)
+ * @example https://github.com/YourGithubAccount/your-project-name
+ * (user account and repo name on Github)
+ * @example ACCOUNT-REPO-SLUG = YourGithubAccount/your-project-name
+ * (repo name of your project on Github)
+ * @example REPO-SLUG = your-project-name
+ *
+ * @todo Rename file name in the root folder called [ disciple-tools-porch-template.php ] to your repo slug name, i.e. [ REPO-SLUG ].php.
+ *
+ * @todo find/replace string [ DiscipleTools/disciple-tools-porch-template ] with your [ ACCOUNT-REPO-SLUG ]
+ *
+ * Find and Replace the following strings with your custom strings.
+ * @todo find/replace string [ Porch Template ] with [ Your Project Name ]
+ * @todo find/replace string [ Disciple_Tools_Porch_Template ] with [ Your_Project_Name ]
+ * @todo find/replace string [ disciple-tools-porch-template ] with [ your-project-name ]
+ * @todo find/replace string [ dt_porch_template ] with [ your_project_name ]
+***********************************************************************************************************************/
 
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -38,7 +55,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @return object|bool
  */
 function dt_porch_template() {
-    $dt_porch_template_required_dt_theme_version = '1.0';
+    $dt_porch_template_required_dt_theme_version = '1.8.1';
     $wp_theme = wp_get_theme();
     $version = $wp_theme->version;
 
@@ -83,13 +100,14 @@ class DT_Porch_Template {
 
     private function __construct() {
 
-        /**
+        /***************************************************************************************************************
+        /***************************************************************************************************************
          * @todo STEP 1: CHOOSE HOME PAGE STYLE
          * 8 starter sites are listed below. Uncomment the loader file to show the site style. Choose only 1 at a time.
          *
          * @todo STEP 2: ONCE A STYLE IS SELECTED, REMOVE ADDITIONAL LINES AND DELETE CORRESPONDING FOLDERS
          * @todo STEP 3: EDIT THE BODY CONTENT OF THE SELECTED STYLE IN THE `body.php` file.
-         */
+         **************************************************************************************************************/
         require_once( 'home-1/loader.php'); /* Pray4Movement */
 //        require_once( 'home-2/loader.php'); /* Simple, Big images, White and Image */
 //        require_once( 'home-3/loader.php'); /* Parallax, White/Green, thin sections, sticky top nav */
@@ -100,8 +118,10 @@ class DT_Porch_Template {
 //        require_once( 'home-8/loader.php'); /* single image, full screen */
 
 
-        /**
-         * @todo STEP 4: SELECT LOGGED IN PAGE STYLE
+
+        /***************************************************************************************************************
+        /***************************************************************************************************************
+         * @todo ADDITIONAL STEP: SELECT LOGGED IN PAGE STYLE
          * This page style allows a person to register to the site, and get a custom profile page, without giving
          * them access to disciple tools. This page is recommended to be used with the custom login plugin so that
          * a registered role can be applied.
@@ -110,17 +130,25 @@ class DT_Porch_Template {
          * @use Allows you to collect data from a user without giving them full Disciple Tools access.
          *
          * Remove all of these if a logged in page is not required.
-         */
+         **************************************************************************************************************/
         require_once( 'logged-in-1/loader.php' );
 
 
-        /**
-         * 
-         */
+        /***************************************************************************************************************
+        /***************************************************************************************************************
+         * @todo ADDITIONAL STEP: CONFIGURE REQUIRED PLUGINS
+         * The `config-required-plugins.php` file triggers a recommendation in the admin area to also require other plugins
+         * when this plugin is enabled. One key plugin is the `disciple-tools-custom-login' plugin to help with the
+         * logged in user experience.
+         **************************************************************************************************************/
         if ( is_admin() ) {
-            require_once('required-plugins/class-tgm-plugin-activation.php');
-            require_once('required-plugins/config-required-plugins.php');
-            add_filter( 'plugin_row_meta', [ $this, 'plugin_description_links' ], 10, 4 );
+            require_once('support/required-plugins/class-tgm-plugin-activation.php');
+            require_once('support/required-plugins/config-required-plugins.php');
+        }
+
+
+        if ( is_admin() ){
+            add_filter( 'plugin_row_meta', [ $this, 'plugin_description_links' ], 10, 4 ); // admin plugin page description
         }
         $this->i18n();
     }
@@ -170,7 +198,7 @@ class DT_Porch_Template {
      */
     public function i18n() {
         $domain = 'disciple-tools-porch-template';
-        load_plugin_textdomain( $domain, false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
+        load_plugin_textdomain( $domain, false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'support/languages' );
     }
 
     /**
