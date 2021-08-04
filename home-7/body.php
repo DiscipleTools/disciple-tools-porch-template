@@ -50,7 +50,7 @@
                 <div class="header-text">
                     <h2>hi <span>,</span> i am <br> browny <br> star <span>.</span>   </h2>
                     <p>ui/ux designer and web developer</p>
-                    <a href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/download/browney.txt" download>download resume</a>
+                    <a href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/download/browney.txt" download>download resume</a>
                 </div><!--/.header-text-->
             </div><!--/.col-->
         </div><!-- /.row-->
@@ -99,7 +99,7 @@
                 </div>
                 <div class="col-sm-offset-1 col-sm-5">
                     <div class="single-about-img">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/about/profile_image.jpg" alt="profile_image">
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/about/profile_image.jpg" alt="profile_image">
                         <div class="about-list-icon">
                             <ul>
                                 <li>
@@ -206,7 +206,7 @@
                         <div class="timeline-horizontal-border">
                             <i class="fa fa-circle" aria-hidden="true"></i>
                             <span class="single-timeline-horizontal spacial-horizontal-line
-									"></span>
+                                    "></span>
                         </div>
                         <div class="timeline">
                             <div class="timeline-content">
@@ -333,7 +333,7 @@
                     </div>
                 </div>
             </div><!-- /.row -->
-        </div>	<!-- /.container -->
+        </div>  <!-- /.container -->
     </div><!-- /.skill-content-->
 
 </section><!--/.skills-->
@@ -658,7 +658,7 @@
 
                         <div class="col-sm-4">
                             <div class="item">
-                                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p1.jpg" alt="portfolio image"/>
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p1.jpg" alt="portfolio image"/>
                                 <div class="isotope-overlay">
                                     <a href="#">
                                         ui/ux design
@@ -666,7 +666,7 @@
                                 </div><!-- /.isotope-overlay -->
                             </div><!-- /.item -->
                             <div class="item">
-                                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p2.jpg" alt="portfolio image"/>
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p2.jpg" alt="portfolio image"/>
                                 <div class="isotope-overlay">
                                     <a href="#">
                                         ui/ux design
@@ -677,7 +677,7 @@
 
                         <div class="col-sm-4">
                             <div class="item">
-                                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p3.jpg" alt="portfolio image"/>
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p3.jpg" alt="portfolio image"/>
                                 <div class="isotope-overlay">
                                     <a href="#">
                                         web design
@@ -688,7 +688,7 @@
 
                         <div class="col-sm-4">
                             <div class="item">
-                                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p4.jpg" alt="portfolio image"/>
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p4.jpg" alt="portfolio image"/>
                                 <div class="isotope-overlay">
                                     <a href="#">
                                         web development
@@ -696,7 +696,7 @@
                                 </div><!-- /.isotope-overlay -->
                             </div><!-- /.item -->
                             <div class="item">
-                                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p5.jpg" alt="portfolio image"/>
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/portfolio/p5.jpg" alt="portfolio image"/>
                                 <div class="isotope-overlay">
                                     <a href="#">
                                         web development
@@ -723,37 +723,37 @@
             <div class="owl-carousel owl-theme" id="client">
                 <div class="item">
                     <a href="#">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c1.png" alt="brand-image" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c1.png" alt="brand-image" />
                     </a>
                 </div><!--/.item-->
                 <div class="item">
                     <a href="#">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c2.png" alt="brand-image" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c2.png" alt="brand-image" />
                     </a>
                 </div><!--/.item-->
                 <div class="item">
                     <a href="#">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c3.png" alt="brand-image" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c3.png" alt="brand-image" />
                     </a>
                 </div><!--/.item-->
                 <div class="item">
                     <a href="#">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c4.png" alt="brand-image" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c4.png" alt="brand-image" />
                     </a>
                 </div><!--/.item-->
                 <div class="item">
                     <a href="#">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c5.png" alt="brand-image" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c5.png" alt="brand-image" />
                     </a>
                 </div><!--/.item-->
                 <div class="item">
                     <a href="#">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c6.png" alt="brand-image" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c6.png" alt="brand-image" />
                     </a>
                 </div><!--/.item-->
                 <div class="item">
                     <a href="#">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c7.png" alt="brand-image" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/clients/c7.png" alt="brand-image" />
                     </a>
                 </div><!--/.item-->
             </div><!--/.owl-carousel-->

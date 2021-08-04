@@ -1,15 +1,30 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
+/**
+ * @todo Configure the title value, root value, type value, and token value. Don't change PORCH_ variable.
+ */
+if ( ! defined( 'PORCH_TITLE' ) ) {
+    define( 'PORCH_TITLE', 'Home 4' ); // Used in tabs and titles, avoid special characters. Spaces are okay.
+}
+if ( ! defined( 'PORCH_ROOT' ) ) {
+    define( 'PORCH_ROOT', 'porch_app' ); // Alphanumeric key. Use underscores not hyphens. No special characters.
+}
+if ( ! defined( 'PORCH_TYPE' ) ) {
+    define( 'PORCH_TYPE', '4' ); // Alphanumeric key. Use underscores not hyphens. No special characters.
+}
+if ( ! defined( 'PORCH_TOKEN' ) ) {
+    define( 'PORCH_TOKEN', 'porch_app_4' ); // Alphanumeric key. Use underscores not hyphens. No special characters. Must be less than 20 characters
+}
 
 class DT_Porch_Template_Home_4 extends DT_Magic_Url_Base
 {
     public $magic = false;
     public $parts = false;
-    public $page_title = 'Home 4';
-    public $root = 'porch_app';
-    public $type = '4';
-    public static $token = 'porch_app_4';
+    public $page_title = PORCH_TITLE;
+    public $root = PORCH_ROOT;
+    public $type = PORCH_TYPE;
+    public static $token = PORCH_TOKEN;
 
     private static $_instance = null;
     public static function instance() {
@@ -48,7 +63,7 @@ class DT_Porch_Template_Home_4 extends DT_Magic_Url_Base
         }
 
         if ( dt_is_rest() ) {
-            require_once('rest.php');
+            require_once( 'rest.php' );
             add_filter( 'dt_allow_rest_access', [ $this, 'authorize_url' ], 10, 1 );
         }
     }

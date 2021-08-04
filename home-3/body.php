@@ -217,8 +217,8 @@
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development print">
                     <div class="portfolio-item">
                         <div class="shot-item">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
-                            <a class="overlay lightbox" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
+                            <a class="overlay lightbox" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
                                 <i class="lnr lnr-eye item-icon"></i>
                             </a>
                         </div>
@@ -227,8 +227,8 @@
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix design print">
                     <div class="portfolio-item">
                         <div class="shot-item">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
-                            <a class="overlay lightbox" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
+                            <a class="overlay lightbox" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
                                 <i class="lnr lnr-eye item-icon"></i>
                             </a>
                         </div>
@@ -237,8 +237,8 @@
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
                     <div class="portfolio-item">
                         <div class="shot-item">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
-                            <a class="overlay lightbox" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
+                            <a class="overlay lightbox" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
                                 <i class="lnr lnr-eye item-icon"></i>
                             </a>
                         </div>
@@ -247,8 +247,8 @@
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development design">
                     <div class="portfolio-item">
                         <div class="shot-item">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
-                            <a class="overlay lightbox" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
+                            <a class="overlay lightbox" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
                                 <i class="lnr lnr-eye item-icon"></i>
                             </a>
                         </div>
@@ -257,8 +257,8 @@
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development">
                     <div class="portfolio-item">
                         <div class="shot-item">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
-                            <a class="overlay lightbox" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
+                            <a class="overlay lightbox" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
                                 <i class="lnr lnr-eye item-icon"></i>
                             </a>
                         </div>
@@ -267,8 +267,8 @@
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix print design">
                     <div class="portfolio-item">
                         <div class="shot-item">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
-                            <a class="overlay lightbox" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg" alt="" />
+                            <a class="overlay lightbox" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/portfolio/img1.jpg">
                                 <i class="lnr lnr-eye item-icon"></i>
                             </a>
                         </div>
@@ -361,7 +361,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="single-team">
-                    <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/team/team1.jpg" alt="">
+                    <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/team/team1.jpg" alt="">
                     <div class="team-details">
                         <div class="team-inner">
                             <h4 class="team-title">Jhon Doe</h4>
@@ -378,7 +378,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="single-team">
-                    <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/team/team1.jpg" alt="">
+                    <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/team/team1.jpg" alt="">
                     <div class="team-details">
                         <div class="team-inner">
                             <h4 class="team-title">Paul Kowalsy</h4>
@@ -395,7 +395,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="single-team">
-                    <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/team/team1.jpg" alt="">
+                    <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/team/team1.jpg" alt="">
                     <div class="team-details">
                         <div class="team-inner">
                             <h4 class="team-title">Emilly Williams</h4>
@@ -412,7 +412,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-xs-12">
                 <div class="single-team">
-                    <img class="img-fulid" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/team/team1.jpg" alt="">
+                    <img class="img-fulid" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/team/team1.jpg" alt="">
                     <div class="team-details">
                         <div class="team-inner">
                             <h4 class="team-title">Patricia Green</h4>
@@ -439,7 +439,7 @@
             <div class="col-md-12">
                 <div class="touch-slider owl-carousel owl-theme">
                     <div class="testimonial-item">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer1.jpg" alt="Client Testimonoal" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer1.jpg" alt="Client Testimonoal" />
                         <div class="testimonial-text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. send do <br> adipisicing ciusmod tempor incididunt ut labore et</p>
                             <h3>Jone Deam</h3>
@@ -447,7 +447,7 @@
                         </div>
                     </div>
                     <div class="testimonial-item">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer2.jpg" alt="Client Testimonoal" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer2.jpg" alt="Client Testimonoal" />
                         <div class="testimonial-text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. send do <br> adipisicing ciusmod tempor incididunt ut labore et</p>
                             <h3>Oidila Matik</h3>
@@ -455,7 +455,7 @@
                         </div>
                     </div>
                     <div class="testimonial-item">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer3.jpg" alt="Client Testimonoal" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer3.jpg" alt="Client Testimonoal" />
                         <div class="testimonial-text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. send do <br> adipisicing ciusmod tempor incididunt ut labore et</p>
                             <h3>Alex Dattilo</h3>
@@ -463,7 +463,7 @@
                         </div>
                     </div>
                     <div class="testimonial-item">
-                        <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer4.jpg" alt="Client Testimonoal" />
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer4.jpg" alt="Client Testimonoal" />
                         <div class="testimonial-text">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. send do <br> adipisicing ciusmod tempor incididunt ut labore et</p>
                             <h3>Paul Kowalsy</h3>
@@ -492,7 +492,7 @@
                 <div class="blog-item-wrapper">
                     <div class="blog-item-img">
                         <a href="#">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img1.jpg" alt="">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img1.jpg" alt="">
                         </a>
                     </div>
                     <div class="blog-item-text">
@@ -517,7 +517,7 @@
                 <div class="blog-item-wrapper">
                     <div class="blog-item-img">
                         <a href="#">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img1.jpg" alt="">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img1.jpg" alt="">
                         </a>
                     </div>
                     <div class="blog-item-text">
@@ -542,7 +542,7 @@
                 <div class="blog-item-wrapper">
                     <div class="blog-item-img">
                         <a href="#">
-                            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img1.jpg" alt="">
+                            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img1.jpg" alt="">
                         </a>
                     </div>
                     <div class="blog-item-text">

@@ -5,7 +5,7 @@
 
         <div class="logo">
 
-            <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>images/logo.png" alt="Logo" />
+            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/logo.png" alt="Logo" />
 
         </div>
 

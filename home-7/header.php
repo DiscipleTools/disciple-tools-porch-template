@@ -11,32 +11,32 @@
 <title>Browny</title>
 
 <!-- For favicon png -->
-<link rel="shortcut icon" type="image/icon" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/logo/favicon.png"/>
+<link rel="shortcut icon" type="image/icon" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/logo/favicon.png"/>
 
 <!--font-awesome.min.css-->
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/font-awesome.min.css">
 
 <!--flat icon css-->
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/flaticon.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/flaticon.css">
 
 <!--animate.css-->
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/animate.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/animate.css">
 
 <!--owl.carousel.css-->
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/owl.theme.default.min.css">
 
 <!--bootstrap.min.css-->
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/bootstrap.min.css">
 
 <!-- bootsnav -->
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/bootsnav.css" >
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/bootsnav.css" >
 
 <!--style.css-->
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/style.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/style.css">
 
 <!--responsive.css-->
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/responsive.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/responsive.css">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

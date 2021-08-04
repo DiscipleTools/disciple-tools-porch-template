@@ -24,7 +24,7 @@
     </div>
 </nav>
 
-<section class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/image_1.jpg);" data-section="home" data-stellar-background-ratio="0.5">
+<section class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/image_1.jpg);" data-section="home" data-stellar-background-ratio="0.5">
     <div class="container">
         <div class="row intro-text">
             <div class="col-md-8 col-md-offset-2 text-center">
@@ -79,7 +79,7 @@
         <!-- END row -->
         <div class="row mb100">
             <div class="col-md-8 col-md-pull-2 probootstrap-animate">
-                <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
+                <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
             </div>
             <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
                 <h3 class="text-primary probootstrap-heading-2">Big Benefits for Small Business</h3>
@@ -95,7 +95,7 @@
         <div class="row mb100">
             <!-- <div class="col-md-8 col-md-pull-2"> -->
             <div class="col-md-8 col-md-push-5 probootstrap-animate">
-                <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_2.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
+                <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_2.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
             </div>
             <!-- <div class="col-md-4 col-md-pull-1"> -->
             <div class="col-md-4 col-md-pull-8 probootstrap-section-heading">
@@ -112,7 +112,7 @@
 
         <div class="row mb100">
             <div class="col-md-8 col-md-pull-2 probootstrap-animate">
-                <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
+                <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
             </div>
             <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
                 <h3 class="text-primary probootstrap-heading-2">All in One Place</h3>
@@ -195,7 +195,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="probootstrap-testimonial">
-                    <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/person_1.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
+                    <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/person_1.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
                     <p class="mb10 probootstrap-rate">
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
@@ -211,7 +211,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="probootstrap-testimonial">
-                    <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/person_2.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
+                    <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/person_2.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
                     <p class="mb10 probootstrap-rate">
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
@@ -228,7 +228,7 @@
             <div class="clearfix visible-sm-block"></div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="probootstrap-testimonial">
-                    <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/person_3.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
+                    <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/person_3.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
                     <p class="mb10 probootstrap-rate">
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
@@ -244,7 +244,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="probootstrap-testimonial">
-                    <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/person_4.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
+                    <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/person_4.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
                     <p class="mb10 probootstrap-rate">
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
@@ -261,7 +261,7 @@
             <div class="clearfix visible-sm-block"></div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="probootstrap-testimonial">
-                    <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/person_2.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
+                    <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/person_2.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
                     <p class="mb10 probootstrap-rate">
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
@@ -277,7 +277,7 @@
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="probootstrap-testimonial">
-                    <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/person_3.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
+                    <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/person_3.jpg" class="img-responsive img-circle probootstrap-author-photo" alt="Free Template by uicookies.com"></p>
                     <p class="mb10 probootstrap-rate">
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
@@ -309,7 +309,7 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12">
-                        <p><img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>img/laptop_1.jpg" alt="Free Template by uicookies.com" class="img-responsive"></p>
+                        <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/laptop_1.jpg" alt="Free Template by uicookies.com" class="img-responsive"></p>
                     </div>
                 </div>
                 <div class="row">

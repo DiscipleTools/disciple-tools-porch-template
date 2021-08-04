@@ -20,7 +20,7 @@
 </nav>
 <!-- END nav -->
 
-<section class="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_7.jpg)" id="section-home">
+<section class="pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_7.jpg)" id="section-home">
     <div class="container">
         <div class="row align-items-center justify-content-end">
             <div class="col-md-6  order-md-1">
@@ -47,8 +47,8 @@
             </div>
             <div class="col-lg-7">
                 <div class="images">
-                    <img class="img1 img-fluid" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/600x450_img_2.jpg" alt="image">
-                    <img class="img2" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/800x500_img_1.jpg" alt="image">
+                    <img class="img1 img-fluid" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/600x450_img_2.jpg" alt="image">
+                    <img class="img2" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/800x500_img_1.jpg" alt="image">
                 </div>
             </div>
 
@@ -93,7 +93,7 @@
 </section>
 <!-- END section -->
 
-<section class="pb_sm_py_cover text-center cover-bg-black cover-bg-opacity-4" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg)">
+<section class="pb_sm_py_cover text-center cover-bg-black cover-bg-opacity-4" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg)">
     <div class="container">
 
         <div class="row align-items-center">
@@ -119,8 +119,8 @@
         <div class="row">
             <div class="col-lg-7">
                 <div class="images right">
-                    <img class="img1 img-fluid" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/600x450_img_2.jpg" alt="image">
-                    <img class="img2" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/800x500_img_1.jpg" alt="image">
+                    <img class="img1 img-fluid" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/600x450_img_2.jpg" alt="image">
+                    <img class="img2" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/800x500_img_1.jpg" alt="image">
                 </div>
             </div>
             <div class="col-lg-5 pl-md-5 pl-sm-0">
@@ -162,7 +162,7 @@
     <div class="multiple-items pb_slide_v1">
         <div>
             <a href="#" class="link-block">
-                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg" alt="" class="img-fluid">
+                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
                     <h2>Reason 1</h2>
                     <p>Read More</p>
@@ -171,7 +171,7 @@
         </div>
         <div>
             <a href="#" class="link-block">
-                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg" alt="" class="img-fluid">
+                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
                     <h2>Reason 2</h2>
                     <span>Read More</span>
@@ -180,7 +180,7 @@
         </div>
         <div>
             <a href="#" class="link-block">
-                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg" alt="" class="img-fluid">
+                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
                     <h2>Reason 3</h2>
                     <span>Read More</span>
@@ -189,7 +189,7 @@
         </div>
         <div>
             <a href="#" class="link-block">
-                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg" alt="" class="img-fluid">
+                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
                     <h2>Reason 4</h2>
                     <span>Read More</span>
@@ -198,7 +198,7 @@
         </div>
         <div>
             <a href="#" class="link-block">
-                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_1.jpg" alt="" class="img-fluid">
+                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_1.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
                     <h2>Reason 5</h2>
                     <span>Read More</span>
@@ -207,7 +207,7 @@
         </div>
         <div>
             <a href="#" class="link-block">
-                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg" alt="" class="img-fluid">
+                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
                     <h2>Reason 6</h2>
                     <span>Read More</span>
@@ -216,7 +216,7 @@
         </div>
         <div>
             <a href="#" class="link-block">
-                <img src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg" alt="" class="img-fluid">
+                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg" alt="" class="img-fluid">
                 <div class="slide-text">
                     <h2>Reason 7</h2>
                     <span>Read More</span>
@@ -244,7 +244,7 @@
                 <div class="single-item pb_slide_v2">
                     <div>
                         <div class="d-lg-flex d-md-block slide_content">
-                            <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
+                            <div class="pb_content-media" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-handcuffs"></i></div>
                                 <h3 class="font-weight-normal mt-0 mb-4">Fact 1</h3>
@@ -257,7 +257,7 @@
 
                     <div>
                         <div class="d-lg-flex d-md-block slide_content">
-                            <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg);"></div>
+                            <div class="pb_content-media" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-wallet"></i></div>
                                 <h3 class="font-weight-normal mt-0 mb-4">Fact 2</h3>
@@ -269,7 +269,7 @@
 
                     <div>
                         <div class="d-lg-flex d-md-block slide_content">
-                            <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg);"></div>
+                            <div class="pb_content-media" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_3.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-computer-security"></i></div>
                                 <h3 class="font-weight-normal mt-0 mb-4">Fact 3</h3>
@@ -282,7 +282,7 @@
 
                     <div>
                         <div class="d-lg-flex d-md-block slide_content">
-                            <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
+                            <div class="pb_content-media" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-courthouse"></i></div>
                                 <h3 class="font-weight-normal mt-0 mb-4">Fact 4</h3>
@@ -295,7 +295,7 @@
 
                     <div>
                         <div class="d-lg-flex d-md-block slide_content">
-                            <div class="pb_content-media" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
+                            <div class="pb_content-media" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_4.jpg);"></div>
                             <div class="slide_content-text text-center">
                                 <div class="pb_icon_v1"><i class="flaticon text-primary flaticon-jury"></i></div>
                                 <h3 class="font-weight-normal mt-0 mb-4">Fact 5</h3>
@@ -314,7 +314,7 @@
 </section>
 <!-- END section -->
 
-<section class="pb_section bg-light bg-image with-overlay" data-section="attorneys" id="section-team" style="background-image: url(<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg)">
+<section class="pb_section bg-light bg-image with-overlay" data-section="attorneys" id="section-team" style="background-image: url(<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/1900x1200_img_2.jpg)">
     <div class="container">
         <div class="row justify-content-md-center text-center mb-5">
             <div class="col-lg-7">
@@ -325,7 +325,7 @@
         <div class="row">
             <div class="col-md">
                 <div class="card text-center pb_card_v1 mb-4">
-                    <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
+                    <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title mt-0 mb-2">Richard Wilson</h4>
                         <h6 class="card-subtitle mb-2">Disciple-Maker</h6>
@@ -335,7 +335,7 @@
             </div>
             <div class="col-md">
                 <div class="card text-center pb_card_v1 mb-4">
-                    <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
+                    <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title mt-0 mb-2">Steve White</h4>
                         <h6 class="card-subtitle mb-2">Disciple-Maker</h6>
@@ -345,7 +345,7 @@
             </div>
             <div class="col-md">
                 <div class="card text-center pb_card_v1 mb-4">
-                    <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
+                    <img class="card-img-top rounded-circle w-50 mx-auto" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title mt-0 mb-2">Ryan David</h4>
                         <h6 class="card-subtitle mb-2">Disciple-Maker</h6>
@@ -371,7 +371,7 @@
                 <div class="single-item-no-arrow pb_slide_v1">
                     <div>
                         <div class="media">
-                            <img class="d-flex img-fluid rounded-circle mb-sm-5" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Generic placeholder image">
+                            <img class="d-flex img-fluid rounded-circle mb-sm-5" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Generic placeholder image">
                             <div class="media-body pl-md-5 pl-sm-0">
                                 <blockquote>
                                     <p>Now there was a Pharisee, a man named Nicodemus who was a member of the Jewish ruling council. He came to Jesus at night and said, "Rabbi, we know that you are a teacher who has come from God. For no one could perform the signs you are doing if God were not with him."</p>
@@ -382,7 +382,7 @@
                     </div>
                     <div>
                         <div class="media">
-                            <img class="d-flex img-fluid rounded-circle mb-sm-5" src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Generic placeholder image">
+                            <img class="d-flex img-fluid rounded-circle mb-sm-5" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/images/square_img_5.jpg" alt="Generic placeholder image">
                             <div class="media-body pl-md-5 pl-sm-0">
                                 <blockquote>
                                     <p>&ldquo;A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&rdquo;</p>

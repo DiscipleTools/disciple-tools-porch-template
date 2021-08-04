@@ -7,8 +7,9 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
  * @version 1
  */
 
-if( ! class_exists( 'DT_Porch_Template_Lead_Form' ) ) {
+if ( ! class_exists( 'DT_Porch_Template_Lead_Form' ) ) {
     class DT_Porch_Template_Lead_Form {
+
         private static $_instance = null;
         public static function instance() {
             if ( is_null( self::$_instance ) ) {
@@ -18,6 +19,10 @@ if( ! class_exists( 'DT_Porch_Template_Lead_Form' ) ) {
         } // End instance()
 
         public function __construct() {
+            if ( ! defined( 'PORCH_ROOT' ) || ! defined( 'PORCH_TYPE' ) ) {
+                dt_write_log( 'You must define PORCH_ROOT and PORCH_TYPE in the loader.php file' );
+                return;
+            }
             add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
         }
 
@@ -60,33 +65,33 @@ if( ! class_exists( 'DT_Porch_Template_Lead_Form' ) ) {
 
             $data = dt_recursive_sanitize_array( $data );
             $email = $data['email'] ?? '';
-            $fname = $data['fname'] ?? '';
-            $lname = $data['lname'] ?? '';
+            $first_name = $data['fname'] ?? '';
+            $last_name = $data['lname'] ?? '';
 
             if ( empty( $email ) && empty( $phone ) ){
                 return new WP_Error( __METHOD__, 'Must have either phone number or email address to create record.', [ 'status' => 400 ] );
             }
 
             //API KEY and LIST ID here
-            $apiKey = $content['mailchimp_api_key'];
-            $listId = $content['mailchimp_list_id'];
+            $api_key = $content['mailchimp_api_key'];
+            $list_id = $content['mailchimp_list_id'];
 
-            $memberId = md5( strtolower( $email ) );
-            $dataCenter = substr( $apiKey, strpos( $apiKey, '-' ) +1 );
-            $url = 'https://' . $dataCenter . '.api.mailchimp.com/3.0/lists/' . $listId . '/members/' . $memberId;
+            $member_id = md5( strtolower( $email ) );
+            $data_center = substr( $api_key, strpos( $api_key, '-' ) +1 );
+            $url = 'https://' . $data_center . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members/' . $member_id;
 
             $json = json_encode([
                 'email_address' => $email,
                 'status'        => 'subscribed', // "subscribed","unsubscribed","cleaned","pending"
                 'merge_fields'  => [
-                    'FNAME'     => $fname,
-                    'LNAME'     => $lname,
+                    'FNAME'     => $first_name,
+                    'LNAME'     => $last_name,
                 ]
             ]);
 
             $ch = curl_init( $url );
 
-            curl_setopt( $ch, CURLOPT_USERPWD, 'user:' . $apiKey );
+            curl_setopt( $ch, CURLOPT_USERPWD, 'user:' . $api_key );
             curl_setopt( $ch, CURLOPT_HTTPHEADER, [ 'Content-Type: application/json' ] );
             curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
             curl_setopt( $ch, CURLOPT_TIMEOUT, 10 );
@@ -96,7 +101,7 @@ if( ! class_exists( 'DT_Porch_Template_Lead_Form' ) ) {
             $result = curl_exec( $ch );
 
 
-            $httpCode = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
+            $http_code = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
             curl_close( $ch );
 
             return $result;
@@ -116,8 +121,8 @@ if( ! class_exists( 'DT_Porch_Template_Lead_Form' ) ) {
                 return new WP_Error( __METHOD__, 'Must have either phone number or email address to create record.', [ 'status' => 400 ] );
             }
 
-            if ( ! empty( $lname ) ) {
-                $full_name = $name . ' ' . $lname;
+            if ( ! empty( $last_name ) ) {
+                $full_name = $name . ' ' . $last_name;
             } else {
                 $full_name = $name;
             }
@@ -171,7 +176,6 @@ if( ! class_exists( 'DT_Porch_Template_Lead_Form' ) ) {
             } else {
                 return new WP_Error( __METHOD__, 'Could not create DT record.', [ 'status' => 400, 'error_data' => $contact ] );
             }
-
 
             return $data;
         }

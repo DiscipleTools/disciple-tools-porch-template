@@ -8,7 +8,7 @@
 
     <div style="margin-left:40px;">
         <a href="/">
-            <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/p4m-logo.png" width="35px;"/>
+            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/p4m-logo.png" width="35px;"/>
         </a>
     </div> <!-- end header-logo -->
     <nav class="header-nav">
@@ -55,7 +55,7 @@
 <!-- home
 ================================================== -->
 
-<section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/hero-bg.jpg" data-natural-width="3000" data-natural-height="2000" data-position-y="top">
+<section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/hero-bg.jpg" data-natural-width="3000" data-natural-height="2000" data-position-y="top">
 
 
     <div class="shadow-overlay"></div>
@@ -359,7 +359,7 @@
             <h1 class="display-1 display-1--light">(1) Get our email prayer guide</h1>
 
             <?php if ( isset( $content['contact_form'] ) && ! empty( $content['contact_form'] ) ) : ?>
-                <?php echo $content['contact_form']; ?>
+                <?php echo $content['contact_form']; // @phpcs:ignore ?>
             <?php else : ?>
                 <form id="newsletter-form" action="">
                     <div id="section-name" class="section">
@@ -475,8 +475,8 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-dmm1.jpg" class="thumb-link" title="Movement" data-size="800x800">
-                                <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/dmm1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/dmm1.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-dmm1.jpg 2x" alt="">
+                            <a href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-dmm1.jpg" class="thumb-link" title="Movement" data-size="800x800">
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/dmm1.jpg" srcset="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/dmm1.jpg 1x, <?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-dmm1.jpg 2x" alt="">
                             </a>
                         </div>
 
@@ -504,8 +504,8 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-pray.jpg" class="thumb-link" title="Pray" data-size="800x800">
-                                <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/pray.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/pray.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-pray.jpg 2x" alt="">
+                            <a href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-pray.jpg" class="thumb-link" title="Pray" data-size="800x800">
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/pray.jpg" srcset="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/pray.jpg 1x, <?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-pray.jpg 2x" alt="">
                             </a>
                         </div>
 
@@ -533,8 +533,8 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote1.jpg" class="thumb-link" title="Woodcraft" data-size="800x800">
-                                <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote1.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote1.jpg 2x" alt="">
+                            <a href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-quote1.jpg" class="thumb-link" title="Woodcraft" data-size="800x800">
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/quote1.jpg" srcset="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/quote1.jpg 1x, <?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-quote1.jpg 2x" alt="">
                             </a>
                         </div>
 
@@ -562,8 +562,8 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-scripture.jpg" class="thumb-link" title="Liberty" data-size="800x800">
-                                <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/scripture1.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/scripture1.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-scripture.jpg 2x" alt="">
+                            <a href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-scripture.jpg" class="thumb-link" title="Liberty" data-size="800x800">
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/scripture1.jpg" srcset="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/scripture1.jpg 1x, <?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-scripture.jpg 2x" alt="">
                             </a>
                         </div>
 
@@ -592,8 +592,8 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote4.jpg" class="thumb-link" title="Fuji" data-size="800x800">
-                                <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote4.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote4.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote4.jpg 2x" alt="">
+                            <a href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-quote4.jpg" class="thumb-link" title="Fuji" data-size="800x800">
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/quote4.jpg" srcset="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/quote4.jpg 1x, <?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-quote4.jpg 2x" alt="">
                             </a>
                         </div>
 
@@ -621,8 +621,8 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote3.jpg" class="thumb-link" title="Shutterbug" data-size="800x800">
-                                <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote3.jpg" srcset="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/quote3.jpg 1x, <?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/g-quote3.jpg 2x" alt="">
+                            <a href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-quote3.jpg" class="thumb-link" title="Shutterbug" data-size="800x800">
+                                <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/quote3.jpg" srcset="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/quote3.jpg 1x, <?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/g-quote3.jpg 2x" alt="">
                             </a>
                         </div>
 
@@ -662,7 +662,7 @@
                 <div class="col-full testimonials__slider">
 
                     <div class="testimonials__slide">
-                        <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/user-02.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/user-02.jpg" alt="Author image" class="testimonials__avatar">
                         <p>If we never pray for movement in <?php echo esc_html( $content['location'] ?? '' ) ?>, do we have the right to complain when it isn't happening?</p>
                         <div class="testimonials__author">
                             Dave ~
@@ -671,7 +671,7 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/user-01.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/user-01.jpg" alt="Author image" class="testimonials__avatar">
                         <p>The American church needs to catch up with the prayer commitment, passion, and priority of the church in Asia and Africa.</p>
                         <div class="testimonials__author">
                             Chris ~
@@ -680,7 +680,7 @@
                     </div> <!-- end testimonials__slide -->
 
                     <div class="testimonials__slide">
-                        <img src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/keller.jpg" alt="Author image" class="testimonials__avatar">
+                        <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/keller.jpg" alt="Author image" class="testimonials__avatar">
                         <p>The primary means of revival, that everyone agrees on, is extra-ordinary prayer.</p>
                         <div class="testimonials__author">
                             Tim Keller

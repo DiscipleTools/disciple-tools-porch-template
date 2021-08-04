@@ -16,19 +16,19 @@
 
 <!-- CSS
 ================================================== -->
-<link rel="stylesheet" href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>css/base.css">
-<link rel="stylesheet" href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>css/vendor.css">
-<link rel="stylesheet" href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>css/main.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>css/base.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>css/vendor.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>css/main.css">
 
 <!-- script
 ================================================== -->
-<script src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>js/modernizr.js"></script>
-<script src="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>js/pace.min.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>js/modernizr.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>js/pace.min.js"></script>
 
 <!-- favicons
 ================================================== -->
-<link rel="shortcut icon" href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/favicon.png" type="image/x-icon">
-<link rel="icon" href="<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/favicon.png" type="image/x-icon">
+<link rel="icon" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/favicon.png" type="image/x-icon">
 <script>
     let jsObject = [<?php echo json_encode([
         'theme_uri' => trailingslashit( get_stylesheet_directory_uri() ),

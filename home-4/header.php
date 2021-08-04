@@ -1,13 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>css/styles-merged.css">
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>css/style.min.css">
-<link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>fonts/icomoon/style.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>css/styles-merged.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>css/style.min.css">
+<link rel="stylesheet" href="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>fonts/icomoon/style.css">
 
 <!--[if lt IE 9]>
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>js/vendor/html5shiv.min.js"></script>
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>js/vendor/respond.min.js"></script>
+        <script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>js/vendor/html5shiv.min.js"></script>
+        <script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>js/vendor/respond.min.js"></script>
         <![endif]-->
 <script>
     let jsObject = [<?php echo json_encode([

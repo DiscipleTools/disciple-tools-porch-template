@@ -12,9 +12,8 @@ class DT_Porch_Template_Home_1_Admin {
         }
         return self::$_instance;
     }
-    public function __construct()
-    {
-        if (!is_admin()) {
+    public function __construct() {
+        if ( !is_admin()) {
             return;
         }
 
@@ -24,18 +23,18 @@ class DT_Porch_Template_Home_1_Admin {
 
         $this->token = DT_Porch_Template_Home_1::$token;
 
-        add_filter('dt_remove_menu_pages', [$this, 'add_media_tab'], 10, 1);
-        add_filter('upload_mimes', [$this, 'add_additional_mime_types'], 1, 1);
+        add_filter( 'dt_remove_menu_pages', [ $this, 'add_media_tab' ], 10, 1 );
+        add_filter( 'upload_mimes', [ $this, 'add_additional_mime_types' ], 1, 1 );
 
-        if ('/wp-admin/upload.php' === $_SERVER['REQUEST_URI']) {
+        if ( isset( $_SERVER['REQUEST_URI'] ) && '/wp-admin/upload.php' === $_SERVER['REQUEST_URI'] ) {
             $this->add_media_page_warning();
         }
 
-        add_action('admin_menu', [$this, 'admin_menu']);
+        add_action( 'admin_menu', [ $this, 'admin_menu' ] );
     }
 
     public function admin_menu() {
-        add_menu_page( 'Porch', 'Porch', 'manage_options', $this->token, [ $this, 'landing_admin_page' ], 'dashicons-admin-generic', 5);
+        add_menu_page( 'Porch', 'Porch', 'manage_options', $this->token, [ $this, 'landing_admin_page' ], 'dashicons-admin-generic', 5 );
     }
 
     public function landing_admin_page(){
@@ -95,7 +94,7 @@ class DT_Porch_Template_Home_1_Admin {
 
             dt_write_log( $_POST );
 
-            foreach( $settings as $index => $value ) {
+            foreach ( $settings as $index => $value ) {
                 if ( 'version' === $index ) {
                     continue;
                 }
@@ -123,20 +122,20 @@ class DT_Porch_Template_Home_1_Admin {
                                 </thead>
                                 <tbody>
                                 <?php
-                                foreach( $settings as $key => $value ) {
+                                foreach ( $settings as $key => $value ) {
                                     if ( 'version' === $key ) {
                                         continue;
                                     }
 
-                                    switch( $value['type'] ) {
+                                    switch ( $value['type'] ) {
                                         case 'text':
                                             ?>
                                             <tr>
                                                 <td style="width:150px;">
-                                                    <?php echo $value['label'] ?>
+                                                    <?php echo esc_html( $value['label'] ) ?>
                                                 </td>
                                                 <td>
-                                                    <input type="text" name="<?php echo $value['key'] ?>" class="regular-text" value="<?php echo $value['value'] ?>" />
+                                                    <input type="text" name="<?php echo esc_attr( $value['key'] ) ?>" class="regular-text" value="<?php echo esc_html( $value['value'] ) ?>" />
                                                 </td>
                                             </tr>
                                             <?php
@@ -145,7 +144,7 @@ class DT_Porch_Template_Home_1_Admin {
                                             ?>
                                             <tr>
                                                 <td style="width:150px;">
-                                                    <?php echo $value['label'] ?>
+                                                    <?php echo esc_html( $value['label'] ) ?>
                                                 </td>
                                                 <td>
                                                     <?php
@@ -170,7 +169,7 @@ class DT_Porch_Template_Home_1_Admin {
                                                     $base_user           = dt_get_base_user();
 
                                                     ?>
-                                                    <select name="<?php echo $value['key'] ?>" id="<?php echo $value['key'] ?>">
+                                                    <select name="<?php echo esc_attr( $value['key'] ) ?>" id="<?php echo esc_attr( $value['key'] ) ?>">
                                                         <option disabled>---</option>
                                                         <?php foreach ( $potential_user_list as $potential_user ): ?>
                                                             <option
@@ -182,7 +181,6 @@ class DT_Porch_Template_Home_1_Admin {
                                             <?php
                                             break;
                                     }
-
                                 }
                                 ?>
                                 <tr>
@@ -215,7 +213,8 @@ class DT_Porch_Template_Home_1_Admin {
             if ( isset( $_POST['reset_template'] ) ) {
                 $content = DT_Porch_Template_Home_1_Storage::insert_starter_content();
             } else {
-                $content = DT_Porch_Template_Home_1_Storage::update_body( $_POST['body_field'] );
+                $body = $_POST['body_field']; // @phpcs:ignore
+                $content = DT_Porch_Template_Home_1_Storage::update_body( $body );
             }
         }
         ?>
@@ -234,7 +233,7 @@ class DT_Porch_Template_Home_1_Admin {
                                 <tbody>
                                 <tr>
                                     <td>
-                                        <textarea type="text" name="body_field" id="body_field" style="width:100%; height:600px;" ><?php echo $content ?></textarea>
+                                        <textarea type="text" name="body_field" id="body_field" style="width:100%; height:600px;" ><?php echo $content; // @phpcs:ignore ?></textarea>
                                     </td>
                                 </tr>
                                 <tr>

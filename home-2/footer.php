@@ -1,13 +1,13 @@
-<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.min.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.min.js"></script>
 
-<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/popper.min.js"></script>
-<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/bootstrap.min.js"></script>
-<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/slick.min.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/popper.min.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/bootstrap.min.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/slick.min.js"></script>
 
-<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.waypoints.min.js"></script>
-<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.easing.1.3.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.waypoints.min.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.easing.1.3.js"></script>
 
-<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/main.js"></script>
+<script src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/main.js"></script>
 <script>
     let jsObject = [<?php echo json_encode([
         'theme_uri' => trailingslashit( get_stylesheet_directory_uri() ),

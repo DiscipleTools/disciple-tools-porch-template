@@ -1,10 +1,21 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
-define( 'PORCH_TITLE', 'Home 1' );
-define( 'PORCH_ROOT', 'porch_app' );
-define( 'PORCH_TYPE', '1' );
-define( 'PORCH_TOKEN', 'porch_app_1' ); // must be less than 20 characters
+/**
+ * @todo Configure the title value, root value, type value, and token value. Don't change PORCH_ variable.
+ */
+if ( ! defined( 'PORCH_TITLE' ) ) {
+    define( 'PORCH_TITLE', 'Home 1' ); // Used in tabs and titles, avoid special characters. Spaces are okay.
+}
+if ( ! defined( 'PORCH_ROOT' ) ) {
+    define( 'PORCH_ROOT', 'porch_app' ); // Alphanumeric key. Use underscores not hyphens. No special characters.
+}
+if ( ! defined( 'PORCH_TYPE' ) ) {
+    define( 'PORCH_TYPE', '1' ); // Alphanumeric key. Use underscores not hyphens. No special characters.
+}
+if ( ! defined( 'PORCH_TOKEN' ) ) {
+    define( 'PORCH_TOKEN', 'porch_app_1' ); // Alphanumeric key. Use underscores not hyphens. No special characters. Must be less than 20 characters
+}
 
 class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
 {
@@ -54,14 +65,14 @@ class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
         }
 
         if ( dt_is_rest() ) {
-            require_once('rest.php');
+            require_once( 'rest.php' );
             add_filter( 'dt_allow_rest_access', [ $this, 'authorize_url' ], 10, 1 );
         }
 
         if ( is_admin() ) {
             require_once( 'admin/admin-customizer.php' );
             add_action( 'init', [ 'DT_Porch_Template_Home_1_Storage', 'register_post_type' ] );
-            add_filter('dt_set_roles_and_permissions', [ $this, 'dt_set_roles_and_permissions'], 50, 1);
+            add_filter( 'dt_set_roles_and_permissions', [ $this, 'dt_set_roles_and_permissions' ], 50, 1 );
         }
     }
 
@@ -78,18 +89,17 @@ class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
     }
 
     public function body(){
-        echo DT_Porch_Template_Home_1_Storage::get_body();
+        echo DT_Porch_Template_Home_1_Storage::get_body(); // @phpcs:ignore
     }
 
     public function footer_javascript(){
         require_once( 'footer.php' );
     }
 
-    public function dt_set_roles_and_permissions($expected_roles)
-    {
-        if (!isset($expected_roles["porch_admin"])) {
+    public function dt_set_roles_and_permissions( $expected_roles) {
+        if ( !isset( $expected_roles["porch_admin"] )) {
             $expected_roles["porch_admin"] = [
-                "label" => __('Porch Admin', 'disciple-tools-porch-template'),
+                "label" => __( 'Porch Admin', 'disciple-tools-porch-template' ),
                 "description" => "Administrates public porch",
                 "permissions" => [
                     'read' => true,
@@ -163,12 +173,12 @@ class DT_Porch_Template_Home_1_Storage {
 
     public static function match_settings() {
         $settings = [];
-        $old_settings = DT_Porch_Template_Home_1_Storage::get_settings();
+        $old_settings = self::get_settings();
         $default_settings = self::get_settings_defaults();
-        foreach( $default_settings as $value ) {
+        foreach ( $default_settings as $value ) {
             $settings[$value['key']] = $value;
         }
-        foreach( $old_settings as $value ) {
+        foreach ( $old_settings as $value ) {
             if ( isset( $settings[$value['key']] ) ) {
                 $settings[$value['key']] = $value;
             }
@@ -180,7 +190,7 @@ class DT_Porch_Template_Home_1_Storage {
         $post_id = self::get_settings_post_id();
         $post_meta = get_post_meta( $post_id, 'content', true );
         if ( false === $post_meta || ! is_array( $post_meta ) ) {
-            $post_meta =  self::update_settings( self::get_settings_defaults() );
+            $post_meta = self::update_settings( self::get_settings_defaults() );
         }
 
         return is_array( $post_meta ) ? $post_meta : self::get_settings_defaults();
@@ -193,7 +203,7 @@ class DT_Porch_Template_Home_1_Storage {
                 'post_title' => self::$settings_token,
                 'post_type' => self::$post_type
             ];
-            $post_id = wp_insert_post($args);
+            $post_id = wp_insert_post( $args );
         } else {
             $post_id = $post['ID'];
         }
@@ -222,7 +232,7 @@ class DT_Porch_Template_Home_1_Storage {
                 'post_title' => self::$body_token,
                 'post_type' => self::$post_type
             ];
-            $post_id = wp_insert_post($args);
+            $post_id = wp_insert_post( $args );
         } else {
             $post_id = $post['ID'];
         }
@@ -230,9 +240,9 @@ class DT_Porch_Template_Home_1_Storage {
     }
 
     public static function insert_starter_content(){
-        $html = file_get_contents(plugin_dir_path(__FILE__) . 'body.php');
-        $url = trailingslashit(plugin_dir_url(__FILE__));
-        $html = str_replace('<?php echo trailingslashit( plugin_dir_url( __FILE__ ) ) ?>', $url, $html );
+        $html = file_get_contents( plugin_dir_path( __FILE__ ) . 'body.php' );
+        $url = trailingslashit( plugin_dir_url( __FILE__ ) );
+        $html = str_replace( '<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>', $url, $html );
         return self::update_body( $html );
     }
 
