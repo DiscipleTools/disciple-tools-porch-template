@@ -5,19 +5,19 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
  * @todo Configure the title value, root value, type value, and token value. Don't change PORCH_ variable.
  */
 if ( ! defined( 'PORCH_TITLE' ) ) {
-    define( 'PORCH_TITLE', 'Home 7' ); // Used in tabs and titles, avoid special characters. Spaces are okay.
+    define( 'PORCH_TITLE', 'Home 8' ); // Used in tabs and titles, avoid special characters. Spaces are okay.
 }
 if ( ! defined( 'PORCH_ROOT' ) ) {
     define( 'PORCH_ROOT', 'porch_app' ); // Alphanumeric key. Use underscores not hyphens. No special characters.
 }
 if ( ! defined( 'PORCH_TYPE' ) ) {
-    define( 'PORCH_TYPE', '7' ); // Alphanumeric key. Use underscores not hyphens. No special characters.
+    define( 'PORCH_TYPE', '8' ); // Alphanumeric key. Use underscores not hyphens. No special characters.
 }
 if ( ! defined( 'PORCH_TOKEN' ) ) {
-    define( 'PORCH_TOKEN', 'porch_app_7' ); // Alphanumeric key. Use underscores not hyphens. No special characters. Must be less than 20 characters
+    define( 'PORCH_TOKEN', 'porch_app_8' ); // Alphanumeric key. Use underscores not hyphens. No special characters. Must be less than 20 characters
 }
 
-class DT_Porch_Template_Home_7 extends DT_Magic_Url_Base
+class DT_Porch_Template_Home_8 extends DT_Magic_Url_Base
 {
     public $magic = false;
     public $parts = false;
@@ -46,6 +46,8 @@ class DT_Porch_Template_Home_7 extends DT_Magic_Url_Base
             }, 100, 1 ); // allows non-logged in visit
             add_filter( 'dt_allow_non_login_access', function (){ return true;
             }, 100, 1 );
+            add_filter( 'dt_override_header_meta', function (){ return true;
+            }, 100, 1 );
 
             // header content
             add_filter( "dt_blank_title", [ $this, "page_tab_title" ] ); // adds basic title to browser tab
@@ -69,7 +71,7 @@ class DT_Porch_Template_Home_7 extends DT_Magic_Url_Base
     }
 
     public function dt_magic_url_base_allowed_js( $allowed_js ) {
-        return [];
+        return [ 'jquery' ];
     }
 
     public function dt_magic_url_base_allowed_css( $allowed_css ) {
@@ -88,4 +90,4 @@ class DT_Porch_Template_Home_7 extends DT_Magic_Url_Base
         require_once( 'body.php' );
     }
 }
-DT_Porch_Template_Home_7::instance();
+DT_Porch_Template_Home_8::instance();

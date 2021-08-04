@@ -1,17 +1,20 @@
+<!-- Self-Hosted Video -->
+<div class="me-video-container">
+    <video class="video" muted autoplay loop src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>video/video.mp4"></video>
+</div>
+
 <div class="fs-me">
 
     <!-- Content Container -->
     <div class="me-content">
 
         <div class="logo">
-
-            <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>images/logo.png" alt="Logo" />
-
+            <span id="logo-text">Site 8</span>
         </div>
 
         <div class="bio">
 
-            <p>This is me. I push pixels at <a href="#">Google</a>, write words on <a href="#">Medium</a> and spill thoughts on <a href="#">Twitter</a>.</p>
+            <p>We are praying for a <a href="#">disciple making movement</a>, in <a href="#">Colorado</a> and  <a href="#">around the world</a>.</p>
 
         </div>
 
@@ -67,7 +70,7 @@
                     </a>
                 </li>
 
-                <!-- email icon reference one
+
                 <li>
                     <a class="icon-email" href="#">
                         <svg class="svg-icon" viewBox="0 0 20 20">
@@ -75,22 +78,6 @@
                         </svg>
                     </a>
                 </li>
-                -->
-
-                <!-- email icon reference two
-                <li>
-                    <a class="icon-email" href="#">
-                        <svg class="svg-icon" viewBox="0 0 20 20">
-                            <path fill="none" d="M19.291,3.026c0.002-0.15-0.053-0.301-0.167-0.415c-0.122-0.122-0.286-0.172-0.444-0.161H1.196
-                                c-0.16-0.011-0.322,0.039-0.444,0.161C0.637,2.725,0.583,2.875,0.585,3.026c0,0.003-0.002,0.006-0.002,0.009v14.032
-                                c0,0.322,0.262,0.584,0.585,0.584h17.54c0.322,0,0.584-0.262,0.584-0.584V3.035C19.292,3.032,19.291,3.029,19.291,3.026z
-                                 M17.147,3.619l-7.21,6.251L2.728,3.619H17.147z M18.122,15.896c0,0.323-0.261,0.584-0.584,0.584H2.337
-                                c-0.323,0-0.585-0.261-0.585-0.584V4.292l7.732,6.704c0.013,0.017,0.019,0.035,0.034,0.052c0.115,0.114,0.268,0.169,0.419,0.166
-                                c0.151,0.003,0.304-0.052,0.419-0.166c0.015-0.017,0.021-0.035,0.034-0.052l7.731-6.704V15.896z"></path>
-                        </svg>
-                    </a>
-                </li>
-                -->
 
             </ul>
 
@@ -98,7 +85,7 @@
 
         <div class="credit">
 
-            <p class="copyright">&copy;2021 <a href="#">Your Name</a> - <a href="https://onepagelove.com/me">Me Template</a> by <a href="https://onepagelove.com">One Page Love</a></p>
+            <p class="copyright">All copyrights reserved &copy;  <script>document.write(new Date().getFullYear())</script></p>
 
         </div>
 

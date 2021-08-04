@@ -1,13 +1,7 @@
-/*
-Template Name: Me
-Author: One Page Love
-Author URI: https://onepagelove.com
-Template URI: https://onepagelove.com/me
-Description: Me is a slick, personal layout for any individual wanting a minimal online presence. Features include a big background image, logo, bio and icons.
-Version: 0.2.2
-*/
 /* -- CSS Reset -- */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+@import url("https://fonts.googleapis.com/css?family=WindSong");
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -144,12 +138,14 @@ body.page-template-page-fullsingle-me {
         height: 90vh; } }
 
 .logo {
+
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
           flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -165,6 +161,11 @@ body.page-template-page-fullsingle-me {
   .logo img {
     max-width: 165px;
     height: auto; }
+
+
+#logo-text {
+    font-family: 'WindSong', 'Roboto', serif;
+}
 
 .bio {
   -webkit-box-flex: 1;

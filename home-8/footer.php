@@ -11,9 +11,11 @@
             'add' => __( 'Add Magic', 'disciple-tools-porch-template' ),
         ],
     ]) ?>][0]
-    document.body.id = 'fullsingle'
 
+    /* Add needed classes to body tag */
+    document.body.id = 'fullsingle'
     jQuery(document).ready(function(){
-        jQuery('body').addClass('page-template-page-fullsingle-me')
+        jQuery('body').addClass('page-template-page-fullsingle-me').addClass('me-video')
     })
+    jQuery('.fs-me').width('100%').height(window.innerHeight)
 </script>

@@ -46,6 +46,8 @@ class DT_Porch_Template_Home_8 extends DT_Magic_Url_Base
             }, 100, 1 ); // allows non-logged in visit
             add_filter( 'dt_allow_non_login_access', function (){ return true;
             }, 100, 1 );
+            add_filter( 'dt_override_header_meta', function (){ return true;
+            }, 100, 1 );
 
             // header content
             add_filter( "dt_blank_title", [ $this, "page_tab_title" ] ); // adds basic title to browser tab
@@ -88,4 +90,4 @@ class DT_Porch_Template_Home_8 extends DT_Magic_Url_Base
         require_once( 'body.php' );
     }
 }
-DT_Porch_Template_Home_7::instance();
+DT_Porch_Template_Home_8::instance();

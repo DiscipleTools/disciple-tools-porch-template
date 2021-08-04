@@ -245,6 +245,11 @@
 <div class="copyright py-4 text-center text-white">
     <div class="container"><small>All copyrights reserved &copy;  <script>document.write(new Date().getFullYear())</script></small></div>
 </div>
+
+
+
+
+
 <!-- Portfolio Modals-->
 <!-- Portfolio Modal 1-->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
