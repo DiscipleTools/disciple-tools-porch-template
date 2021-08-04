@@ -84,9 +84,11 @@ class DT_Porch_Template {
     private function __construct() {
 
         /**
-         * Home Page
-         * 8 starter sites are commented out below. Choose only 1 for the home page.
-         * (choose only 1)
+         * @todo STEP 1: CHOOSE HOME PAGE STYLE
+         * 8 starter sites are listed below. Uncomment the loader file to show the site style. Choose only 1 at a time.
+         *
+         * @todo STEP 2: ONCE A STYLE IS SELECTED, REMOVE ADDITIONAL LINES AND DELETE CORRESPONDING FOLDERS
+         * @todo STEP 3: EDIT THE BODY CONTENT OF THE SELECTED STYLE IN THE `body.php` file.
          */
         require_once( 'home-1/loader.php'); /* Pray4Movement */
 //        require_once( 'home-2/loader.php'); /* Simple, Big images, White and Image */
@@ -98,9 +100,23 @@ class DT_Porch_Template {
 //        require_once( 'home-8/loader.php'); /* single image, full screen */
 
 
-        // private user page example
-        require_once( 'template-user-page/loader.php' );
+        /**
+         * @todo STEP 4: SELECT LOGGED IN PAGE STYLE
+         * This page style allows a person to register to the site, and get a custom profile page, without giving
+         * them access to disciple tools. This page is recommended to be used with the custom login plugin so that
+         * a registered role can be applied.
+         *
+         * @use Use this to give a partner a dashboard on the project without giving them access to the entire DT system.
+         * @use Allows you to collect data from a user without giving them full Disciple Tools access.
+         *
+         * Remove all of these if a logged in page is not required.
+         */
+        require_once( 'logged-in-1/loader.php' );
 
+
+        /**
+         * 
+         */
         if ( is_admin() ) {
             require_once('required-plugins/class-tgm-plugin-activation.php');
             require_once('required-plugins/config-required-plugins.php');
