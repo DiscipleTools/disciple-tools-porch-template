@@ -1,4 +1,3 @@
-
 <!-- Fixed navbar -->
 <nav class="navbar navbar-default probootstrap-navbar">
     <div class="container">
@@ -9,15 +8,15 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/" title="uiCookies:Frame">Frame</a>
+            <a class="navbar-brand" href="/" title="Site 4">Site 4</a>
         </div>
 
         <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#" data-nav-section="home">Home</a></li>
-                <li><a href="#" data-nav-section="features">Features</a></li>
-                <li><a href="#" data-nav-section="pricing">Pricing</a></li>
-                <li><a href="#" data-nav-section="reviews">Reviews</a></li>
+                <li><a href="#" data-nav-section="features">Section 1</a></li>
+                <li><a href="#" data-nav-section="pricing">Section 2</a></li>
+                <li><a href="#" data-nav-section="reviews">Section 3</a></li>
                 <li><a href="#" data-nav-section="contact">Contact</a></li>
             </ul>
         </div>
@@ -28,9 +27,9 @@
     <div class="container">
         <div class="row intro-text">
             <div class="col-md-8 col-md-offset-2 text-center">
-                <h1 class="probootstrap-heading probootstrap-animate">uicookies.com Creates High Quality Bootstrap Template For <em>Free</em></h1>
+                <h1 class="probootstrap-heading probootstrap-animate">Praying for a disciple making movement in <em>Colorado</em></h1>
                 <div class="probootstrap-subheading center">
-                    <p class="probootstrap-animate"><a href="https://uicookies.com/" target="_blank" role="button" class="btn btn-primary">Get Them Now</a><a href="#features" class="btn btn-default smoothscroll" role="button">See Features</a></p>
+                    <p class="probootstrap-animate"><a href="/login" target="_blank" role="button" class="btn btn-primary">Join Us</a><a href="#features" class="btn btn-default smoothscroll" role="button">Our Vision</a></p>
                 </div>
             </div>
         </div>
@@ -43,24 +42,24 @@
             <div class="col-md-4">
                 <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
                     <span class="icon icon-phone3"></span>
-                    <h2>Mobile Optimize</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <h2>Thought 1</h2>
+                    <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     <p><a href="#" class="probootstrap-link">Learn More <i class="icon-chevron-right"></i></a></p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
                     <span class="icon icon-wallet2"></span>
-                    <h2>Increase Revenue</h2>
-                    <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                    <h2>Thought 2</h2>
+                    <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     <p><a href="#" class="probootstrap-link">Learn More <i class="icon-chevron-right"></i></a></p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="probootstrap-service-item probootstrap-animate" data-animate-effect="fadeIn">
                     <span class="icon icon-lightbulb"></span>
-                    <h2>Smart Idea</h2>
-                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                    <h2>Thought 3</h2>
+                    <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     <p><a href="#" class="probootstrap-link">Learn More <i class="icon-chevron-right"></i></a></p>
                 </div>
             </div>
@@ -72,8 +71,8 @@
     <div class="container">
         <div class="row text-center mb100">
             <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
-                <h2 class="mb30 text-black probootstrap-heading">Features</h2>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                <h2 class="mb30 text-black probootstrap-heading">Section 1</h2>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
             </div>
         </div>
         <!-- END row -->
@@ -82,12 +81,12 @@
                 <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
             </div>
             <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
-                <h3 class="text-primary probootstrap-heading-2">Big Benefits for Small Business</h3>
-                <p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p></p>
+                <h3 class="text-primary probootstrap-heading-2">Convincing Point 1</h3>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                 <ul class="probootstrap-list">
-                    <li class="probootstrap-check">Pointing has no control</li>
-                    <li class="probootstrap-check">A small river named Duden flows</li>
-                    <li class="probootstrap-check">Roasted parts of sentences fly into your mouth</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact, fact</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact, fact, fact</li>
                 </ul>
             </div>
         </div>
@@ -95,16 +94,16 @@
         <div class="row mb100">
             <!-- <div class="col-md-8 col-md-pull-2"> -->
             <div class="col-md-8 col-md-push-5 probootstrap-animate">
-                <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_2.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
+                <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
             </div>
             <!-- <div class="col-md-4 col-md-pull-1"> -->
             <div class="col-md-4 col-md-pull-8 probootstrap-section-heading">
-                <h3 class="text-primary probootstrap-heading-2">How Frame is different</h3>
-                <p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p></p>
+                <h3 class="text-primary probootstrap-heading-2">Convincing Point 2</h3>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                 <ul class="probootstrap-list">
-                    <li class="probootstrap-check">Pointing has no control</li>
-                    <li class="probootstrap-check">A small river named Duden flows</li>
-                    <li class="probootstrap-check">Roasted parts of sentences fly into your mouth</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact, fact</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact, fact, fact</li>
                 </ul>
             </div>
         </div>
@@ -115,12 +114,12 @@
                 <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
             </div>
             <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
-                <h3 class="text-primary probootstrap-heading-2">All in One Place</h3>
-                <p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p></p>
+                <h3 class="text-primary probootstrap-heading-2">Convincing Point 3</h3>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                 <ul class="probootstrap-list">
-                    <li class="probootstrap-check">Pointing has no control</li>
-                    <li class="probootstrap-check">A small river named Duden flows</li>
-                    <li class="probootstrap-check">Roasted parts of sentences fly into your mouth</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact, fact</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact</li>
+                    <li class="probootstrap-check">Awesome blah, blah, fact, fact, fact</li>
                 </ul>
             </div>
         </div>
@@ -133,52 +132,36 @@
     <div class="container">
         <div class="row text-center mb100">
             <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
-                <h2 class="mb30 text-black probootstrap-heading">Choose the plan that’s right for your business </h2>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                <h2 class="mb30 text-black probootstrap-heading">Section 2</h2>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
             </div>
         </div>
         <!-- END row -->
-        <div class="row">
-            <div class="col-md-4">
-                <div class="probootstrap-pricing">
-                    <h2>Starter</h2>
-                    <p class="probootstrap-price"><strong>$22.99</strong></p>
-                    <p class="probootstrap-note">This is a monthly recurring payment.</p>
-                    <ul class="probootstrap-list text-left mb50">
-                        <li class="probootstrap-check">Pointing has no control</li>
-                        <li class="probootstrap-check">A small river named Duden flows</li>
-                        <li class="probootstrap-check">Roasted parts of sentences fly into your mouth</li>
-                    </ul>
-                    <p><a href="#" class="btn btn-black">Get Started</a></p>
-                </div>
+
+        <div class="row mb100">
+            <div class="col-md-8 col-md-pull-2 probootstrap-animate">
+                <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
             </div>
-            <div class="col-md-4">
-                <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
-                    <h2>Business</h2>
-                    <p class="probootstrap-price"><strong>$69.99</strong></p>
-                    <p class="probootstrap-note">This is a monthly recurring payment.</p>
-                    <ul class="probootstrap-list text-left mb50">
-                        <li class="probootstrap-check">Pointing has no control</li>
-                        <li class="probootstrap-check">A small river named Duden flows</li>
-                        <li class="probootstrap-check">Roasted parts of sentences fly into your mouth</li>
-                    </ul>
-                    <p><a href="#" class="btn btn-primary">Get Started</a></p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="probootstrap-pricing">
-                    <h2>Premium</h2>
-                    <p class="probootstrap-price"><strong>$224.99</strong></p>
-                    <p class="probootstrap-note">This is a monthly recurring payment.</p>
-                    <ul class="probootstrap-list text-left mb50">
-                        <li class="probootstrap-check">Pointing has no control</li>
-                        <li class="probootstrap-check">A small river named Duden flows</li>
-                        <li class="probootstrap-check">Roasted parts of sentences fly into your mouth</li>
-                    </ul>
-                    <p><a href="#" class="btn btn-black">Get Started</a></p>
-                </div>
+            <div class="col-md-4 col-md-pull-1 probootstrap-section-heading">
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
             </div>
         </div>
+
+        <div class="row mb100">
+            <!-- <div class="col-md-8 col-md-pull-2"> -->
+            <div class="col-md-8 col-md-push-5 probootstrap-animate">
+                <p><img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/img_showcase_1.jpg" alt="Free Template by uicookies.com" class="img-responsive probootstrap-shadow"></p>
+            </div>
+            <!-- <div class="col-md-4 col-md-pull-1"> -->
+            <div class="col-md-4 col-md-pull-8 probootstrap-section-heading">
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
+            </div>
+        </div>
+
     </div>
 </section>
 <!-- END section -->
@@ -187,8 +170,8 @@
     <div class="container">
         <div class="row text-center mb100">
             <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
-                <h2 class="mb30 text-black probootstrap-heading">That’s why 100,000+ Love Frame</h2>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                <h2 class="mb30 text-black probootstrap-heading">Section 3</h2>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
             </div>
         </div>
         <!-- END row -->
@@ -201,10 +184,9 @@
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
-                        <i class="icon-star"></i>
                     </p>
                     <blockquote>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                        <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     </blockquote>
                     <p class="mb0">&mdash; Garry Alexander</p>
                 </div>
@@ -220,7 +202,7 @@
                         <i class="icon-star"></i>
                     </p>
                     <blockquote>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     </blockquote>
                     <p class="mb0">&mdash; James Robertson</p>
                 </div>
@@ -234,10 +216,9 @@
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
                         <i class="icon-star"></i>
-                        <i class="icon-star"></i>
                     </p>
                     <blockquote>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                        <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     </blockquote>
                     <p class="mb0">&mdash; Ben Goodrich</p>
                 </div>
@@ -253,7 +234,7 @@
                         <i class="icon-star-outlined"></i>
                     </p>
                     <blockquote>
-                        <p>And if she hasn’t been rewritten, then they are still using her.</p>
+                        <p>You must be born again. The wind blows wherever it pleases.</p>
                     </blockquote>
                     <p class="mb0">&mdash; Kip Hugh</p>
                 </div>
@@ -270,7 +251,7 @@
                         <i class="icon-star"></i>
                     </p>
                     <blockquote>
-                        <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                        <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     </blockquote>
                     <p class="mb0">&mdash; James Robertson</p>
                 </div>
@@ -286,7 +267,7 @@
                         <i class="icon-star"></i>
                     </p>
                     <blockquote>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                        <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                     </blockquote>
                     <p class="mb0">&mdash; Ben Goodrich</p>
                 </div>
@@ -301,7 +282,7 @@
         <div class="row text-center mb100">
             <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
                 <h2 class="mb30 text-black probootstrap-heading">Try It Today</h2>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                <p>You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.</p>
                 <p><a href="#" class="btn btn-primary">Get It Now</a></p>
             </div>
         </div>
@@ -314,23 +295,24 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <h4 class="text-black probootstrap-check-2"> What is Instant?</h4>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                        <h4 class="text-black probootstrap-check-2">What about?</h4>
+                        <p>Very truly I tell you, no one can see the kingdom of God unless they are born again. For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</p>
 
-                        <h4 class="text-black probootstrap-check-2">How do I use the new features of Frame App?</h4>
-                        <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. </p>
+                        <h4 class="text-black probootstrap-check-2">And what about?</h4>
+                        <p>No one has ever gone into heaven except the one who came from heaven—the Son of Man. For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</p>
                     </div>
                     <div class="col-md-6">
-                        <h4 class="text-black probootstrap-check-2">Is this available to my country?</h4>
-                        <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.
+                        <h4 class="text-black probootstrap-check-2">And what about?</h4>
+                        <p>Very truly I tell you, no one can see the kingdom of God unless they are born again. You must be born again. The wind blows wherever it pleases. You hear its sound, but you cannot tell where it comes from or where it is going. So it is with everyone born of the Spirit.
                         </p>
 
-                        <h4 class="text-black probootstrap-check-2">I have technical problem who do I email?</h4>
-                        <p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+                        <h4 class="text-black probootstrap-check-2">And what about?</h4>
+                        <p>No one has ever gone into heaven except the one who came from heaven—the Son of Man. For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</p>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 <!-- END section -->
@@ -339,24 +321,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
-                <h2 class="probootstrap-heading">Join With Over 100K Members</h2>
-                <p class="probootstrap-sub-heading">But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+                <h2 class="probootstrap-heading">Join Other Seeking Like You</h2>
+                <p class="probootstrap-sub-heading">For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</p>
                 <p><a href="#" class="btn btn-black">Get Started</a></p>
             </div>
         </div>
     </div>
 </section>
-<!-- <section class"probootstrap-section probootstrap-cta">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2 class="probootstrap-heading">Join With Over 100K Members</h2>
-        <p class="probootstrap-sub-heading">But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
 
-      </div>
-    </div>
-  </div>
-</section> -->
 <!-- END section -->
 <section class="probootstrap-section probootstrap-bg-light" data-section="contact">
     <div class="container">
@@ -384,29 +356,22 @@
             <div class="col-md-3 col-md-push-1">
                 <ul class="probootstrap-contact-details">
                     <li>
-                        <span class="text-uppercase">Email</span>
-                        probootstrap@gmail.com
-                    </li>
-                    <li>
                         <span class="text-uppercase">Phone</span>
                         +30 976 1382 9921
                     </li>
                     <li>
-                        <span class="text-uppercase">Fax</span>
-                        +30 976 1382 9922
+                        <span class="text-uppercase">WhatsApp</span>
+                        +30 976 1382 9921
                     </li>
                     <li>
-                        <span class="text-uppercase">Address</span>
-                        San Francisco, CA <br>
-                        4th Floor8 Lower  <br>
-                        San Francisco street, M1 50F
+                        <span class="text-uppercase">Facebook</span>
+                        @ourfacebookusername
                     </li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
-
 
 <footer class="probootstrap-footer">
     <div class="container text-center">
@@ -417,7 +382,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                &copy; 2017 <a href="https://uicookies.com/">uiCookies:Frame</a>. All Rights Reserved. <br> Designed &amp; Developed by <a href="https://uicookies.com">uicookies.com</a> <br> Demo Images by <a href="https://unsplash.com">Unsplash</a>
+                <p>All copyrights reserved &copy;  <script>document.write(new Date().getFullYear())</script></p>
             </div>
         </div>
     </div>
