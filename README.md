@@ -47,4 +47,4 @@ system for git. For a more details on contribution see the
 
 ## Screenshots
 
-![screenshot](documentation/community/starter-banners/banner-blue-green.png)
+![screenshot](support/documentation/community/starter-banners/banner-blue-green.png)
