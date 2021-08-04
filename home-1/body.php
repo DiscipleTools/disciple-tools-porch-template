@@ -16,7 +16,7 @@
         <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
 
         <div class="header-nav__content">
-            <h3>Pray4Movement</h3>
+            <h3>Pray4Colorado</h3>
 
             <ul class="header-nav__list">
                 <li class="current"><a class="smoothscroll" href="#home" title="home">Home</a></li>
@@ -26,8 +26,8 @@
                 <li><a class="smoothscroll" href="#works" title="works">Samples</a></li>
             </ul>
 
-            <p>Pray4Movement serves as a connection point for anyone with a passion to see a disciple-making movement
-                everywhere. Join our email prayer guide, follow us on social media, or join us for a
+            <p>Pray4Colorado serves as a connection point for anyone with a passion to see a disciple-making movement
+                in Colorado. Join our email prayer guide, follow us on social media, or join us for a
                 prayer-walk. Above all pray with us to see spiritual life poured out on our state.</p>
 
             <ul class="header-nav__social">
@@ -64,10 +64,10 @@
 
         <div class="row home-content__main">
             <h1>
-                Praying for a <br>disciple making movement <br>everywhere.
+                Praying for a <br>disciple making movement in <br>Colorado.
             </h1>
 
-            <h2 style="color:white;font-family: 'metropolis-light', 'sans-serif';font-size:3.8rem;margin-top:0;"><span style="color:#cc147f;">-</span> #Pray4Movement</h2>
+            <h2 style="color:white;font-family: 'metropolis-light', 'sans-serif';font-size:3.8rem;margin-top:0;"><span style="color:#cc147f;">-</span> #Pray4Colorado</h2>
             <a href="#contact" class="smoothscroll"><button class="">Join Us</button></a>
 
         </div> <!-- end home-content__main -->
@@ -122,7 +122,7 @@
     <div class="row section-header" data-aos="fade-up">
         <div class="col-full">
             <h3 class="subhead">Who We Are</h3>
-            <h1 class="display-1">#Pray4Movement serves as a connection point for anyone with a passion to see a disciple making movement everywhere.</h1>
+            <h1 class="display-1">#Pray4Colorado serves as a connection point for anyone with a passion to see a disciple making movement in Colorado.</h1>
         </div>
     </div> <!-- end section-header -->
 
@@ -145,7 +145,6 @@
             <div class="col-block process__col" data-item="1" data-aos="fade-up">
                 <div class="process__text">
                     <h4>Email Prayer Guide</h4>
-
                     <p>
                         We offer a regular prayer guide that includes challenges, quotes, and scripture focusing on global issues. These serve as a help to focus us and help us pray together.
                         <a href="#contact">Join our Prayer Guide</a>
@@ -155,7 +154,6 @@
             <div class="col-block process__col" data-item="2" data-aos="fade-up">
                 <div class="process__text">
                     <h4>Social Media</h4>
-
                     <p>
                         Our same email challenges can also be followed on social media. Join our online prayer
                         warriors.
@@ -195,19 +193,19 @@
     <div class="row stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
 
         <div class="col-block stats__col ">
-            <div class="stats__static">7600</div>
+            <div class="stats__static">5.6</div>
             <h5>Million</h5>
         </div>
         <div class="col-block stats__col">
-            <div class="stats__count">10000</div>
+            <div class="stats__count">214</div>
             <h5>Cities</h5>
         </div>
         <div class="col-block stats__col">
-            <div class="stats__count">256000</div>
+            <div class="stats__count">1240</div>
             <h5>New Trainings Needed</h5>
         </div>
         <div class="col-block stats__col">
-            <div class="stats__count">500000</div>
+            <div class="stats__count">2500</div>
             <h5>New Churches Needed</h5>
         </div>
 
@@ -244,7 +242,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Loving</h3>
-                <p>#Pray4Movement loves God, loves people, and helps Christians fulfill the Great Commission by
+                <p>#Pray4Colorado loves God, loves people, and helps Christians fulfill the Great Commission by
                     mobilizing prayer.
                 </p>
             </div>
@@ -256,7 +254,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Strategic</h3>
-                <p>#Pray4Movement promotes strategic prayer for movement, knowing that ( based upon research )
+                <p>#Pray4Colorado promotes strategic prayer for movement, knowing that ( based upon research )
                     extraordinary prayer is found at the root of all modern movements.
                 </p>
             </div>
@@ -268,7 +266,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Safe</h3>
-                <p>#Pray4Movement will never ask for money or market to you on behalf of others. The resources and
+                <p>#Pray4Colorado will never ask for money or market to you on behalf of others. The resources and
                     events we may mention will always be for the benefit and connection of the community.
                 </p>
             </div>
@@ -280,7 +278,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Open</h3>
-                <p>#Pray4Movement welcomes collaboration of <strong>all</strong> Christians.
+                <p>#Pray4Colorado welcomes collaboration of <strong>all</strong> Christians.
                 </p>
             </div>
         </div>
@@ -291,7 +289,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Multiplying</h3>
-                <p>#Pray4Movement cares that obedient disciples of Jesus Christ make more obedient disciples. Obeying
+                <p>#Pray4Colorado cares that obedient disciples of Jesus Christ make more obedient disciples. Obeying
                     all that Jesus commanded includes making disciples who make disciples.
                 </p>
             </div>
@@ -303,7 +301,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Expectant</h3>
-                <p>#Pray4Movement strives to neither under- nor over-estimate man’s role in disciple multiplication
+                <p>#Pray4Colorado strives to neither under- nor over-estimate man’s role in disciple multiplication
                     movements. God declared prayer as the vehicle for seeking and receiving his kingdom in the place we live.
                 </p>
             </div>
@@ -315,7 +313,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Mobilizing</h3>
-                <p>#Pray4Movement asks everyone to not only pray but also to mobilize prayer through relationships
+                <p>#Pray4Colorado asks everyone to not only pray but also to mobilize prayer through relationships
                     and opportunities God provides.
                 </p>
             </div>
@@ -327,7 +325,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Brief</h3>
-                <p>#Pray4Movement is super brief, usually 1-to-3 lines long. We aim to provoke directed prayer, not
+                <p>#Pray4Colorado is super brief, usually 1-to-3 lines long. We aim to provoke directed prayer, not
                     monologue.
                 </p>
             </div>
@@ -339,7 +337,7 @@
             </div>
             <div class="service-text">
                 <h3 class="h4">Not Political</h3>
-                <p>#Pray4Movement is not a political agenda, rather an effort for sinners who have found forgiveness
+                <p>#Pray4Colorado is not a political agenda, rather an effort for sinners who have found forgiveness
                     in Christ to share this Good News with others.
                 </p>
             </div>
@@ -358,9 +356,7 @@
             <h3 class="subhead subhead--light">Join Us</h3>
             <h1 class="display-1 display-1--light">(1) Get our email prayer guide</h1>
 
-            <?php if ( isset( $content['contact_form'] ) && ! empty( $content['contact_form'] ) ) : ?>
-                <?php echo $content['contact_form']; // @phpcs:ignore ?>
-            <?php else : ?>
+
                 <form id="newsletter-form" action="">
                     <div id="section-name" class="section">
                         <label for="name" class="input-label label-name">First Name *
@@ -388,7 +384,6 @@
                     </div>
 
                 </form>
-            <?php endif; ?>
 
         </div>
     </div> <!-- end section-header -->
@@ -705,7 +700,7 @@
     <div class="row">
         <div class="col-full cl-copyright">
                 <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://zume.community" target="_blank" rel="noopener noreferrer">Zúme.Community</a>
+                    Copyright ©<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://zume.community" target="_blank" rel="noopener noreferrer">Zúme.Community</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
         </div>
     </div>

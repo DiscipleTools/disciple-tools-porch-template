@@ -108,7 +108,7 @@ class DT_Porch_Template {
          * @todo STEP 2: ONCE A STYLE IS SELECTED, REMOVE ADDITIONAL LINES AND DELETE CORRESPONDING FOLDERS
          * @todo STEP 3: EDIT THE BODY CONTENT OF THE SELECTED STYLE IN THE `body.php` file.
          **************************************************************************************************************/
-//        require_once( 'home-1/loader.php'); /* Pray4Movement */
+        require_once( 'home-1/loader.php' ); /* Pray4Movement */
 //        require_once( 'home-2/loader.php' ); /* Simple, Big images, White and Image */
 //        require_once( 'home-3/loader.php'); /* Parallax, White/Green, thin sections, sticky top nav */
 //        require_once( 'home-4/loader.php' ); /* Large sections, white/light blue, */
@@ -117,7 +117,7 @@ class DT_Porch_Template {
 //        require_once( 'home-7/loader.php'); /* single image, full screen */
 //        require_once( 'home-8/loader.php'); /* single looping video, full screen */
 
-        require_once( 'home-blank/loader.php'); /* blank setup. You can drop a single page site into this folder. */
+//        require_once( 'home-blank/loader.php'); /* blank setup. You can drop a single page site into this folder. */
 
 
 
