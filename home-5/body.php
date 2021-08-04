@@ -6,19 +6,19 @@
                     <a class="nav-link" href="#video-area">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#services">Section One</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#features">Features</a>
+                    <a class="nav-link" href="#features">Section Two</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolios">Our Works</a>
+                    <a class="nav-link" href="#portfolios">Section Three</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#pricing">Pricing</a>
+                    <a class="nav-link" href="#pricing">Section Four</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog</a>
+                    <a class="nav-link" href="#blog">Section Five</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -31,14 +31,15 @@
     </nav>
     <button class="close-button" id="close-button"><i class="lnr lnr-cross"></i></button>
 </div>
-<!-- Header Section Start -->
 
+<!-- Header Section Start -->
 <header id="video-area" data-stellar-background-ratio="0.5">
-    <div id="block" data-vide-bg="video/video"></div>
+    <!-- Note: Video file background is defined through the data-vide-bg param using the jquery.vide.js library. The .mp4 is not needed, the jQuery plugin senses the file type. video(folder)/video(filename) -->
+    <div id="block" data-vide-bg="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>video/video"></div>
     <div class="fixed-top">
         <div class="container">
             <div class="logo-menu">
-                <a href="/" class="logo"><span class="lnr lnr-diamond"></span> CRYSTAL</a>
+                <a href="/" class="logo"><span class="lnr lnr-diamond"></span> SITE 5</a>
                 <button class="menu-button" id="open-button"><i class="lnr lnr-menu"></i></button>
             </div>
         </div>
@@ -48,8 +49,8 @@
         <div class="row justify-content-md-center">
             <div class="col-md-10">
                 <div class="contents text-center">
-                    <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Crystal - Free Video Background HTML5 Bootstrap Template</h1>
-                    <p class="lead  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="400ms">Free High-quality Responsive Video Background Website Template Based on Bootstrap 4 to Create Complete Business Website in Minutes</p>
+                    <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Site 5 - Parallax, video and color schemes support</h1>
+                    <p class="lead  wow fadeIn" data-wow-duration="1000ms" data-wow-delay="400ms">Color scheme can be set to: preset (royal blue), teal, forestgreen, green, purple, orange</p>
                     <a href="#" class="btn btn-common wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms"><i class="lnr lnr-download"></i> Download</a>
                 </div>
             </div>
@@ -63,7 +64,7 @@
 <section id="services" class="section">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Services</span></h2>
+            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Section <span>One</span></h2>
             <hr class="lines wow zoomIn" data-wow-delay="0.3s">
             <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy <br> nibh euismod tincidunt ut laoreet dolore magna.</p>
         </div>
@@ -73,7 +74,7 @@
                     <div class="icon">
                         <i class="lnr lnr-pencil"></i>
                     </div>
-                    <h4>Content Writing</h4>
+                    <h4>Fact 1</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
                 </div>
             </div>
@@ -82,7 +83,7 @@
                     <div class="icon">
                         <i class="lnr lnr-cog"></i>
                     </div>
-                    <h4>Web Development</h4>
+                    <h4>Fact 2</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
                 </div>
             </div>
@@ -91,7 +92,7 @@
                     <div class="icon">
                         <i class="lnr lnr-chart-bars"></i>
                     </div>
-                    <h4>Graphic Design</h4>
+                    <h4>Fact 3</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
                 </div>
             </div>
@@ -100,7 +101,7 @@
                     <div class="icon">
                         <i class="lnr lnr-layers"></i>
                     </div>
-                    <h4>UI/UX Design</h4>
+                    <h4>Fact 4</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
                 </div>
             </div>
@@ -109,7 +110,7 @@
                     <div class="icon">
                         <i class="lnr lnr-tablet"></i>
                     </div>
-                    <h4>App Development</h4>
+                    <h4>Fact 5</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
                 </div>
             </div>
@@ -118,7 +119,7 @@
                     <div class="icon">
                         <i class="lnr lnr-briefcase"></i>
                     </div>
-                    <h4>Digital Marketing</h4>
+                    <h4>Fact 6</h4>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
                 </div>
             </div>
@@ -131,7 +132,7 @@
 <section id="features" class="section" data-stellar-background-ratio="0.2">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Amazing <span>Features</span></h2>
+            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Section <span>Two</span></h2>
             <hr class="lines wow zoomIn" data-wow-delay="0.3s">
             <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy <br> nibh euismod tincidunt ut laoreet dolore magna.</p>
         </div>
@@ -143,7 +144,7 @@
                   <i class="lnr lnr-rocket"></i>
                 </span>
                         <div class="text">
-                            <h4>Bootstrap 4 Based</h4>
+                            <h4>Thought 1</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
@@ -152,7 +153,7 @@
                   <i class="lnr lnr-laptop-phone"></i>
                 </span>
                         <div class="text">
-                            <h4>Fully Responsive</h4>
+                            <h4>Thought 2</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
@@ -161,7 +162,7 @@
                   <i class="lnr lnr-cog"></i>
                 </span>
                         <div class="text">
-                            <h4>HTML5 & CSS3</h4>
+                            <h4>Thought 3</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                         </div>
                     </div>
@@ -179,7 +180,7 @@
                   <i class="lnr lnr-camera-video"></i>
                 </span>
                         <div class="text">
-                            <h4>Video Background</h4>
+                            <h4>Thought 4</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
                         </div>
                     </div>
@@ -188,7 +189,7 @@
                   <i class="lnr lnr-magic-wand"></i>
                 </span>
                         <div class="text">
-                            <h4>Parallax Sections</h4>
+                            <h4>Thought 5</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
@@ -197,7 +198,7 @@
                   <i class="lnr lnr-spell-check"></i>
                 </span>
                         <div class="text">
-                            <h4>Ajax Contact Form</h4>
+                            <h4>Thought 6</h4>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
                     </div>
@@ -217,7 +218,7 @@
                 <div class="video-promo-content text-center">
                     <h2 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Our Introductory Video</h2>
                     <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Learn more about us, its only 30mins</p>
-                    <a href="https://www.youtube.com/watch?v=r44RKWyfcFw" class="video-popup wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s"><i class="lnr lnr-film-play"></i></a>
+                    <a href="https://www.youtube.com/watch?v=FZAqbhYWW9g" class="video-popup wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s"><i class="lnr lnr-film-play"></i></a>
                 </div>
             </div>
         </div>
@@ -230,7 +231,7 @@
     <!-- Container Starts -->
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Our <span>Works</span></h2>
+            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Section <span>Three</span></h2>
             <hr class="lines wow zoomIn" data-wow-delay="0.3s">
             <p class="section-subtitle wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy <br> nibh euismod tincidunt ut laoreet dolore magna.</p>
         </div>
@@ -327,7 +328,7 @@
 <div id="pricing" class="section pricing-section">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Pricing <span>Plans</span></h2>
+            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Section <span>Four</span></h2>
             <hr class="lines wow zoomIn" data-wow-delay="0.3s">
             <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy <br> nibh euismod tincidunt ut laoreet dolore magna.</p>
         </div>
@@ -339,8 +340,8 @@
                         <i class="lnr lnr-rocket"></i>
                     </div>
                     <div class="pricing-details">
-                        <h2>Starter Plan</h2>
-                        <span>Free</span>
+                        <h2>Idea 1</h2>
+
                         <ul>
                             <li>Consectetur adipiscing</li>
                             <li>Nunc luctus nulla et tellus</li>
@@ -349,7 +350,7 @@
                         </ul>
                     </div>
                     <div class="plan-button">
-                        <a href="#" class="btn btn-common">Get Plan</a>
+                        <a href="#" class="btn btn-common">Take Action</a>
                     </div>
                 </div>
             </div>
@@ -360,8 +361,8 @@
                         <i class="lnr lnr-heart"></i>
                     </div>
                     <div class="pricing-details">
-                        <h2>Popular Plan</h2>
-                        <span>$3.99</span>
+                        <h2>Idea 2</h2>
+                        <span>Favorite</span>
                         <ul>
                             <li>Consectetur adipiscing</li>
                             <li>Nunc luctus nulla et tellus</li>
@@ -370,7 +371,7 @@
                         </ul>
                     </div>
                     <div class="plan-button">
-                        <a href="#" class="btn btn-common">Buy Now</a>
+                        <a href="#" class="btn btn-common">Take Action</a>
                     </div>
                 </div>
             </div>
@@ -381,8 +382,7 @@
                         <i class="lnr lnr-magic-wand"></i>
                     </div>
                     <div class="pricing-details">
-                        <h2>Premium Plan</h2>
-                        <span>$9.50</span>
+                        <h2>Idea 3</h2>
                         <ul>
                             <li>Consectetur adipiscing</li>
                             <li>Nunc luctus nulla et tellus</li>
@@ -391,7 +391,7 @@
                         </ul>
                     </div>
                     <div class="plan-button">
-                        <a href="#" class="btn btn-common">Buy Now</a>
+                        <a href="#" class="btn btn-common">Take Action</a>
                     </div>
                 </div>
             </div>
@@ -414,7 +414,7 @@
                         </div>
                         <div class="fact-count">
                             <h3><span class="counter">100</span>%</h3>
-                            <h4>Faster</h4>
+                            <h4>Counter</h4>
                         </div>
                     </div>
                 </div>
@@ -427,7 +427,7 @@
                         </div>
                         <div class="fact-count">
                             <h3><span class="counter">700</span></h3>
-                            <h4>Cup of Coffee</h4>
+                            <h4>Counter</h4>
                         </div>
                     </div>
                 </div>
@@ -440,7 +440,7 @@
                         </div>
                         <div class="fact-count">
                             <h3><span class="counter">10000</span>+</h3>
-                            <h4>Active Clients</h4>
+                            <h4>Counter</h4>
                         </div>
                     </div>
                 </div>
@@ -453,7 +453,7 @@
                         </div>
                         <div class="fact-count">
                             <h3><span class="counter">1689</span></h3>
-                            <h4>Peoples Love</h4>
+                            <h4>Counter</h4>
                         </div>
                     </div>
                 </div>
@@ -473,24 +473,24 @@
                         <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer1.png" alt="Client Testimonoal" />
                         <div class="testimonial-text">
                             <p>Morbi eget dictum enim. Praesent sed quam sit amet lorem tempor rhoncus. <br>In hac habitasse platea dictumst. Vivamus in accumsan ex</p>
-                            <h3>Johnathan Doe</h3>
-                            <span>Marketing Head Matrix media</span>
+                            <h3>Terrance</h3>
+                            <span>disciple-maker</span>
                         </div>
                     </div>
                     <div class="testimonial-item">
                         <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer2.png" alt="Client Testimonoal" />
                         <div class="testimonial-text">
                             <p>Morbi eget dictum enim. Praesent sed quam sit amet lorem tempor rhoncus. <br>In hac habitasse platea dictumst. Vivamus in accumsan ex</p>
-                            <h3>Oidila Matik</h3>
-                            <span>President Lexo Inc</span>
+                            <h3>Tod</h3>
+                            <span>disciple-maker</span>
                         </div>
                     </div>
                     <div class="testimonial-item">
                         <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/testimonial/customer3.png" alt="Client Testimonoal" />
                         <div class="testimonial-text">
                             <p>Morbi eget dictum enim. Praesent sed quam sit amet lorem tempor rhoncus. <br>In hac habitasse platea dictumst. Vivamus in accumsan ex</p>
-                            <h3>- Alex Dattilo</h3>
-                            <span>CEO Optima Inc</span>
+                            <h3>- Tom</h3>
+                            <span>disciple-maker</span>
                         </div>
                     </div>
                 </div>
@@ -504,12 +504,12 @@
 <section id="download" class="section">
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s"><span>Download</span> Our App</h2>
+            <h2 class="section-title wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s"><span>Download</span> Bible App</h2>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="download-area text-center wow fadeInUp" data-wow-delay="0.3s">
-                    <a href="#" class="btn btn-border"><i class="fa fa-apple"></i>Download Now</a>
+                    <a href="https://www.youversion.com/the-bible-app/" class="btn btn-border"><i class="fa fa-apple"></i>Download Now</a>
                 </div>
             </div>
         </div>
@@ -522,7 +522,7 @@
     <!-- Container Starts -->
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Latest <span>Blogs</span></h2>
+            <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Section <span>Five</span></h2>
             <hr class="lines wow zoomIn" data-wow-delay="0.3s">
             <p class="section-subtitle wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy <br> nibh euismod tincidunt ut laoreet dolore magna.</p>
         </div>
@@ -531,13 +531,13 @@
                 <!-- Blog Item Starts -->
                 <div class="blog-item-wrapper wow fadeInUp" data-wow-delay="0.3s">
                     <div class="blog-item-img">
-                        <a href="single-post.html">
+                        <a href="#">
                             <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img1.jpg" alt="">
                         </a>
                     </div>
                     <div class="blog-item-text">
                         <h3>
-                            <a href="#">How often should you tweet?</a>
+                            <a href="#">Cool engaging title</a>
                         </h3>
                         <div class="meta-tags">
                             <span class="date"><i class="lnr lnr-calendar-full"></i>on Mar 23, 2018</span>
@@ -546,7 +546,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
                         </p>
-                        <a href="single-post.html" class="btn btn-common btn-rm">Read More</a>
+                        <a href="#" class="btn btn-common btn-rm">Read More</a>
                     </div>
                 </div>
                 <!-- Blog Item Wrapper Ends-->
@@ -556,13 +556,13 @@
                 <!-- Blog Item Starts -->
                 <div class="blog-item-wrapper wow fadeInUp" data-wow-delay="0.6s">
                     <div class="blog-item-img">
-                        <a href="single-post.html">
+                        <a href="#">
                             <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img2.jpg" alt="">
                         </a>
                     </div>
                     <div class="blog-item-text">
                         <h3>
-                            <a href="#">Content is still king</a>
+                            <a href="#">Cool engaging title</a>
                         </h3>
                         <div class="meta-tags">
                             <span class="date"><i class="lnr lnr-calendar-full"></i>on Mar 29, 2018</span>
@@ -571,7 +571,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
                         </p>
-                        <a href="single-post.html" class="btn btn-common btn-rm">Read More</a>
+                        <a href="#" class="btn btn-common btn-rm">Read More</a>
                     </div>
                 </div>
                 <!-- Blog Item Wrapper Ends-->
@@ -581,13 +581,13 @@
                 <!-- Blog Item Starts -->
                 <div class="blog-item-wrapper wow fadeInUp" data-wow-delay="0.9s">
                     <div class="blog-item-img">
-                        <a href="single-post.html">
+                        <a href="#">
                             <img src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>img/blog/img3.jpg" alt="">
                         </a>
                     </div>
                     <div class="blog-item-text">
                         <h3>
-                            <a href="#">Social media at work</a>
+                            <a href="#">Cool engaging title</a>
                         </h3>
                         <div class="meta-tags">
                             <span class="date"><i class="lnr lnr-calendar-full"></i>on Mar 21, 2018</span>
@@ -596,7 +596,7 @@
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
                         </p>
-                        <a href="single-post.html" class="btn btn-common btn-rm">Read More</a>
+                        <a href="#" class="btn btn-common btn-rm">Read More</a>
                     </div>
                 </div>
                 <!-- Blog Item Wrapper Ends-->
@@ -692,7 +692,7 @@
                     </ul>
                 </div>
                 <div class="site-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
-                    <p>All copyrights reserved &copy; 2017 - Designed & Developed by <a rel="nofollow" href="https://uideck.com">UIdeck</a></p>
+                    <p>All copyrights reserved &copy;  <script>document.write(new Date().getFullYear())</script></p>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 /**
- * @todo Configure the title value, root value, type value, and token value. Don't change PORCH_ variable.
+ * @todo Configure the title value, root value, type value, token value, and color scheme. Don't change PORCH_ variable.
  */
 if ( ! defined( 'PORCH_TITLE' ) ) {
     define( 'PORCH_TITLE', 'Home 5' ); // Used in tabs and titles, avoid special characters. Spaces are okay.
@@ -15,6 +15,14 @@ if ( ! defined( 'PORCH_TYPE' ) ) {
 }
 if ( ! defined( 'PORCH_TOKEN' ) ) {
     define( 'PORCH_TOKEN', 'porch_app_5' ); // Alphanumeric key. Use underscores not hyphens. No special characters. Must be less than 20 characters
+}
+
+/**
+ * This template includes 6 color schemes set by the definition below.
+ * preset, teal, forestgreen, green, purple, orange
+ */
+if ( ! defined( 'PORCH_COLOR_SCHEME' ) ) {
+    define( 'PORCH_COLOR_SCHEME', 'preset' ); // Alphanumeric key. Use underscores not hyphens. No special characters. Must be less than 20 characters
 }
 
 class DT_Porch_Template_Home_5 extends DT_Magic_Url_Base
