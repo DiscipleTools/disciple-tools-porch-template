@@ -54,7 +54,7 @@ class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
         }
 
         if ( dt_is_rest() ) {
-            require_once('admin/rest.php');
+            require_once('rest.php');
             add_filter( 'dt_allow_rest_access', [ $this, 'authorize_url' ], 10, 1 );
         }
 

@@ -1,7 +1,6 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
-
 class DT_Porch_Template_Home_2 extends DT_Magic_Url_Base
 {
     public $magic = false;
@@ -21,9 +20,6 @@ class DT_Porch_Template_Home_2 extends DT_Magic_Url_Base
 
     public function __construct() {
         parent::__construct();
-
-        add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
-        add_filter( 'dt_allow_rest_access', [ $this, 'authorize_url' ], 10, 1 );
 
         $url = dt_get_url_path();
         if ( empty( $url ) && ! dt_is_rest() ) {
@@ -49,6 +45,11 @@ class DT_Porch_Template_Home_2 extends DT_Magic_Url_Base
             add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css' ], 10, 1 );
             add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js' ], 10, 1 );
         }
+
+        if ( dt_is_rest() ) {
+            require_once('rest.php');
+            add_filter( 'dt_allow_rest_access', [ $this, 'authorize_url' ], 10, 1 );
+        }
     }
 
     public function dt_magic_url_base_allowed_js( $allowed_js ) {
@@ -59,225 +60,16 @@ class DT_Porch_Template_Home_2 extends DT_Magic_Url_Base
         return [];
     }
 
-    public function theme_redirect() {
-        $path = get_theme_file_path( 'template-blank.php' );
-        include( $path );
-        die();
-    }
-
     public function header_javascript(){
-        ?>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
-
-        <link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/bootstrap/bootstrap.css">
-        <link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/fonts/ionicons/css/ionicons.min.css">
-        <link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/fonts/law-icons/font/flaticon.css">
-
-        <link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/fonts/fontawesome/css/font-awesome.min.css">
-
-
-        <link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/slick.css">
-        <link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/slick-theme.css">
-
-        <link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/helpers.css">
-        <link rel="stylesheet" href="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/css/style.css">
-        <?php
-        return true;
-    }
-
-    public function footer_javascript(){
-        ?>
-
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.min.js"></script>
-
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/popper.min.js"></script>
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/bootstrap.min.js"></script>
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/slick.min.js"></script>
-
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.waypoints.min.js"></script>
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/jquery.easing.1.3.js"></script>
-
-        <script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>assets/js/main.js"></script>
-        <script>
-            let jsObject = [<?php echo json_encode([
-                'theme_uri' => trailingslashit( get_stylesheet_directory_uri() ),
-                'root' => esc_url_raw( rest_url() ),
-                'nonce' => wp_create_nonce( 'wp_rest' ),
-                'parts' => [
-                    'root' => $this->root,
-                    'type' => $this->type,
-                ],
-                'trans' => [
-                    'add' => __( 'Add Magic', 'disciple_tools' ),
-                ],
-            ]) ?>][0]
-
-            jQuery(document).ready(function(){
-                jQuery('body').data('spy', 'scroll').data('target', '#pb-navbar').data('offset', '200')
-            })
-        </script>
-        <?php
+        require_once('header.php');
     }
 
     public function body(){
-        require_once( 'template.php' );
+        require_once( 'body.php' );
     }
 
-    public function add_api_routes() {
-        $namespace = $this->root . '/v1';
-        register_rest_route(
-            $namespace, '/' . $this->type, [
-                [
-                    'methods'  => "POST",
-                    'callback' => [ $this, 'endpoint' ],
-                    'permission_callback' => '__return_true',
-                ],
-            ]
-        );
-    }
-
-    public function endpoint( WP_REST_Request $request ) {
-        $params = $request->get_params();
-
-        if ( ! isset( $params['parts'], $params['action'] ) ) {
-            return new WP_Error( __METHOD__, "Missing parameters", [ 'status' => 400 ] );
-        }
-
-        $params = dt_recursive_sanitize_array( $params );
-        $action = sanitize_text_field( wp_unslash( $params['action'] ) );
-
-        switch ( $action ) {
-            case 'followup':
-                return $this->save_contact_lead( $params['data'] );
-            case 'newsletter':
-                return $this->save_newsletter( $params['data'] );
-
-            default:
-                return new WP_Error( __METHOD__, "Missing valid action", [ 'status' => 400 ] );
-        }
-    }
-
-    public function save_newsletter( $data ) {
-        $content = get_option( 'landing_content' );
-
-        $data = dt_recursive_sanitize_array( $data );
-        $email = $data['email'] ?? '';
-        $fname = $data['fname'] ?? '';
-        $lname = $data['lname'] ?? '';
-
-        if ( empty( $email ) && empty( $phone ) ){
-            return new WP_Error( __METHOD__, 'Must have either phone number or email address to create record.', [ 'status' => 400 ] );
-        }
-
-        //API KEY and LIST ID here
-        $apiKey = $content['mailchimp_api_key'];
-        $listId = $content['mailchimp_list_id'];
-
-        $memberId = md5( strtolower( $email ) );
-        $dataCenter = substr( $apiKey, strpos( $apiKey, '-' ) +1 );
-        $url = 'https://' . $dataCenter . '.api.mailchimp.com/3.0/lists/' . $listId . '/members/' . $memberId;
-
-        $json = json_encode([
-            'email_address' => $email,
-            'status'        => 'subscribed', // "subscribed","unsubscribed","cleaned","pending"
-            'merge_fields'  => [
-                'FNAME'     => $fname,
-                'LNAME'     => $lname,
-            ]
-        ]);
-
-        $ch = curl_init( $url );
-
-        curl_setopt( $ch, CURLOPT_USERPWD, 'user:' . $apiKey );
-        curl_setopt( $ch, CURLOPT_HTTPHEADER, [ 'Content-Type: application/json' ] );
-        curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-        curl_setopt( $ch, CURLOPT_TIMEOUT, 10 );
-        curl_setopt( $ch, CURLOPT_CUSTOMREQUEST, 'PUT' );
-        curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, false );
-        curl_setopt( $ch, CURLOPT_POSTFIELDS, $json );
-        $result = curl_exec( $ch );
-
-
-        $httpCode = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
-        curl_close( $ch );
-
-        return $result;
-    }
-
-    public function save_contact_lead( $data ) {
-        $content = get_option( 'landing_content' );
-        $fields = [];
-
-        $data = dt_recursive_sanitize_array( $data );
-        $email = $data['email'] ?? '';
-        $phone = $data['phone'] ?? '';
-        $name = $data['name'] ?? '';
-        $comment = $data['comment'] ?? '';
-
-        if ( empty( $email ) && empty( $phone ) ){
-            return new WP_Error( __METHOD__, 'Must have either phone number or email address to create record.', [ 'status' => 400 ] );
-        }
-
-        if ( ! empty( $lname ) ) {
-            $full_name = $name . ' ' . $lname;
-        } else {
-            $full_name = $name;
-        }
-
-        $fields['title'] = $full_name;
-        if ( ! empty( $email ) ) {
-            $fields['contact_email'] = [
-                [ "value" => $email ]
-            ];
-        }
-        if ( ! empty( $phone ) ) {
-            $fields['contact_phone'] = [
-                [ "value" => $phone ]
-            ];
-        }
-        $fields['type'] = 'access';
-
-        if ( isset( $content['assigned_user_for_followup'] ) && ! empty( $content['assigned_user_for_followup'] ) ) {
-            $fields['assigned_to'] = $content['assigned_user_for_followup'];
-        }
-
-        if ( isset( $content['status_for_subscriptions'] ) && ! empty( $content['status_for_subscriptions'] ) ) {
-            $fields['overall_status'] = $content['status_for_subscriptions'];
-        }
-
-        if ( isset( $content['source_for_subscriptions'] ) && ! empty( $content['source_for_subscriptions'] ) ) {
-            $fields['sources'] = [
-                "values" => [
-                    [ "value" => $content['source_for_subscriptions'] ],
-                ]
-            ];
-        }
-
-
-        $fields['notes'] = [];
-        // geolocate IP address
-        if ( DT_Ipstack_API::get_key() ) {
-            $result = DT_Ipstack_API::geocode_current_visitor();
-            // @todo geocode ip address
-            $fields['notes'][] = serialize( $result );
-        } else {
-
-            $fields['notes'][] = DT_Ipstack_API::get_real_ip_address();
-        }
-
-        $fields['notes'][] = $comment;
-
-        $contact = DT_Posts::create_post( 'contacts', $fields, true, false );
-        if ( ! is_wp_error( $contact ) ) {
-            $contact_id = $contact['ID'];
-        } else {
-            return new WP_Error( __METHOD__, 'Could not create DT record.', [ 'status' => 400, 'error_data' => $contact ] );
-        }
-
-        return $data;
+    public function footer_javascript(){
+        require_once('footer.php');
     }
 }
 DT_Porch_Template_Home_2::instance();

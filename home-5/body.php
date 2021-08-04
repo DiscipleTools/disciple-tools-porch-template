@@ -711,4 +711,3 @@
         <div class="double-bounce2"></div>
     </div>
 </div>
-

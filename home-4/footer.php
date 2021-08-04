@@ -1,0 +1,2 @@
+<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>js/scripts.min.js"></script>
+<script src="<?php echo trailingslashit( esc_url( plugin_dir_url( __FILE__ ) ) ) ?>js/custom.js"></script>
