@@ -83,20 +83,21 @@ class DT_Porch_Template {
 
     private function __construct() {
 
-        require_once( 'example-templates/loader.php');
         /**
-         * Example home templates are preconfigured single page designs
-         *
-         * @see
-         *
+         * Home Page (choose 1)
          */
-        load_home_template( 1 ); // load templates 1 - 8
+        require_once( 'home-1/loader.php');
+//        require_once( 'home-2/loader.php');
+//        require_once( 'home-3/loader.php');
+//        require_once( 'home-4/loader.php');
+//        require_once( 'home-5/loader.php');
+//        require_once( 'home-6/loader.php');
+//        require_once( 'home-7/loader.php');
+//        require_once( 'home-8/loader.php');
+
 
         // private user page example
-        $template_user_page = true;
-        if ( $template_user_page ) {
-            require_once( 'template-user-page/loader.php' );
-        }
+        require_once( 'template-user-page/loader.php' );
 
         if ( is_admin() ) {
             require_once('required-plugins/class-tgm-plugin-activation.php');
