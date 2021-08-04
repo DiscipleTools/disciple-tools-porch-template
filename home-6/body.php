@@ -1,15 +1,15 @@
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand" href="#page-top">Site 6</a>
         <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Section 1</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Section 2</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -21,7 +21,7 @@
         <!-- Masthead Avatar Image-->
         <img class="masthead-avatar mb-5" src="<?php echo esc_url( trailingslashit( plugin_dir_url( __FILE__ ) ) ) ?>assets/img/avataaars.svg" alt="..." />
         <!-- Masthead Heading-->
-        <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+        <h1 class="masthead-heading text-uppercase mb-0">Site 6</h1>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -29,14 +29,14 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Masthead Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+        <p class="masthead-subheading font-weight-light mb-0">Praying to See a Disciple Making Movement</p>
     </div>
 </header>
 <!-- Portfolio Section-->
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
         <!-- Portfolio Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Section 1</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -106,7 +106,7 @@
 <section class="page-section bg-primary text-white mb-0" id="about">
     <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-white">Section 2</h2>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -115,14 +115,28 @@
         </div>
         <!-- About Section Content-->
         <div class="row">
-            <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-            <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+            <div class="col-lg-4 ms-auto">
+                <p class="lead">For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.
+                    For God did not send his Son into the world to condemn the world, but to save the world through him.</p>
+                <p class="lead">Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God’s one and only Son.</p>
+                <p class="lead">This is the verdict: Light has come into the world, but people loved darkness instead of light because their deeds were evil.
+                    Everyone who does evil hates the light, and will not come into the light for fear that their deeds will be exposed.
+                    But whoever lives by the truth comes into the light, so that it may be seen plainly that what they have done has been done in the sight of God.
+                </p>
+            </div>
+            <div class="col-lg-4 me-auto">
+                <p class="lead">Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God’s one and only Son.</p>
+                <p class="lead">This is the verdict: Light has come into the world, but people loved darkness instead of light because their deeds were evil.
+                    Everyone who does evil hates the light, and will not come into the light for fear that their deeds will be exposed.
+                    But whoever lives by the truth comes into the light, so that it may be seen plainly that what they have done has been done in the sight of God.
+                </p>
+            </div>
         </div>
         <!-- About Section Button-->
         <div class="text-center mt-4">
-            <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+            <a class="btn btn-xl btn-outline-light" href="https://www.youversion.com/the-bible-app/">
                 <i class="fas fa-download me-2"></i>
-                Free Download!
+                Download Bible App!
             </a>
         </div>
     </div>
@@ -206,9 +220,7 @@
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <h4 class="text-uppercase mb-4">Location</h4>
                 <p class="lead mb-0">
-                    2215 John Daniel Drive
-                    <br />
-                    Clark, MO 65243
+                    Africa, Asia, Middle East
                 </p>
             </div>
             <!-- Footer Social Icons-->
@@ -221,11 +233,9 @@
             </div>
             <!-- Footer About Text-->
             <div class="col-lg-4">
-                <h4 class="text-uppercase mb-4">About Freelancer</h4>
+                <h4 class="text-uppercase mb-4">About Site 6</h4>
                 <p class="lead mb-0">
-                    Freelance is a free to use, MIT licensed Bootstrap theme created by
-                    <a href="http://startbootstrap.com">Start Bootstrap</a>
-                    .
+                    We are a group of people who take the commands of the Lord Jesus serious.
                 </p>
             </div>
         </div>
@@ -233,7 +243,7 @@
 </footer>
 <!-- Copyright Section-->
 <div class="copyright py-4 text-center text-white">
-    <div class="container"><small>Copyright &copy; Your Website 2021</small></div>
+    <div class="container"><small>All copyrights reserved &copy;  <script>document.write(new Date().getFullYear())</script></small></div>
 </div>
 <!-- Portfolio Modals-->
 <!-- Portfolio Modal 1-->
