@@ -5,9 +5,6 @@
 __Kick start your Disciple.Tools porch plugin project with this template!__
 
 
-
-
-
 ## Purpose
 
 A team, organization, or movement effort might love Disciple.Tools, but __wish it had one more thing.__
