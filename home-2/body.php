@@ -1,7 +1,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark pb_navbar pb_scrolled-light" id="pb-navbar">
     <div class="container">
-        <a class="navbar-brand" href="/">Site Name</a>
+        <a class="navbar-brand" href="/">Site 2</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#probootstrap-navbar" aria-controls="probootstrap-navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="ion-navicon"></i></span>
         </button>
@@ -25,7 +25,7 @@
         <div class="row align-items-center justify-content-end">
             <div class="col-md-6  order-md-1">
 
-                <h2 class="heading mb-3">Site</h2>
+                <h2 class="heading mb-3">Site 2</h2>
                 <div class="sub-heading"><p class="mb-5">Praying for a disciple making movement</p>
                     <p><a href="#section-contact" role="button" class="btn smoothscroll pb_outline-light btn-xl pb_font-13 p-4 rounded-0 pb_letter-spacing-2">Join Us</a></p>
                 </div>
