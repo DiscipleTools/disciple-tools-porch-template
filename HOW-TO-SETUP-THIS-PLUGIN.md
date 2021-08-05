@@ -7,8 +7,7 @@ in order to rapid build a Disciple Tools "Front Porch".
 A Disciple Tools porch is a plugin that places a micro site in front of a Disciple Tools system. It can be made as a single page
 or multipage site with lead forms, sign up forms, and even a lightweight logged in experience for non-DT users. A porch can also
 be used to cloak the presence of the Disciple Tools system, by hiding it behind a benign public page, for security sensitive implementations.
-This porch can have direct integration or no integration with the
-Disciple Tools system running behind it.
+This porch can have direct integration or no integration with the Disciple Tools system running behind it.
 
 The following are a list of the key steps you need to take to adapt this starter plugin for your projects use:
 
