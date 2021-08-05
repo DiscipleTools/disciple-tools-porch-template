@@ -1,14 +1,16 @@
 # HOW TO SETUP THIS PLUGIN
 
-This plugin is designed to be reduced. It is provides a number of best practices in the use of filters
-and actions to integrate with the Disciple Tools system. I also offers a number of site starter bases
-the begin building a Disciple Tools "Front Porch" with.
+This plugin is designed to be reduced. It provides a number of best practices in the use of filters
+and actions to integrate with the Disciple Tools system. I also offers a number of site starter sites
+in order to rapid build a Disciple Tools "Front Porch".
 
-The unique usage of the front porch is that a person can visit the Disciple Tools system root url
-and get a micro website. This website can have direct integration or no integration with the
+A Disciple Tools porch is a plugin that places a micro site in front of a Disciple Tools system. It can be made as a single page
+or multipage site with lead forms, sign up forms, and even a lightweight logged in experience for non-DT users. A porch can also
+be used to cloak the presence of the Disciple Tools system, by hiding it behind a benign public page, for security sensitive implementations.
+This porch can have direct integration or no integration with the
 Disciple Tools system running behind it.
 
-The following are a list of key steps to adapt this plugin for your custom use.
+The following are a list of the key steps you need to take to adapt this starter plugin for your projects use:
 
 ## 1. REFACTOR
 
