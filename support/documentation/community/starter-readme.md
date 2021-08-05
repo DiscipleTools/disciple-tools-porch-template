@@ -67,4 +67,36 @@ system for git. For a more details on contribution see the
 
 ## Screenshots
 
-![screenshot](https://via.placeholder.com/600x150)
+Home-1
+
+![screenshot](readme-files/template-1-screenshot-1.jpg)
+
+Home-2
+
+![screenshot](readme-files/template-2-screenshot-1.jpg)
+![screenshot](readme-files/template-2-screenshot-2.jpg)
+
+Home-3
+
+![screenshot](readme-files/template-3-screenshot-1.jpg)
+![screenshot](readme-files/template-3-screenshot-2.jpg)
+
+Home-4
+
+
+
+Home-5
+
+
+
+Home-6
+
+
+Home-7
+
+
+
+Home-8
+
+![screenshot](readme-files/template-8-screenshot.jpg)
+

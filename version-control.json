@@ -14,7 +14,7 @@
   "discussions_url": "https://github.com/DiscipleTools/disciple-tools-porch-template/discussions",
   "wiki_url": "https://github.com/DiscipleTools/disciple-tools-porch-template/wiki",
   "license_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-porch-template/master/LICENSE",
-  "readme_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-porch-template/master/README.md",
+  "readme_url": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-porch-template/master/support/documentation/community/starter-readme.md",
   "requires": "4.7",
   "tested": "5.7",
   "upgrade_notice": "Upgrade to get the latest features.",
