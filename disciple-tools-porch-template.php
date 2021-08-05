@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Disciple Tools - Porch Template
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-porch-template
- * Description: This front porch facilitates the open source location grid public site.
+ * Description: This plugin adds a front porch to a Disciple Tools system.
  * Text Domain: disciple-tools-porch-template
  * Domain Path: /languages
  * Version:  0.1
