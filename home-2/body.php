@@ -318,7 +318,7 @@
     <div class="container">
         <div class="row justify-content-md-center text-center mb-5">
             <div class="col-lg-7">
-                <h2 class="mt-0 heading-border-top light font-weight-normal text-white">Attorneys</h2>
+                <h2 class="mt-0 heading-border-top light font-weight-normal text-white">Team</h2>
                 <p class="text-white">No one has ever gone into heaven except the one who came from heaven—the Son of Man. Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up, that everyone who believes may have eternal life in him.</p>
             </div>
         </div>
