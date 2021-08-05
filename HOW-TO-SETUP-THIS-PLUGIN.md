@@ -12,7 +12,7 @@ Disciple Tools system running behind it.
 
 The following are a list of the key steps you need to take to adapt this starter plugin for your projects use:
 
-## 1. REFACTOR
+## 1. REFACTOR/RENAME
 
 The plugin has been written so that with a couple find-and-replace tasks you can rename all the key classes,
 ids, and domains inside the plugin to the names of the project you are working on. This is required.
