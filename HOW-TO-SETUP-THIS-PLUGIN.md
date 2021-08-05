@@ -78,3 +78,60 @@ started with ```probootstrap-section```.
 ---
 
 In just a few minutes, you can refactor this plugin and reduce a starter site to be ready for you to add your unique messaging! Good luck!
+
+
+## Screenshots
+
+__Home-1__ (Pray4Movement example dark, large start image, animations)
+
+![screenshot](support/documentation/community/readme-files/template-1-screenshot-1.jpg)
+![screenshot](support/documentation/community/readme-files/template-1-screenshot-2.jpg)
+![screenshot](support/documentation/community/readme-files/template-1-screenshot-3.jpg)
+![screenshot](support/documentation/community/readme-files/template-1-screenshot-4.jpg)
+![screenshot](support/documentation/community/readme-files/template-1-screenshot-5.jpg)
+
+__Home-2__ (Simple, Big images, White and Image)
+
+![screenshot](support/documentation/community/readme-files/template-2-screenshot-1.jpg)
+![screenshot](support/documentation/community/readme-files/template-2-screenshot-2.jpg)
+![screenshot](support/documentation/community/readme-files/template-2-screenshot-3.jpg)
+![screenshot](support/documentation/community/readme-files/template-2-screenshot-4.jpg)
+![screenshot](support/documentation/community/readme-files/template-2-screenshot-5.jpg)
+
+__Home-3__ (Parallax, White/Green, thin sections, sticky top nav)
+
+![screenshot](support/documentation/community/readme-files/template-3-screenshot-1.jpg)
+![screenshot](support/documentation/community/readme-files/template-3-screenshot-2.jpg)
+![screenshot](support/documentation/community/readme-files/template-3-screenshot-3.jpg)
+![screenshot](support/documentation/community/readme-files/template-3-screenshot-4.jpg)
+
+__Home-4__ (Large sections, white/light blue)
+
+![screenshot](support/documentation/community/readme-files/template-4-screenshot-1.jpg)
+![screenshot](support/documentation/community/readme-files/template-4-screenshot-3.jpg)
+![screenshot](support/documentation/community/readme-files/template-4-screenshot-4.jpg)
+![screenshot](support/documentation/community/readme-files/template-4-screenshot-5.jpg)
+![screenshot](support/documentation/community/readme-files/template-4-screenshot-6.jpg)
+
+__Home-5__ (Big sections, hover effects/animations, color schemes: blue, teal, lightgreen, green, purple, orange)
+
+![screenshot](support/documentation/community/readme-files/template-5-screenshot-1.jpg)
+![screenshot](support/documentation/community/readme-files/template-5-screenshot-2.jpg)
+![screenshot](support/documentation/community/readme-files/template-5-screenshot-3.jpg)
+![screenshot](support/documentation/community/readme-files/template-5-screenshot-4.jpg)
+![screenshot](support/documentation/community/readme-files/template-5-screenshot-5.jpg)
+
+__Home-6__ (simple, greeen/white, bold)
+
+![screenshot](support/documentation/community/readme-files/template-6-screenshot-1.jpg)
+![screenshot](support/documentation/community/readme-files/template-6-screenshot-2.jpg)
+![screenshot](support/documentation/community/readme-files/template-6-screenshot-3.jpg)
+![screenshot](support/documentation/community/readme-files/template-6-screenshot-4.jpg)
+
+__Home-7__ (one page image)
+
+![screenshot](support/documentation/community/readme-files/template-7-screenshot.jpg)
+
+__Home-8__ (one page background video)
+
+![screenshot](support/documentation/community/readme-files/template-8-screenshot.jpg)

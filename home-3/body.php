@@ -12,7 +12,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a href="/" class="navbar-brand logo-title">SITE TITLE</a>
+                <a href="/" class="navbar-brand logo-title">SITE 3</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="lnr lnr-menu"></i>
                 </button>
