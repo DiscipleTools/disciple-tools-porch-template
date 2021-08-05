@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-porch-template.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-porch-template)
 
-# Disciple Tools - Name
+# Disciple Tools - Porch Template
 
 Description Description Description Description Description Description Description
 Description Description Description Description Description Description Description
