@@ -120,6 +120,10 @@ class DT_Porch_Template {
 //        require_once( 'home-blank/loader.php'); /* blank setup. You can drop a single page site into this folder. */
 
 
+        // beta
+//        require_once( 'landing-pages/loader.php' ); /* framework for dynamic landing pages*/
+
+
 
         /***************************************************************************************************************
         /***************************************************************************************************************
