@@ -152,7 +152,8 @@ class DT_Porch_Template_Landing_Tab_General {
             <tr>
                 <td>
                     <select name="selected_home_page">
-                        <option></option>
+                        <option value="0">No Home Page</option>
+                        <option disabled>---</option>
                         <?php
                         if ( ! empty( $list->posts ) ) {
                             foreach ( $list->posts as $post_object ) {
