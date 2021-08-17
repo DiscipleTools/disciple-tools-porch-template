@@ -121,7 +121,7 @@ class DT_Porch_Template {
 
 
         // beta
-//        require_once( 'landing-pages/loader.php' ); /* framework for dynamic landing pages*/
+        require_once( 'landing-pages/loader.php' ); /* framework for dynamic landing pages*/
 
 
 
