@@ -25,7 +25,6 @@ if ( ! defined( 'PORCH_LANDING_POST_TYPE_PLURAL' ) ) {
 require_once( 'roles-and-permissions.php' );
 require_once( 'landing-post-type.php' );
 require_once( 'rest.php' );
-require_once( 'enqueue.php' );
 // load admin files only if in admin
 if ( is_admin() ) {
     $required_admin_files = scandir( plugin_dir_path( __FILE__ ) . '/admin' );
@@ -70,11 +69,10 @@ class DT_Porch_Template_Landing extends DT_Magic_Url_Base
             return;
         }
 
-
-
         // load if valid url
         add_action( 'dt_blank_body', [ $this, 'body' ] ); // body for no post key
 
+        require_once( 'enqueue.php' );
         add_filter( 'dt_magic_url_base_allowed_css', [ $this, 'dt_magic_url_base_allowed_css' ], 10, 1 );
         add_filter( 'dt_magic_url_base_allowed_js', [ $this, 'dt_magic_url_base_allowed_js' ], 10, 1 );
         add_action( 'wp_enqueue_scripts', [ $this, 'wp_enqueue_scripts' ], 99 );
