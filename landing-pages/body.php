@@ -7,7 +7,7 @@ if ( isset( $this->parts['post_id'] ) && ! empty( $this->parts['post_id'] ) ) {
         $content = $content_post->post_content;
         $content = apply_filters( 'the_content', $content );
         $content = str_replace( ']]>', ']]&gt;', $content );
-        echo $content;
+        echo $content; // @phpcs:ignore
     }
     else {
         echo 'No post found';
