@@ -413,7 +413,7 @@
                 <div id="section-name" class="section">
                     <label for="name" class="input-label label-name">Name *
                         <input type="text" id="contact-name" name="name" class="input-text input-name" value="" required="required" ></label>
-                    <span id="contact-name-error" class="form-error">You're name is required.</span>
+                    <span id="contact-name-error" class="form-error">Your name is required</span>
                 </div>
 
                 <div id="section-email" class="section">
