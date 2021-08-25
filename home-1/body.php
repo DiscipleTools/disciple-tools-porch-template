@@ -375,7 +375,7 @@
                             <input type="email" id="newsletter-email" name="email" class="input-text input-email" value="" >
                             <input type="email" id="newsletter-e2" name="email2" class="input-text email" value="" required="required" >
                         </label>
-                        <span id="email-error" class="form-error">You're email is required.</span>
+                        <span id="email-error" class="form-error">Your email is required.</span>
                     </div>
 
                     <div class="section" id="submit-button-container">
@@ -421,7 +421,7 @@
                         <input type="email" id="contact-email" name="email" class="input-text input-email" value="" >
                         <input type="email" id="contact-e2" name="email2" class="input-text email" value="" required="required" >
                     </label>
-                    <span id="contact-email-error" class="form-error">You're email is required.</span>
+                    <span id="contact-email-error" class="form-error">Your email is required.</span>
                 </div>
 
                 <div id="section-phone" class="section">
