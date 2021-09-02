@@ -38,6 +38,7 @@
  * Find and Replace the following strings with your custom strings.
  * @todo find/replace string [ Porch Template ] with [ Your Project Name ]
  * @todo find/replace string [ Disciple_Tools_Porch_Template ] with [ Your_Project_Name ]
+ * @todo find/replace string [ DT_Porch_Template ] with [ Your_Project_Name ]
  * @todo find/replace string [ disciple-tools-porch-template ] with [ your-project-name ]
  * @todo find/replace string [ dt_porch_template ] with [ your_project_name ]
 ***********************************************************************************************************************/

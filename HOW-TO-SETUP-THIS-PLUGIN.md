@@ -22,6 +22,7 @@ to have class name and function name collisions. You must refactor.
 1. find/replace string ```DiscipleTools/disciple-tools-porch-template```
 1. find/replace string ```Porch Template```
 1. find/replace string ```Disciple_Tools_Porch_Template```
+1. find/replace string ```DT_Porch_Template```
 1. find/replace string ```disciple-tools-porch-template```
 1. find/replace string ```dt_porch_template```
 
