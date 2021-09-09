@@ -59,7 +59,7 @@ class DT_Porch_Template_Landing_Menu {
 
         ?>
         <div class="wrap">
-            <h2>Public Porch Template</h2>
+            <h2><?php echo esc_html( PORCH_LANDING_POST_TYPE_SINGLE ) ?></h2>
             <h2 class="nav-tab-wrapper">
                 <a href="<?php echo esc_attr( $link ) . 'general' ?>"
                    class="nav-tab <?php echo esc_html( ( $tab == 'general' || !isset( $tab ) ) ? 'nav-tab-active' : '' ); ?>">General</a>
