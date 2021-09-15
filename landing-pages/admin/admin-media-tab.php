@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
  */
 class DT_Porch_Template_Landing_Media_Tab {
 
-    public $token = 'disciple_tools_porch_template';
+    public $token = 'dt_porch_template';
     public $title = 'Porch Template';
 
     private static $_instance = null;
