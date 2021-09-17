@@ -37,12 +37,12 @@ add_action( 'tgmpa_register', function () {
      * If the source is NOT from the .org repo, then source is also required.
      */
     $plugins = array(
-        array(
-            'name'                  => 'Disciple Tools - Custom Login',
-            'slug'                  => 'disciple-tools-custom-login',
-            'required'              => false,
-            'version'               => '0.1',
-        ),
+        //array( @todo this points to the Wordpress plugin store.
+        //    'name'                  => 'Disciple Tools - Custom Login',
+        //    'slug'                  => 'disciple-tools-custom-login',
+        //    'required'              => false,
+        //    'version'               => '0.1',
+        //),
         array(
             'name'                  => 'Genesis Blocks',
             'slug'                  => 'genesis-blocks',
