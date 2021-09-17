@@ -147,5 +147,4 @@ add_action( 'tgmpa_register', function () {
     );
 
     tgmpa( $plugins, $config );
-    }
-);
+});
