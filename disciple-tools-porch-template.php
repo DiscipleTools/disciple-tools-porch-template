@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Disciple Tools - Porch Template
+ *Plugin Name: Disciple.Tools - Porch Template
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-porch-template
  * Description: This plugin adds a front porch to a Disciple Tools system.
  * Text Domain: disciple-tools-porch-template
