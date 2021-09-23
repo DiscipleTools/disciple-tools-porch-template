@@ -22,7 +22,7 @@ class DT_Porch_Template_Landing_Media_Tab {
             return;
         }
 
-        // Adds back Media to Disciple Tools system
+        // Adds back Media to Disciple.Tools system
         add_filter( 'dt_remove_menu_pages', [ $this, 'add_media_tab' ], 10, 1 );
         if ( isset( $_SERVER['REQUEST_URI'] ) && '/wp-admin/upload.php' === $_SERVER['REQUEST_URI'] ) {
             $this->media_page_warning();

@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-porch-template.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-porch-template)
 
-# Disciple Tools - Porch Template
+# Disciple.Tools - Porch Template
 
 __Kick start your Disciple.Tools porch plugin project with this template!__
 
@@ -16,11 +16,11 @@ we know we can't create everything everyone needs.
 Instead of waiting for us, you can run ahead on your own. This
 plugin includes all our best practices and starter codes for the most commonly developed extensions.
 
-A Disciple Tools porch is a plugin that places a micro site in front of a Disciple Tools system. It can be made as a single page
+A Disciple.Tools porch is a plugin that places a micro site in front of a Disciple.Tools system. It can be made as a single page
 or multi-page site with lead forms, sign up forms, and even a lightweight logged in experience for non-DT users.
 
-A porch can also be used to cloak the presence of the Disciple Tools system, by hiding it behind a benign public page, for security sensitive implementations.
-This porch can have direct integration or no integration with the Disciple Tools system running behind it.
+A porch can also be used to cloak the presence of the Disciple.Tools system, by hiding it behind a benign public page, for security sensitive implementations.
+This porch can have direct integration or no integration with the Disciple.Tools system running behind it.
 
 __This plugin is for developers__ who want to extend the Disciple.Tools system for their movement effort.
 
@@ -53,8 +53,8 @@ __This plugin is for developers__ who want to extend the Disciple.Tools system f
 ## Recommended
 
 - [Composer](https://getcomposer.org/download/).
-- Disciple Tools Theme installed on a local Wordpress Server ([localwp.com](https://localwp.com) or [MAMP](https://www.mamp.info)).
-- Disciple Tools Custom Login plugin for upgrading logins and redirecting them to your private pages.
+- Disciple.Tools Theme installed on a local Wordpress Server ([localwp.com](https://localwp.com) or [MAMP](https://www.mamp.info)).
+- Disciple.Tools Custom Login plugin for upgrading logins and redirecting them to your private pages.
 
 ## Contribution
 

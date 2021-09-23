@@ -2,7 +2,7 @@
 /**
  *Plugin Name: Disciple.Tools - Porch Template
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-porch-template
- * Description: This plugin adds a front porch to a Disciple Tools system.
+ * Description: This plugin adds a front porch to a Disciple.Tools system.
  * Text Domain: disciple-tools-porch-template
  * Domain Path: /languages
  * Version:  0.1
@@ -130,11 +130,11 @@ class DT_Porch_Template {
         /***************************************************************************************************************
          * @todo ADDITIONAL STEP: SELECT LOGGED IN PAGE STYLE
          * This page style allows a person to register to the site, and get a custom profile page, without giving
-         * them access to disciple tools. This page is recommended to be used with the custom login plugin so that
+         * them access to Disciple.Tools. This page is recommended to be used with the custom login plugin so that
          * a registered role can be applied.
          *
          * @use Use this to give a partner a dashboard on the project without giving them access to the entire DT system.
-         * @use Allows you to collect data from a user without giving them full Disciple Tools access.
+         * @use Allows you to collect data from a user without giving them full Disciple.Tools access.
          *
          * Remove all of these if a logged in page is not required.
          **************************************************************************************************************/
@@ -268,9 +268,9 @@ if ( ! function_exists( 'dt_porch_template_hook_admin_notice' ) ) {
         global $dt_porch_template_required_dt_theme_version;
         $wp_theme = wp_get_theme();
         $current_version = $wp_theme->version;
-        $message = "'Disciple Tools - Porch Template' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.";
+        $message = "'Disciple.Tools - Porch Template' plugin requires 'Disciple.Tools' theme to work. Please activate 'Disciple.Tools' theme or make sure it is latest version.";
         if ( $wp_theme->get_template() === "disciple-tools-theme" ){
-            $message .= ' ' . sprintf( esc_html( 'Current Disciple Tools version: %1$s, required version: %2$s' ), esc_html( $current_version ), esc_html( $dt_porch_template_required_dt_theme_version ) );
+            $message .= ' ' . sprintf( esc_html( 'Current Disciple.Tools version: %1$s, required version: %2$s' ), esc_html( $current_version ), esc_html( $dt_porch_template_required_dt_theme_version ) );
         }
         // Check if it's been dismissed...
         if ( ! get_option( 'dismissed-disciple-tools-porch-template', false ) ) { ?>

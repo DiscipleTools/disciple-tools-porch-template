@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-porch-template.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-porch-template)
 
 ![Porch Template](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-porch-template/master/support/documentation/banner.png)
-# Disciple Tools - Porch Template
+# Disciple.Tools - Porch Template
 
 Description Description Description Description Description Description Description
 Description Description Description Description Description Description Description
@@ -29,7 +29,7 @@ Purpose purpose purpose purpose purpose purpose purpose purpose purpose purpose 
 
 ## Requirements
 
-- Disciple Tools Theme installed on a Wordpress Server
+- Disciple.Tools Theme installed on a Wordpress Server
 
 ## Installing
 

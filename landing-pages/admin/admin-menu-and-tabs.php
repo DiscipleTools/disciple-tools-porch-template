@@ -35,7 +35,7 @@ class DT_Porch_Template_Landing_Menu {
     }
 
     /**
-     * Menu stub. Replaced when Disciple Tools Theme fully loads.
+     * Menu stub. Replaced when Disciple.Tools Theme fully loads.
      */
     public function extensions_menu() {}
 
@@ -45,7 +45,7 @@ class DT_Porch_Template_Landing_Menu {
      */
     public function content() {
 
-        if ( !current_user_can( 'manage_dt' ) ) { // manage dt is a permission that is specific to Disciple Tools and allows admins, strategists and dispatchers into the wp-admin
+        if ( !current_user_can( 'manage_dt' ) ) { // manage dt is a permission that is specific to Disciple.Tools and allows admins, strategists and dispatchers into the wp-admin
             wp_die( 'You do not have sufficient permissions to access this page.' );
         }
 

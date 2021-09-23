@@ -2,7 +2,7 @@
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 /**
- * Lead form REST API for saving to Disciple Tools
+ * Lead form REST API for saving to Disciple.Tools
  *
  * @version 1
  */
