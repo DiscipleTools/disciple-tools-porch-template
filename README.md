@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-porch-template.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-porch-template)
 
-![Porch Template](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-porch-template/master/support/documentation/banner.png)
+![Plugin Banner](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-porch-template/master/support/documentation/banner.png)
 # Disciple.Tools - Porch Template
 
 Description Description Description Description Description Description Description
