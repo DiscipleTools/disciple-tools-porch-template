@@ -30,34 +30,34 @@ class DT_Porch_Template_Landing_Roles
     }
 
     public function dt_set_roles_and_permissions( $expected_roles ){
+        $landing_page_permissions = [
+            // landing page access
+            'create_'.$this->post_type => true,
+            'edit_'.$this->post_type => true,
+            'read_'.$this->post_type => true,
+            'delete_'.$this->post_type => true,
+            'delete_others_'.$this->post_type.'s',
+            'delete_'.$this->post_type.'s' => true,
+            'edit'.$this->post_type.'s' => true,
+            'edit_others_'.$this->post_type.'s' => true,
+            'publish_'.$this->post_type.'s' => true,
+            'read_private_'.$this->post_type.'s' => true,
+
+            'edit_files' => true,
+            'upload_files' => true,
+            // rest access for blocks editor
+            'wp_api_allowed_user' => true,
+            // wp-admin dashboard access
+            'read' => true,
+        ];
         if ( !isset( $expected_roles["porch_admin"] ) ){
             $expected_roles["porch_admin"] = [
                 "label" => __( 'Porch Admin', 'disciple_tools' ),
                 "description" => "Administrates porch public pages",
-                "permissions" => [
-                    // rest access for blocks editor
-                    'wp_api_allowed_user' => true,
-
-                    // wp-admin dashboard access
-                    'read' => true,
-
-                    // landing page access
-                    'create_'.$this->post_type => true,
-                    'edit_'.$this->post_type => true,
-                    'read_'.$this->post_type => true,
-                    'delete_'.$this->post_type => true,
-                    'delete_others_'.$this->post_type.'s',
-                    'delete_'.$this->post_type.'s' => true,
-                    'edit'.$this->post_type.'s' => true,
-                    'edit_others_'.$this->post_type.'s' => true,
-                    'publish_'.$this->post_type.'s' => true,
-                    'read_private_'.$this->post_type.'s' => true,
-
-                    'edit_files' => true,
-                    'upload_files' => true,
-                ]
+                "permissions" => $landing_page_permissions
             ];
         }
+        $expected_roles["administrator"]["permissions"] = wp_parse_args( $expected_roles["administrator"]["permissions"], $landing_page_permissions );
         return $expected_roles;
     }
 
