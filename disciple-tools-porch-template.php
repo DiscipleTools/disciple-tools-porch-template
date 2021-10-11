@@ -149,7 +149,6 @@ class DT_Porch_Template {
          * logged in user experience.
          **************************************************************************************************************/
         if ( is_admin() ) {
-            require_once( 'support/required-plugins/class-tgm-plugin-activation.php' );
             require_once( 'support/required-plugins/config-required-plugins.php' );
         }
 
