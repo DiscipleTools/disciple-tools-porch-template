@@ -25,7 +25,7 @@ class DT_Porch_Template_Landing_Media_Tab {
         // Adds back Media to Disciple.Tools system
         add_filter( 'dt_remove_menu_pages', [ $this, 'add_media_tab' ], 10, 1 );
         if ( isset( $_SERVER['REQUEST_URI'] ) && '/wp-admin/upload.php' === $_SERVER['REQUEST_URI'] ) {
-            $this->media_page_warning();
+            add_action( 'admin_notices', [ $this, 'admin_notices' ] );
         }
         add_filter( 'upload_mimes', [ $this, 'add_additional_mime_types' ], 1, 1 );
 
@@ -37,7 +37,8 @@ class DT_Porch_Template_Landing_Media_Tab {
         }
         return $list;
     }
-    public function add_additional_mime_types( $mime_types){
+
+    public function add_additional_mime_types( $mime_types ){
         $mime_types['svg'] = 'image/svg+xml'; //Adding svg extension
         $mime_types['psd'] = 'image/vnd.adobe.photoshop'; //Adding photoshop files
         $mime_types['pdf'] = 'application/pdf'; //Adding photoshop files
@@ -48,7 +49,7 @@ class DT_Porch_Template_Landing_Media_Tab {
         return $mime_types;
     }
 
-    public function media_page_warning() {
+    public function admin_notices() {
         ?>
         <div class="notice notice-warning is-dismissible">
             <p>SECURITY WARNING: <BR>ALL IMAGES AND MEDIA FILES ADDED HERE ARE PUBLICLY ACCESSIBLE TO THE INTERNET. <BR>DO NOT STORE SENSITIVE FILES!</p>
