@@ -28,7 +28,6 @@ class DT_Porch_Template_Landing_Media_Tab {
             add_action( 'admin_notices', [ $this, 'admin_notices' ] );
         }
         add_filter( 'upload_mimes', [ $this, 'add_additional_mime_types' ], 1, 1 );
-
     } // End __construct()
 
     public function add_media_tab( $list ) {

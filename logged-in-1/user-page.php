@@ -144,6 +144,5 @@ class DT_Porch_Template_User_Page extends DT_Magic_Url_Base {
 
         return $params;
     }
-
 }
 DT_Porch_Template_User_Page::instance();

@@ -23,7 +23,6 @@ class DT_Porch_Template_Landing_Menu {
         }
 
         add_action( "admin_menu", array( $this, "register_menu" ) );
-
     } // End __construct()
 
     /**

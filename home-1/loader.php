@@ -69,7 +69,6 @@ class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
             require_once( 'rest.php' );
             add_filter( 'dt_allow_rest_access', [ $this, 'authorize_url' ], 10, 1 );
         }
-
     }
 
     public function dt_magic_url_base_allowed_js( $allowed_js ) {
@@ -91,6 +90,5 @@ class DT_Porch_Template_Home_1 extends DT_Magic_Url_Base
     public function footer_javascript(){
         require_once( 'footer.php' );
     }
-
 }
 DT_Porch_Template_Home_1::instance();

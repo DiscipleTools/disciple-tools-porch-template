@@ -37,7 +37,7 @@ class DT_Porch_Template_Landing_Post_Type
      * @param array $args
      * @param array $taxonomies
      */
-    public function __construct( $args = [], $taxonomies = []) {
+    public function __construct( $args = [], $taxonomies = [] ) {
         $this->post_type = PORCH_LANDING_POST_TYPE;
         $this->singular = PORCH_LANDING_POST_TYPE_SINGLE;
         $this->plural = PORCH_LANDING_POST_TYPE_PLURAL;
@@ -53,7 +53,6 @@ class DT_Porch_Template_Landing_Post_Type
             add_filter( 'manage_'.$this->post_type.'_posts_columns', [ $this, 'set_custom_edit_columns' ] );
             add_action( 'manage_'.$this->post_type.'_posts_custom_column', [ $this, 'custom_column' ], 10, 2 );
         }
-
     } // End __construct()
 
     public function add_meta_box( $post_type ) {
@@ -150,7 +149,7 @@ class DT_Porch_Template_Landing_Post_Type
     }
 
     // Add the custom columns to the book post type:
-    public function set_custom_edit_columns( $columns) {
+    public function set_custom_edit_columns( $columns ) {
         unset( $columns['author'] );
         $columns['url'] = 'URL';
 

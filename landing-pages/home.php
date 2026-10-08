@@ -99,7 +99,5 @@ class DT_Porch_Template_Landing_Home extends DT_Magic_Url_Base
         <?php
         return true;
     }
-
-
 }
 DT_Porch_Template_Landing_Home::instance();
